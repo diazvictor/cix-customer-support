@@ -1,0 +1,270 @@
+<div class="container">
+    <div class="row is-margin-bottom-3">
+        <h1 class="display-1 is-margin-bottom-0">Bienvenida Isabel</h1>
+        <nav class="breadcrumb">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Cix Dashboard</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="columns columns-3 columns-lg-3 columns-md-1">
+        <div class="column-2 column-lg-2 column-md-1">
+            <section class="info box is-grouped is-vertical">
+                <div class="box">
+                    <div class="d-flex j-between is-margin-bottom-1">
+                        <div class="start">
+                            <h1 class="title text-uppercase">deuda total</h1>
+                            <p class="subtitle">Facturas por pagar</p>
+                        </div>
+
+                        <div class="end">
+                            <i class="fas fa-dollar-sign fa-2x is-color-orange"></i>
+                        </div>
+                    </div>
+
+                    <h2 class="is-margin-bottom-1">$5,900.00</h2>
+
+                    <p class="is-font-xs">
+                        <a href="/facturas/">22 <span class="is-color-grey-light">Facturas</span></a>
+                    </p>
+                </div>
+
+                <div class="box">
+                    <div class="d-flex j-between is-margin-bottom-1">
+                        <div class="start">
+                            <h1 class="title text-uppercase">pagos por aprobar</h1>
+                            <p class="subtitle">Procesando facturas</p>
+                        </div>
+
+                        <div class="end">
+                            <i class="fas fa-coins fa-2x is-color-orange"></i>
+                        </div>
+                    </div>
+
+                    <h2 class="is-margin-bottom-1">6</h2>
+
+                    <a href="/pagos/mis-pagos/" class="is-font-xs">6/22</a>
+                </div>
+
+                <div class="box">
+                    <div class="d-flex j-between is-margin-bottom-1">
+                        <div class="start">
+                            <h1 class="title text-uppercase">deuda total</h1>
+                            <p class="subtitle">Facturas por pagar</p>
+                        </div>
+
+                        <div class="end">
+                            <i class="fas fa-exclamation-circle fa-2x is-color-orange"></i>
+                        </div>
+                    </div>
+
+                    <h2 class="is-margin-bottom-1">7</h2>
+
+                    <a href="/reportes/mis-reportes/" class="is-font-xs">Ver mis reportes</a>
+                </div>
+            </section>
+
+            <section class="box">
+                <div class="columns columns-1">
+                    <div class="row">
+                        <div class="columns">
+                            <div class="row j-start">
+                                <h1 class="title text-uppercase">Consumo de internet</h1>
+                                <p class="subtitle">Consulta el consumo de internet hasta ahora</p>
+                            </div>
+
+                            <div class="row j-end j-md-normal">
+                                <select class="select">
+                                    <option value="0">Internet r-50Mbps</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="chart-container">
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <form class="form">
+                            <div class="columns">
+                                <div class="field">
+                                    <label>Rango</label>
+                                    <select class="select">
+                                        <option value="0">Ultima semana</option>
+                                    </select>
+                                </div>
+
+                                <div class="field">
+                                    <label>Desde</label>
+                                    <div class="has-icon">
+                                        <input type="text" placeholder="16/06/2021">
+                                        <i class="fas fa-calendar-alt is-right"></i>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <label>Hasta</label>
+                                    <div class="has-icon">
+                                        <input type="text" placeholder="16/06/2021">
+                                        <i class="fas fa-calendar-alt is-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="row has-centered j-sm-normal">
+                        <button type="button" class="button is-fullwidth is-primary">
+                            <i class="fas fa-chart-bar"></i>
+                            Generar Gráfica
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="column-1">
+            <div class="panel">
+                <div class="panel-head">
+                    <div class="start">
+                        <h1 class="title text-uppercase">historial de pagos</h1>
+                        <p class="subtitle">Pagos completados</p>
+                    </div>
+
+                    <div class="end">
+                        <button type="button" class="button is-icon is-transparent">
+                            <i class="fas fa-history is-color-orange"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="panel-item">
+                    <div class="start">
+                        <div class="icon">
+                            <i class="fas fa-project-diagram is-color-orange"></i>
+                        </div>
+
+                        <div class="title">
+                            <span>Internet r-20Mbps</span>
+                            <p class="subtitle">Pago de mensualidad</p>
+                        </div>
+                    </div>
+
+                    <div class="end">
+                        <h1 class="title">
+                            $40,00
+                            <i class="fas fa-long-arrow-alt-up is-color-green"></i>
+                        </h1>
+                        <p class="subtitle">15 junio 2021</p>
+                    </div>
+                </div>
+
+                <div class="panel-item">
+                    <div class="start">
+                        <div class="icon">
+                            <i class="fas fa-project-diagram is-color-orange"></i>
+                        </div>
+
+                        <div class="title">
+                            <span>Internet r-20Mbps</span>
+                            <p class="subtitle">Pago de mensualidad</p>
+                        </div>
+                    </div>
+
+                    <div class="end">
+                        <h1 class="title">
+                            $40,00
+                            <i class="fas fa-long-arrow-alt-up is-color-green"></i>
+                        </h1>
+                        <p class="subtitle">15 junio 2021</p>
+                    </div>
+                </div>
+
+                <div class="panel-item">
+                    <div class="start">
+                        <div class="icon">
+                            <i class="fas fa-project-diagram is-color-orange"></i>
+                        </div>
+
+                        <div class="title">
+                            <span>Internet r-20Mbps</span>
+                            <p class="subtitle">Pago de mensualidad</p>
+                        </div>
+                    </div>
+
+                    <div class="end">
+                        <h1 class="title">
+                            $40,00
+                            <i class="fas fa-long-arrow-alt-up is-color-green"></i>
+                        </h1>
+                        <p class="subtitle">15 junio 2021</p>
+                    </div>
+                </div>
+
+                <div class="panel-item">
+                    <div class="start">
+                        <div class="icon">
+                            <i class="fas fa-project-diagram is-color-orange"></i>
+                        </div>
+
+                        <div class="title">
+                            <span>Internet r-20Mbps</span>
+                            <p class="subtitle">Pago de mensualidad</p>
+                        </div>
+                    </div>
+
+                    <div class="end">
+                        <h1 class="title">
+                            $40,00
+                            <i class="fas fa-long-arrow-alt-up is-color-green"></i>
+                        </h1>
+                        <p class="subtitle">15 junio 2021</p>
+                    </div>
+                </div>
+
+                <div class="panel-foot">
+                    <div class="d-flex j-center a-center">
+                        <a href="javascript:void(0);" class="is-font-xs">Ver historial completo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column-3 column-lg-3 column-md-1">
+            <section class="box map">
+                <div class="row">
+                    <div class="start">
+                        <h1 class="title text-uppercase">tu ubicación</h1>
+                        <p class="subtitle">Ubicación y calidad del radio enlace</p>
+                    </div>
+
+                    <div class="end">
+                        <div class="column">
+                            <span class="is-font-xs">Calidad de la señal</span>
+                            <span class="is-font-xs j-end">90%</span>
+
+                            <progress class="progress is-small" value="90" max="100">90%</progress>
+                        </div>
+
+                        <div class="column">
+                            <button type="button" class="button is-icon is-transparent">
+                                <i class="is-color-orange fas fa-sync"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="is-margin-bottom-2"></div>
+
+                <div class="row">
+                    <div id="mapid"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

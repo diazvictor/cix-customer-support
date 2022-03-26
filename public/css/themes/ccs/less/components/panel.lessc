@@ -1,0 +1,75 @@
+// @package   CCS
+// @filename  panel.less
+// @version   1.0
+// @autor     Díaz Urbaneja Víctor Eduardo Diex <diazvictor@tutamail.com>
+// @date      23.07.2021 00:25:33 -04
+
+// Para compilar el archivo desde la consola:
+// lessc panel.less > panel.css
+
+.panel {
+	background-color: @white;
+	border: 1px solid darken(@white-2, 5%);
+	border-radius: @border-radius-width;
+
+	&-head {
+		padding: 1.6rem;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&-item {
+		padding: 1rem 1.6rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-top: 1px solid darken(@white-2, 5%);
+
+		.start {
+			display: flex;
+			align-items: center;
+
+			.icon {
+				margin-right: 10px;
+
+				i {
+					font-size: 24px;
+				}
+			}
+
+			.title {
+				margin-right: 10px;
+
+				span + .subtitle {
+					margin-top: 5px;
+				}
+			}
+		}
+
+		.end {
+			.title {
+				text-align: right;
+
+				@media screen and (max-width: @breakpoints[large]) {
+					& {
+						text-align: left;
+					}
+				}
+
+				@media screen and (max-width: @breakpoints[medium]) {
+					& {
+						text-align: right;
+					}
+				}
+				// i {
+					// margin-left: 5px;
+				// }
+			}
+		}
+	}
+
+	&-foot {
+		padding: 25.6px;
+		border-top: 1px solid darken(@white-2, 5%);
+	}
+}

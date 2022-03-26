@@ -1,0 +1,127 @@
+// @package   CCS
+// @filename  accordion.less
+// @version   1.0
+// @autor     Díaz Urbaneja Víctor Eduardo Diex <diazvictor@tutamail.com>
+// @date      04.08.2021 23:04:13 -04
+
+// Para compilar el archivo desde la consola:
+// lessc accordion.less > accordion.css
+
+.accordion {
+	&-item {
+		border-bottom: 1px solid @white;
+
+		&:first-child {
+			.accordion-head {
+				border-top-left-radius: 4px;
+				border-top-right-radius: 4px;
+			}
+		}
+
+		&:last-child {
+			.accordion-head {
+				border-bottom-left-radius: 4px;
+				border-bottom-right-radius: 4px;
+			}
+		}
+
+		.accordion-head {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background: @bg-primary;
+			color: @white;
+			font-size: 14px;
+			font-weight: 700;
+			padding: 0.625rem 0.938rem;
+			transition: color .15s ease-in-out,background-color .15s ease-in-out,
+			border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+			.icon {
+				font-size: 10px;
+				font-style: normal;
+
+				&::before {
+					font-family: "Font Awesome 6 Free";
+					font-weight: 900;
+					content: "\f067";
+				}
+			}
+
+			&:hover {
+				background: darken(@bg-primary, 5%);
+				border-color:darken(@bg-primary, 5%);
+				cursor: pointer
+			}
+		}
+
+		.accordion-content {
+			display: none;
+			padding: 1.25rem 0.938rem;
+			font-size: @font-size-subtitle;
+			border-left: 1px solid darken(@white-2, 5%);
+			border-right: 1px solid darken(@white-2, 5%);
+
+			grid-template-columns: 1fr;
+			grid-gap: 10px;
+
+			img {
+				width: 100%;
+			}
+
+			ul {
+				li {
+					margin-left: 0.938rem;
+
+					ul {
+						margin-top: 10px;
+					}
+
+					& + li {
+						margin-top: 5px;
+					}
+				}
+			}
+		}
+
+		&.is-active {
+			border-bottom: none;
+
+			&:last-child {
+				.accordion-head {
+					border-bottom-left-radius: 0;
+					border-bottom-right-radius: 0;
+				}
+
+				.accordion-content {
+					border-bottom: 1px solid darken(@white-2, 5%);
+					border-bottom-left-radius: 4px;
+					border-bottom-right-radius: 4px;
+				}
+			}
+
+			.accordion-head {
+				i {
+					&::before {
+						content: "\f068";
+					}
+				}
+			}
+
+			.accordion-content {
+				display: grid;
+				animation: fadeIn linear .2s;
+			}
+		}
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}

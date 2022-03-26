@@ -1,0 +1,12 @@
+// @package   CCS
+// @filename  section.less
+// @version   1.0
+// @autor     Díaz Urbaneja Víctor Eduardo Diex <diazvictor@tutamail.com>
+// @date      04.07.2021 02:07:36 -04
+
+// Para compilar el archivo desde la consola:
+// lessc section.less > section.css
+
+.section {
+	padding: 1rem 1.5rem;
+}

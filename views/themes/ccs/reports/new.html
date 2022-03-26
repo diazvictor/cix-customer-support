@@ -1,0 +1,73 @@
+			<div class="container">
+				<div class="row is-margin-bottom-3">
+					<h1 class="display-1 is-margin-bottom-0">Crear Reportes</h1>
+					<nav class="breadcrumb">
+						<ul>
+							<li><a href="#">Inicio</a></li>
+							<li><a href="#">Crear Reportes</a></li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="box is-grouped">
+					<section class="box">
+						<div class="columns columns-1">
+							<div class="row">
+								<h1 class="title text-uppercase">Nuevo Reporte</h1>
+								<p class="subtitle">Rellene los formularios a continuación para crear su reporte.</p>
+							</div>
+
+							<div class="row">
+								<form class="form">
+									<div class="columns columns-2 columns-md-2 columns-sm-1">
+										<div class="field">
+											<label>Asunto</label>
+											<input type="text" placeholder="Ingrese un título del asunto">
+										</div>
+
+										<div class="field">
+											<label>Importancia</label>
+											<select>
+												<option value="0">Seleccione una opción</option>
+											</select>
+										</div>
+
+										<div class="field column-2 column-sm-1">
+											<label>Descripción</label>
+											<textarea placeholder="Diganos detalladamente su problema..."></textarea>
+										</div>
+									</div>
+
+									<div class="columns columns-2 columns-md-1">
+										<div class="field">
+											<label for="file">Adjuntar Archivo</label>
+											<div class="file">
+												<input type="text" disabled>
+												<label>
+													<i class="fas fa-file-medical"></i>
+													<span>Adjuntar</span>
+													<input type="file">
+												</label>
+											</div>
+										</div>
+
+										<div class="field">
+											<div class="d-flex j-between">
+												<label for="switch">Notificarme al correo cuando se apruebe el pago</label>
+												<label class="switch">
+													<input type="checkbox" id="switch">
+													<span class="slider round"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+
+							<div class="row j-end">
+								<button type="button" class="button is-primary">Enviar</button>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>

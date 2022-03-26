@@ -1,0 +1,49 @@
+// @package   CCS
+// @filename  progress.less
+// @version   1.0
+// @autor     Díaz Urbaneja Víctor Diex Gamar <diazvictor@tutamail.com>
+// @date      09.07.2021 01:23:00 -04
+
+// Para compilar el archivo desde la consola:
+// lessc progress.less > progress.css
+
+
+.progress {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	border: none;
+	border-radius: 9999px;
+	display: block;
+	height: 1rem;
+	overflow: hidden;
+	padding: 0;
+	width: 100%;
+
+	&::-webkit-progress-bar {
+		background-color: @bg-light;
+		border-radius: 4px;
+	}
+
+	&::-moz-progress-bar {
+		background: @bg-primary;
+	}
+
+	&::-webkit-progress-value {
+		background: @bg-primary;
+		border-radius: 9999px;
+	}
+
+	&.is {
+		&-small {
+			height: .7rem
+		}
+	}
+}
+
+// progress:after {
+	// margin: -26px 0 0 -7px;
+	// padding: 0;
+	// display: inline-block;
+	// float: left;
+	// content: attr(value) '%';
+// }

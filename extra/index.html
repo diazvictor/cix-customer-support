@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cix Customer Support | Dashboard</title>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/assets/css/ccs.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/fontawesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/chartist.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/leaflet.css">
+    <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon">
+	<style type="text/css">
+		#mapid {
+			min-height: 50vh;
+		}
+		.chart-container {
+			// height: 80vh;
+			// width: 80vw;
+		}
+		#myChart {
+			width: 100% !important
+		}
+    </style>
+</head>
+<body>
+	<div id="overlay-bg"></div>
+
+    <div class="wrapper">
+		<header class="header">
+			<nav class="navbar">
+				<div class="navbar-start">
+					<button type="button" id="toggle-sidebar" class="button is-icon">
+						<i></i>
+					</button>
+
+					<div class="searchbar">
+						<input type="text" class="input" placeholder="Buscar...">
+						<button type="button" class="button is-primary button-search"><i class="fas fa-search"></i>
+					</div>
+				</div>
+
+				<div class="navbar-logo">
+					<img src="/assets/images/logo-black.svg">
+	
+					<span class="title">
+						customer
+						<br>
+						support
+					</span>
+				</div>
+
+				<div class="navbar-end">
+					<div class="buttons">
+						<div class="dropdown">
+							<button type="button" class="button is-icon dropdown-toggle">
+								<i class="far fa-bell"></i>
+								<span class="label is-floating">4</span>
+							</button>
+
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="javascript:void(0);">
+									<div class="icon">
+										<img src="/assets/images/avatar.jpg">
+									</div>
+
+									<div class="content">
+										<span class="title">Nuevo mensaje de Víctor</span>
+										<span class="subtitle">Hoy a las 10:27 am</span>
+									</div>
+								</a>
+
+								<a class="dropdown-item" href="javascript:void(0);">
+									<div class="icon">
+										<i class="fas fa-file-alt"></i>
+									</div>
+
+									<div class="content">
+										<span class="title">Tienes nuevas facturas</span>
+										<span class="subtitle">Ayer a las 7:15 am</span>
+									</div>
+								</a>
+
+								<a class="dropdown-item" href="javascript:void(0);">
+									<div class="icon">
+										<i class="fas fa-money-check"></i>
+									</div>
+
+									<div class="content">
+										<span class="title">Pago aprobado</span>
+										<span class="subtitle">Ayer a las 11:29 am</span>
+									</div>
+								</a>
+							</div>
+						</div>
+
+						<div class="dropdown">
+							<button type="button" class="button is-icon dropdown-toggle">
+								<i class="far fa-comment-alt"></i>
+								<span class="label is-floating">6</span>
+							</button>
+
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="javascript:void(0);">
+									<div class="icon">
+										<img src="/assets/images/avatar.jpg">
+									</div>
+
+									<div class="content">
+										<span class="title">Nuevo mensaje de Víctor</span>
+										<span class="subtitle">Hoy a las 10:27 am</span>
+									</div>
+								</a>
+
+								<a class="dropdown-item" href="javascript:void(0);">
+									<div class="icon">
+										<i class="fas fa-file-alt"></i>
+									</div>
+
+									<div class="content">
+										<span class="title">Tienes nuevas facturas</span>
+										<span class="subtitle">Ayer a las 7:15 am</span>
+									</div>
+								</a>
+
+								<a class="dropdown-item" href="javascript:void(0);">
+									<div class="icon">
+										<i class="fas fa-money-check"></i>
+									</div>
+
+									<div class="content">
+										<span class="title">Pago aprobado</span>
+										<span class="subtitle">Ayer a las 11:29 am</span>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="dropdown">
+						<button type="button" class="button is-icon menu dropdown-toggle">
+							<i class="fas fa-ellipsis-v"></i>
+						</button>
+
+						<div class="dropdown-menu">
+							<div class="tabs">
+								<button type="button" class="button is-icon tab-item is-active" data-tab="notifications">
+									<i class="far fa-bell"></i>
+									<span class="label is-floating">4</span>
+								</button>
+
+								<button type="button" class="button is-icon tab-item" data-tab="messages">
+									<i class="far fa-comment-alt"></i>
+									<span class="label is-floating">6</span>
+								</button>
+							</div>
+
+							<div class="tab-content">
+								<div class="tab-pane is-active" id="notifications">
+									<a class="dropdown-item" href="javascript:void(0);">
+										<div class="icon">
+											<img src="/assets/images/avatar.jpg">
+										</div>
+
+										<div class="content">
+											<span class="title">Nuevo mensaje de Víctor</span>
+											<span class="subtitle">Hoy a las 10:27 am</span>
+										</div>
+									</a>
+
+									<a class="dropdown-item" href="javascript:void(0);">
+										<div class="icon">
+											<i class="fas fa-file-alt"></i>
+										</div>
+
+										<div class="content">
+											<span class="title">Tienes nuevas facturas</span>
+											<span class="subtitle">Ayer a las 7:15 am</span>
+										</div>
+									</a>
+
+									<a class="dropdown-item" href="javascript:void(0);">
+										<div class="icon">
+											<i class="fas fa-money-check"></i>
+										</div>
+
+										<div class="content">
+											<span class="title">Pago aprobado</span>
+											<span class="subtitle">Ayer a las 11:29 am</span>
+										</div>
+									</a>
+								</div>
+
+								<div class="tab-pane" id="messages">
+									<a class="dropdown-item" href="javascript:void(0);">
+										<div class="icon">
+											<img src="/assets/images/avatar.jpg">
+										</div>
+
+										<div class="content">
+											<span class="title">Nuevo mensaje de Víctor</span>
+											<span class="subtitle">Hoy a las 10:27 am</span>
+										</div>
+									</a>
+
+									<a class="dropdown-item" href="javascript:void(0);">
+										<div class="icon">
+											<i class="fas fa-file-alt"></i>
+										</div>
+
+										<div class="content">
+											<span class="title">Tienes nuevas facturas</span>
+											<span class="subtitle">Ayer a las 7:15 am</span>
+										</div>
+									</a>
+
+									<a class="dropdown-item" href="javascript:void(0);">
+										<div class="icon">
+											<i class="fas fa-money-check"></i>
+										</div>
+
+										<div class="content">
+											<span class="title">Pago aprobado</span>
+											<span class="subtitle">Ayer a las 11:29 am</span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<aside class="sidebar">
+			<button type="button" id="close-sidebar" class="button is-icon is-transparent">
+				<i class="fas fa-chevron-left"></i>
+<!--
+				<i class="fas fa-times"></i>
+-->
+			</button>
+
+			<div class="sidebar-brand">
+				<img src="/assets/images/logo-white.svg">
+
+				<span class="title">
+					customer
+					<br>
+					support
+				</span>
+			</div>
+
+			<nav class="sidenav">
+				<div class="heading">Dashboard</div>
+				<a href="/" class="sidenav-item is-active">
+					<i class="sidenav-item-icon fas fa-home"></i>
+					<div class="sidenav-item-content">Dashboard</div>
+				</a>
+
+				<a href="/facturas/" class="sidenav-item">
+					<i class="sidenav-item-icon fas fa-file-alt"></i>
+					<div class="sidenav-item-content">Facturas</div>
+					<span class="label">22</span>
+				</a>
+
+				<div class="sidenav-collapse-item">
+					<div class="sidenav-collapse-item-header">
+						<i class="sidenav-item-icon fas fa-money-check"></i>
+						<div class="sidenav-item-content">Pagos</div>
+						<i class="fas fa-chevron-right"></i>
+					</div>
+
+					<div class="sidenav-collapse-item-body">
+						<a href="/pagos/mis-pagos/" class="sidenav-item">
+							<i class="sidenav-item-icon fas fa-certificate"></i>
+							<div class="sidenav-item-content">Mis pagos</div>
+						</a>
+
+						<a href="/pagos/reportar-pagos/" class="sidenav-item">
+							<i class="sidenav-item-icon fas fa-certificate"></i>
+							<div class="sidenav-item-content">Reportar pagos</div>
+						</a>
+					</div>
+				</div>
+
+				<div class="sidenav-collapse-item">
+					<div class="sidenav-collapse-item-header">
+						<i class="sidenav-item-icon fas fa-cog"></i>
+						<div class="sidenav-item-content">Servicios</div>
+						<i class="fas fa-chevron-right"></i>
+					</div>
+
+					<div class="sidenav-collapse-item-body">
+						<a href="/servicios/" class="sidenav-item">
+							<i class="sidenav-item-icon fas fa-certificate"></i>
+							<div class="sidenav-item-content">Solicitar Nuevo</div>
+						</a>
+
+						<a href="/pagos/reportar-pagos/" class="sidenav-item">
+							<i class="sidenav-item-icon fas fa-certificate"></i>
+							<div class="sidenav-item-content">Plan 20Mb-r</div>
+						</a>
+
+						<a href="/pagos/reportar-pagos/" class="sidenav-item">
+							<i class="sidenav-item-icon fas fa-certificate"></i>
+							<div class="sidenav-item-content">Plan 50Mb-r</div>
+						</a>
+
+						<a href="/pagos/reportar-pagos/" class="sidenav-item">
+							<i class="sidenav-item-icon fas fa-certificate"></i>
+							<div class="sidenav-item-content">Plan 100Mb-e</div>
+						</a>
+					</div>
+				</div>
+
+				<div class="heading">Soporte y Ayuda</div>
+				<div class="sidenav-collapse-item">
+					<div class="sidenav-collapse-item-header">
+						<i class="sidenav-item-icon fas fa-exclamation-circle"></i>
+						<div class="sidenav-item-content">Reportes</div>
+						<i class="fas fa-chevron-right"></i>
+					</div>
+
+					<div class="sidenav-collapse-item-body">
+						<a href="/reportes/mis-reportes/" class="sidenav-item">
+							<i class="sidenav-item-icon fas fa-certificate"></i>
+							<div class="sidenav-item-content">Mis Reportes</div>
+							<span class="label is-info">5</span>
+						</a>
+
+						<a href="/reportes/crear-reportes/" class="sidenav-item">
+							<i class="sidenav-item-icon fas fa-certificate"></i>
+							<div class="sidenav-item-content">Crear Reportes</div>
+						</a>
+					</div>
+				</div>
+
+				<div class="sidenav-collapse-item">
+					<div class="sidenav-collapse-item-header">
+						<i class="sidenav-item-icon fas fa-wrench"></i>
+						<div class="sidenav-item-content">Asistencia Técnica</div>
+						<i class="fas fa-chevron-right"></i>
+					</div>
+
+					<div class="sidenav-collapse-item-body">
+						<a href="/asistencia-tecnica/asistencia-guiada/" class="sidenav-item">
+							<i class="sidenav-item-icon fas fa-certificate"></i>
+							<div class="sidenav-item-content">Asistencia Guiada</div>
+						</a>
+
+						<a href="/asistencia-tecnica/asistencia-personalizada/" class="sidenav-item">
+							<i class="sidenav-item-icon fas fa-certificate"></i>
+							<div class="sidenav-item-content">Asistencia Personalizada</div>
+						</a>
+					</div>
+				</div>
+			</nav>
+		</aside>
+
+		<main class="content">
+			<div class="container">
+				<div class="row is-margin-bottom-3">
+					<h1 class="display-1 is-margin-bottom-0">Bienvenida Isabel</h1>
+					<nav class="breadcrumb">
+						<ul>
+							<li><a href="#">Inicio</a></li>
+							<li><a href="#">Cix Dashboard</a></li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="columns columns-3 columns-lg-3 columns-md-1">
+					<div class="column-2 column-lg-2 column-md-1">
+						<section class="info box is-grouped is-vertical">
+							<div class="box">
+								<div class="d-flex j-between is-margin-bottom-1">
+									<div class="start">
+										<h1 class="title text-uppercase">deuda total</h1>
+										<p class="subtitle">Facturas por pagar</p>
+									</div>
+
+									<div class="end">
+										<i class="fas fa-dollar-sign fa-2x is-color-orange"></i>
+									</div>
+								</div>
+
+								<h2 class="is-margin-bottom-1">$5,900.00</h2>
+
+								<p class="is-font-xs">
+									<a href="/facturas/">22 <span class="is-color-grey-light">Facturas</span></a>
+								</p>
+							</div>
+
+							<div class="box">
+								<div class="d-flex j-between is-margin-bottom-1">
+									<div class="start">
+										<h1 class="title text-uppercase">pagos por aprobar</h1>
+										<p class="subtitle">Procesando facturas</p>
+									</div>
+
+									<div class="end">
+										<i class="fas fa-coins fa-2x is-color-orange"></i>
+									</div>
+								</div>
+
+								<h2 class="is-margin-bottom-1">6</h2>
+
+								<a href="/pagos/mis-pagos/" class="is-font-xs">6/22</a>
+							</div>
+
+							<div class="box">
+								<div class="d-flex j-between is-margin-bottom-1">
+									<div class="start">
+										<h1 class="title text-uppercase">deuda total</h1>
+										<p class="subtitle">Facturas por pagar</p>
+									</div>
+
+									<div class="end">
+										<i class="fas fa-exclamation-circle fa-2x is-color-orange"></i>
+									</div>
+								</div>
+
+								<h2 class="is-margin-bottom-1">7</h2>
+
+								<a href="/reportes/mis-reportes/" class="is-font-xs">Ver mis reportes</a>
+							</div>
+						</section>
+
+						<section class="box">
+							<div class="columns columns-1">
+								<div class="row">
+									<div class="columns">
+										<div class="row j-start">
+											<h1 class="title text-uppercase">Consumo de internet</h1>
+											<p class="subtitle">Consulta el consumo de internet hasta ahora</p>
+										</div>
+
+										<div class="row j-end j-md-normal">
+											<select class="select">
+												<option value="0">Internet r-50Mbps</option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="chart-container">
+										<canvas id="myChart"></canvas>
+									</div>
+								</div>
+
+								<div class="row">
+									<form class="form">
+										<div class="columns">
+											<div class="field">
+												<label>Rango</label>
+												<select class="select">
+													<option value="0">Ultima semana</option>
+												</select>
+											</div>
+
+											<div class="field">
+												<label>Desde</label>
+												<div class="has-icon">
+													<input type="text" placeholder="16/06/2021">
+													<i class="fas fa-calendar-alt is-right"></i>
+												</div>
+											</div>
+
+											<div class="field">
+												<label>Hasta</label>
+												<div class="has-icon">
+													<input type="text" placeholder="16/06/2021">
+													<i class="fas fa-calendar-alt is-right"></i>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+
+								<div class="row has-centered j-sm-normal">
+									<button type="button" class="button is-fullwidth is-primary">
+										<i class="fas fa-chart-bar"></i>
+										Generar Gráfica
+									</button>
+								</div>
+							</div>
+						</section>
+					</div>
+
+					<div class="column-1">
+						<div class="panel">
+							<div class="panel-head">
+								<div class="start">
+									<h1 class="title text-uppercase">historial de pagos</h1>
+									<p class="subtitle">Pagos completados</p>
+								</div>
+
+								<div class="end">
+									<button type="button" class="button is-icon is-transparent">
+										<i class="fas fa-history is-color-orange"></i>
+									</button>
+								</div>
+							</div>
+
+							<div class="panel-item">
+								<div class="start">
+									<div class="icon">
+										<i class="fas fa-project-diagram is-color-orange"></i>
+									</div>
+
+									<div class="title">
+										<span>Internet r-20Mbps</span>
+										<p class="subtitle">Pago de mensualidad</p>
+									</div>
+								</div>
+
+								<div class="end">
+									<h1 class="title">
+										$40,00
+										<i class="fas fa-long-arrow-alt-up is-color-green"></i>
+									</h1>
+									<p class="subtitle">15 junio 2021</p>
+								</div>
+							</div>
+
+							<div class="panel-item">
+								<div class="start">
+									<div class="icon">
+										<i class="fas fa-project-diagram is-color-orange"></i>
+									</div>
+
+									<div class="title">
+										<span>Internet r-20Mbps</span>
+										<p class="subtitle">Pago de mensualidad</p>
+									</div>
+								</div>
+
+								<div class="end">
+									<h1 class="title">
+										$40,00
+										<i class="fas fa-long-arrow-alt-up is-color-green"></i>
+									</h1>
+									<p class="subtitle">15 junio 2021</p>
+								</div>
+							</div>
+
+							<div class="panel-item">
+								<div class="start">
+									<div class="icon">
+										<i class="fas fa-project-diagram is-color-orange"></i>
+									</div>
+
+									<div class="title">
+										<span>Internet r-20Mbps</span>
+										<p class="subtitle">Pago de mensualidad</p>
+									</div>
+								</div>
+
+								<div class="end">
+									<h1 class="title">
+										$40,00
+										<i class="fas fa-long-arrow-alt-up is-color-green"></i>
+									</h1>
+									<p class="subtitle">15 junio 2021</p>
+								</div>
+							</div>
+
+							<div class="panel-item">
+								<div class="start">
+									<div class="icon">
+										<i class="fas fa-project-diagram is-color-orange"></i>
+									</div>
+
+									<div class="title">
+										<span>Internet r-20Mbps</span>
+										<p class="subtitle">Pago de mensualidad</p>
+									</div>
+								</div>
+
+								<div class="end">
+									<h1 class="title">
+										$40,00
+										<i class="fas fa-long-arrow-alt-up is-color-green"></i>
+									</h1>
+									<p class="subtitle">15 junio 2021</p>
+								</div>
+							</div>
+
+							<div class="panel-foot">
+								<div class="d-flex j-center a-center">
+									<a href="javascript:void(0);" class="is-font-xs">Ver historial completo</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="column-3 column-lg-3 column-md-1">
+						<section class="box map">
+							<div class="row">
+								<div class="start">
+									<h1 class="title text-uppercase">tu ubicación</h1>
+									<p class="subtitle">Ubicación y calidad del radio enlace</p>
+								</div>
+
+								<div class="end">
+									<div class="column">
+										<span class="is-font-xs">Calidad de la señal</span>
+										<span class="is-font-xs j-end">90%</span>
+
+										<progress class="progress is-small" value="90" max="100">90%</progress>
+									</div>
+
+									<div class="column">
+										<button type="button" class="button is-icon is-transparent">
+											<i class="is-color-orange fas fa-sync"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="is-margin-bottom-2"></div>
+
+							<div class="row">
+								<div id="mapid"></div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer class="footer">
+			<p>Copyright © 2021 <a href="https://cixtelecom.net">CIX Telecom</a>
+
+			<div class="social">
+				<a href="javascript:void(0);" class="button is-icon">
+					<i class="fab fa-facebook-f"></i>
+				</a>
+				<a href="javascript:void(0);" class="button is-icon">
+					<i class="fab fa-instagram"></i>
+				</a>
+				<a href="javascript:void(0);" class="button is-icon">
+					<i class="fab fa-twitter"></i>
+				</a>
+			</div>
+		</footer>
+    </div>
+
+    <script type="text/javascript" src="/assets/js/ccs.js"></script>
+    <script type="text/javascript" src="/assets/js/navbar.js"></script>
+    <script type="text/javascript" src="/assets/js/sidebar.js"></script>
+    <script type="text/javascript" src="/assets/js/chart.js"></script>
+    <script type="text/javascript" src="/assets/js/leaflet.js"></script>
+    <script type="text/javascript">
+		const labels = [
+			'Ene', 'Feb', 'Mzo',
+			'May', 'Jun', 'Jul',
+			'Ago', 'Sep', 'Oct',
+			'Nov', 'Dic'
+		];
+		const data = {
+			labels: labels,
+			datasets: [
+				{
+					label: 'Descarga Mbps',
+					// data: [0,1,2,3,4,5,6,7,8,9,10,11,12],
+					data: [4, 5, 10, 12, 25, 12, 23, 18, 25, 10, 35],
+					backgroundColor: [
+						'rgba(230, 60, 31, 0.4)',
+						'rgba(230, 60, 31, 0.4)',
+						'rgba(230, 60, 31, 0.4)',
+						'rgba(230, 60, 31, 0.4)',
+						'rgba(230, 60, 31, 0.4)',
+						'rgba(230, 60, 31, 0.4)',
+						'rgba(230, 60, 31, 0.4)',
+						'rgba(230, 60, 31, 0.4)',
+						'rgba(230, 60, 31, 0.4)',
+						'rgba(230, 60, 31, 0.4)',
+						'rgba(230, 60, 31, 0.4)',
+					],
+					borderColor: []
+				},
+				{
+					label: 'Subida Mbps',
+					data: [5, 3, 7, 9, 0.6, 2, 0.3, 15, 0.8, 1, 9],
+					backgroundColor: [
+						'rgba(230, 60, 31, 1)',
+						'rgba(230, 60, 31, 1)',
+						'rgba(230, 60, 31, 1)',
+						'rgba(230, 60, 31, 1)',
+						'rgba(230, 60, 31, 1)',
+						'rgba(230, 60, 31, 1)',
+						'rgba(230, 60, 31, 1)',
+						'rgba(230, 60, 31, 1)',
+						'rgba(230, 60, 31, 1)',
+						'rgba(230, 60, 31, 1)',
+						'rgba(230, 60, 31, 1)',
+						'rgba(230, 60, 31, 1)',
+					],
+					borderColor: []
+				}
+			]
+		};
+
+		const config = {
+			type: 'bar',
+			data: data,
+			options: {
+				scales: {
+					y: {
+						beginAtZero: true
+					}
+				}
+			},
+		};
+
+		let myChart = new Chart(
+			document.getElementById('myChart'),
+			config
+		);
+	</script>
+    <script type="text/javascript">
+		let mymap = L.map('mapid').setView([51.505, -0.09], 13);
+    </script>
+</body>
+</html>

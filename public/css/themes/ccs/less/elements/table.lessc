@@ -1,0 +1,128 @@
+// @package   CCS
+// @filename  table.less
+// @version   1.0
+// @autor     Díaz Urbaneja Víctor Diex Gamar <diazvictor@tutamail.com>
+// @date      09.07.2021 23:29:26 -04
+
+// Para compilar el archivo desde la consola:
+// lessc table.less > table.css
+
+// Variables
+@bg-tr-odd: #F6F8FF;
+@text-primary: #FDA942;
+@text-danger: #E63C1F;
+@text-success: #1CB15B;
+@text-info: #01B8FF;
+@text-dark: #25233C;
+
+.responsive-table {
+	width: 100%;
+	overflow-x: auto;
+}
+
+.table {
+	width: 100%;
+	border-spacing: 0;
+	border-collapse: collapse;
+
+	td, th {
+		text-align: left
+	}
+
+	th {
+		background-color: @bg-primary;
+		color: @white;
+		padding: 8px 10px;
+		font-size: 12px;
+		border: 1px solid @bg-light;
+	}
+
+	td {
+		color: @blue-dark;
+		padding: 8px 10px;
+		font-size: 14px;
+		border: 1px solid @bg-light;
+
+		@media screen and (max-width: @breakpoints[large]) {
+			& {
+				text-align: center;
+
+				.icon {
+					display: block;
+					margin: 0 auto 5px auto;
+				}
+			}
+		}
+
+		&.icon {
+			text-align: center;
+
+			i {
+				font-size: 14px;
+				color: @grey;
+			}
+		}
+
+		i.icon {
+			// font-size: 10px;
+			padding: 2px;
+			border-radius: 50%;
+		}
+
+		&.is {
+			&-primary,
+			&-info,
+			&-success,
+			&-danger,
+			&-dark {
+				font-size: 12px;
+				font-weight: 700;
+			}
+
+			&-primary {
+				color: @text-primary;
+
+				// i.icon {
+					// border: 1px solid @text-primary;
+				// }
+			}
+
+			&-info {
+				color: @text-info;
+
+				// i.icon {
+					// border: 1px solid @text-info;
+				// }
+			}
+
+			&-danger {
+				color: @text-danger;
+
+				// i.icon {
+					// border: 1px solid @text-danger;
+				// }
+			}
+
+			&-success {
+				color: @text-success;
+
+				// i.icon {
+					// border: 1px solid @text-success;
+				// }
+			}
+
+			&-dark {
+				color: @text-dark;
+			}
+		}
+
+	}
+
+	tr:nth-child(odd) {
+		background-color: @bg-tr-odd;
+	}
+}
+
+.no-border {
+	border: none !important;
+}

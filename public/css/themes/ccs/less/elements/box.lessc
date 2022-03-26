@@ -1,0 +1,90 @@
+// @package   CCS
+// @filename  box.less
+// @version   1.0
+// @autor     Díaz Urbaneja Víctor Eduardo Diex <diazvictor@tutamail.com>
+// @date      04.07.2021 02:19:07 -04
+
+// Para compilar el archivo desde la consola:
+// lessc box.less > box.css
+
+@border-radius-width: 4px;
+
+.box {
+	padding: 1.875rem;
+	background-color: @white;
+	border: 1px solid darken(@white-2, 5%);
+	border-radius: @border-radius-width;
+
+	&:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+	&.is-grouped {
+		background-color: transparent;
+		border: none;
+		border-radius: 0;
+		padding: 0;
+
+		.box {
+			margin-bottom: 0;
+			border-radius: 0;
+			border-top: none;
+
+			&:first-child {
+				border-top-left-radius: @border-radius-width;
+				border-top-right-radius: @border-radius-width;
+				border-top: 1px solid darken(@white-2, 5%);
+			}
+
+			&:last-child {
+				border-bottom-left-radius: @border-radius-width;
+				border-bottom-right-radius: @border-radius-width;
+			}
+		}
+
+		&.is-vertical {
+			display: grid;
+			grid-auto-flow: column;
+
+			@media screen and (max-width: @breakpoints[medium]) {
+				& {
+					grid-gap: 10px;
+					grid-auto-flow: row;
+
+					.box {
+						border-radius: @border-radius-width !important;
+						border: 1px solid darken(@white-2, 5%) !important;
+					}
+				}
+			}
+
+			.box {
+				border-radius: 0;
+				border-top: 1px solid darken(@white-2, 5%);
+
+				&:not(:last-child) {
+					border-right: none;
+				}
+
+				&:first-child {
+					border-top-left-radius: @border-radius-width;
+					border-bottom-left-radius: @border-radius-width;
+				}
+
+				&:last-child {
+					border-top-right-radius: @border-radius-width;
+					border-bottom-right-radius: @border-radius-width;
+				}
+			}
+		}
+	}
+}
+
+.info-box {
+	background: @bg-light;
+	font-size: 14px;
+	font-weight: 400;
+	padding: 0.57rem;
+	border-radius: 4px;
+	border: 1px solid @bg-light
+}

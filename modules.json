@@ -1,0 +1,4 @@
+{
+  "private": [ "/dash", "/users", "bills", "payments", "services", "reports", "help" ],
+  "public": [ "/logout", "/start" ]
+}

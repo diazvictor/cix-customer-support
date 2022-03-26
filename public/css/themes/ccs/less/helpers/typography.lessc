@@ -1,0 +1,64 @@
+// @package   CCS
+// @filename  typography.less
+// @version   1.0
+// @autor     Díaz Urbaneja Víctor Eduardo Diex <diazvictor@tutamail.com>
+// @date      05.07.2021 00:10:32 -04
+
+// Para compilar el archivo desde la consola:
+// lessc typography.less > typography.css
+
+// Variables
+@font-size-title: 15px;
+@font-size-subtitle: 13px;
+@color-text-subtitle: lighten(@grey, 30%);
+
+.title {
+	font-size: @font-size-title;
+	margin-bottom: 0;
+
+	& + .subtitle {
+		margin-top: 5px;
+	}
+}
+
+.subtitle {
+	font-size: @font-size-subtitle;
+	color: @color-text-subtitle
+}
+
+.display {
+	&-1 {
+		font-size: 32px;
+
+	}
+
+	@media screen and (max-width: @breakpoints[small]) {
+		&-1 {
+			font-size: 25.6px;
+		}
+	}
+}
+
+.text {
+	&-uppercase {
+		text-transform: uppercase;
+	}
+
+	&-truncate {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis
+	}
+
+	&-center {
+		text-align: center
+	}
+
+	&-left {
+		text-align: left
+	}
+
+	&-right {
+		text-align: right
+	}
+}

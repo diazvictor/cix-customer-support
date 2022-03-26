@@ -1,0 +1,34 @@
+// @package   CCS
+// @filename  color.less
+// @version   1.0
+// @autor     Díaz Urbaneja Víctor Eduardo Diex <diazvictor@tutamail.com>
+// @date      15.07.2021 21:00:05 -04
+
+// Para compilar el archivo desde la consola:
+// lessc color.less > color.css
+
+.is {
+	&-color-orange {
+		color: @orange
+	}
+
+	&-color-grey-light {
+		color: lighten(@grey, 30%)
+	}
+
+	&-color-green {
+		color: @green
+	}
+
+	&-color-info {
+		color: @text-info
+	}
+
+	&-color-success {
+		color: @text-success
+	}
+
+	&-color-danger {
+		color: @text-danger
+	}
+}

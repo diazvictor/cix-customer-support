@@ -1,0 +1,118 @@
+// @package   CCS
+// @filename  plan.less
+// @version   1.0
+// @autor     Díaz Urbaneja Víctor Eduardo Diex <diazvictor@tutamail.com>
+// @date      03.08.2021 01:14:47 -04
+
+// Para compilar el archivo desde la consola:
+// lessc plan.less > plan.css
+
+.select-plan {
+	grid-template-columns: repeat(3, 1fr);
+
+	@media screen and (max-width: @breakpoints[small]) {
+		& {
+			grid-template-columns: 1fr auto;			
+		}
+	}
+}
+
+.plan-item {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: 500px auto 1fr;
+
+	@media screen and (max-width: @breakpoints[medium]) {
+		& {
+			grid-template-columns: 1fr auto;
+		}
+	}
+
+	@media screen and (max-width: @breakpoints[medium]) {
+		& {
+			p.text-truncate {
+				width: 18rem
+			}
+		}
+	}
+
+	@media screen and (max-width: @breakpoints[small]) {
+		& {
+			p.text-truncate {
+				width: 10rem
+			}
+		}
+	}
+
+	.row:last-child {
+		justify-self: end;
+		align-self: center;
+
+		@media screen and (max-width: @breakpoints[medium]) {
+			& {
+				grid-column: span 2
+			}
+		}
+	}
+}
+
+.step-content {
+	> .step-pane {
+		display: none;
+
+		&.is-active {
+			display: grid;
+			grid-gap: 20px;
+			grid-template-columns: 1fr;
+		}
+	}
+}
+
+.data {
+	width: 50%;
+	margin: 0 auto;
+	padding: 20px;
+	border: 1px solid darken(@white-2, 5%);
+
+	@media screen and (max-width: @breakpoints[small]) {
+		& {
+			width: 100%;
+			margin: 0;
+		}
+	}
+
+	&-item {
+		padding: 20px 0px;
+		border-bottom: 1px solid darken(@white-2, 5%);
+
+		h2, p, label, input {
+			font-size: 14px;
+		}
+
+
+		h2, p {
+			color: @color-text-subtitle;
+		}
+
+		h2 + p {
+			margin-top: 5px;
+		}
+
+		p + p {
+			margin-top: 2px;
+		}
+
+		&:first-child {
+			padding-top: 0
+		}
+
+		&:last-child {
+			padding-bottom: 0;
+			border-bottom: none
+		}
+	}
+}
+
+#accept {
+	display: none;
+}

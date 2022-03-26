@@ -1,0 +1,49 @@
+// @package   CCS
+// @filename  helpers.less
+// @version   1.0
+// @autor     Díaz Urbaneja Víctor Eduardo Diex <diazvictor@tutamail.com>
+// @date      04.07.2021 02:07:36 -04
+
+// Para compilar el archivo desde la consola:
+// lessc helpers.less > helpers.css
+
+.d {
+	&-flex {
+		display: flex;
+	}
+
+	&-flow-column {
+		flex-flow: column
+	}
+}
+
+.j {
+	&-between {
+		justify-content: space-between
+	}
+
+	&-start {
+		justify-self: start
+	}
+
+	&-end {
+		justify-self: end
+	}
+
+	&-center {
+		justify-self: center;
+		justify-content: center
+	}
+}
+
+.a {
+	&-center {
+		align-items: center;
+		align-self: center;
+	}
+
+	&-end {
+		align-items: end;
+		align-self: end;
+	}
+}

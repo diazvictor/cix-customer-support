@@ -1,0 +1,27 @@
+// @package   CCS
+// @filename  vars.less
+// @version   1.0
+// @autor     Díaz Urbaneja Víctor Eduardo Diex <diazvictor@tutamail.com>
+// @date      04.07.2021 23:19:59 -04
+
+// Para compilar el archivo desde la consola:
+// lessc vars.less > vars.css
+
+// Colors
+@orange: #E63C1F;
+@grey: #4A4D51;
+@green: #1CB15B;
+@grey-light: lighten(@grey, 50%);
+@white: #FFFFFF;
+@white-2: #F0F0FF;
+@blue-dark: #25233C;
+@gradient: {
+	primary: #010032;
+	secondary: #160048;
+}
+
+// General
+@bg-light: @white-2;
+@bg-primary: @orange;
+@text-primary: @grey;
+@text-secondary: @white;

@@ -1,0 +1,165 @@
+// @package   CCS
+// @filename  button.less
+// @version   1.0
+// @autor     Díaz Urbaneja Víctor Diex Gamar <diazvictor@tutamail.com>
+// @date      04.07.2021 02:19:07 -04
+
+// Para compilar el archivo desde la consola:
+// lessc button.less > button.css
+
+.button {
+	background-color: @white;
+	padding: 0.75rem 1.25rem;
+	border: 1px solid #E5E5E5;
+	border-radius: 4px;
+	color: @grey;
+	font-weight: 500;
+	transition: color .15s ease-in-out,background-color .15s ease-in-out,
+	border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+	&.is-primary {
+		background-color: @bg-primary;
+		border-color: @bg-primary;
+		color: @text-secondary;
+
+		&:focus {
+			box-shadow: 0 0 0 0.2rem rgba(230, 60, 31, .5)
+		}
+
+		&:hover {
+			background: darken(@bg-primary, 5%);
+			border-color:darken(@bg-primary, 5%);
+		}
+
+		&[disabled] {
+			opacity: 0.5;
+
+			&:hover {
+				cursor: default;
+				background: @bg-primary;
+				border-color: @bg-primary;
+			}
+		}
+	}
+
+	&.is-secondary {
+		background-color: @bg-light;
+		border-color: @bg-light;
+		color: rgba(0, 0, 0, .4);
+
+		&:focus {
+			box-shadow: 0 0 0 0.2rem rgba(215, 215, 255, .4)
+		}
+
+		&:hover {
+			background: darken(@bg-light, 5%);
+			border-color:darken(@bg-light, 5%);
+		}
+
+		&[disabled] {
+			opacity: 0.5;
+
+			&:hover {
+				cursor: default;
+				background: @bg-light;
+				border-color: @bg-light;
+			}
+		}
+	}
+
+	&.is-transparent {
+		background: transparent;
+		border: none
+	}
+
+	&.is-fullwidth {
+		width: 100%
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&.is-icon {
+		padding: 0;
+		border: none;
+		border-radius: 0;
+		position: relative;
+
+		i {
+			font-size: 1.25rem;
+		}
+
+		.label {
+			top: -3px;
+			left: 10px;
+			position: absolute;
+		}
+	}
+
+	&.is-small {
+		font-size: 14px;
+		padding: 0.57rem 1rem;
+	}
+}
+
+.buttons {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+	grid-gap: 20px;
+
+	&.is-grouped {
+		display: flex;
+
+		.button {
+			&:not(:first-child):not(:last-child){
+				border-radius: 0;
+			}
+
+			&:first-child {
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0
+			}
+
+			&:last-child {
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0
+			}
+		}
+	}
+}
+
+.pagination {
+	display: flex;
+
+	.button {
+		font-size: 14px;
+		padding: 0.5rem 0.8rem;
+
+		&:not(:first-child):not(:last-child) {
+			border-radius: 0;
+			border-right: none;
+		}
+
+		&:first-child {
+			border-right: none;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+
+		&:last-child {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+
+		&.is-active {
+			background-color: @bg-primary;
+			border-color: @bg-primary;
+			color: @text-secondary;
+		}
+	}
+
+	&.is-centered {
+		justify-content: center;
+	}
+}

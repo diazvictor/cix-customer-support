@@ -1,0 +1,18 @@
+// @package   CCS
+// @filename  size.less
+// @version   1.0
+// @autor     Díaz Urbaneja Víctor Eduardo Diex <diazvictor@tutamail.com>
+// @date      15.07.2021 20:59:49 -04
+
+// Para compilar el archivo desde la consola:
+// lessc size.less > size.css
+
+.is-font {
+	&-xs {
+		font-size: 13px
+	}
+
+	&-medium {
+		font-size: 20px
+	}
+}

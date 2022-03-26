@@ -1,0 +1,161 @@
+// @package   CCS
+// @filename  navbar.less
+// @version   1.0
+// @autor     Díaz Urbaneja Víctor Diex Gamar <diazvictor@tutamail.com>
+// @date      04.07.2021 02:19:07 -04
+
+// Para compilar el archivo desde la consola:
+// lessc navbar.less > navbar.css
+
+// Variables
+
+.navbar {
+	background-color: @white;
+	padding: 1rem 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@media screen and (max-width: 460px) {
+		& {
+			position: fixed;
+			width: 100%;
+			transition: top 0.3s;
+			z-index: 1999;
+		}
+	}
+
+	.dropdown {
+		z-index: 6;
+	}
+
+	.menu {
+		display: none;
+		position: relative;
+		padding-right: 1.25rem;
+	}
+
+	&-start {
+		display: flex;
+	}
+
+	#toggle-sidebar {
+		padding-left: 0.75rem;
+
+		@media screen and (max-width: @breakpoints[small]) {
+			& {
+				padding-left: 1.25rem;
+			}
+		}
+
+		i {
+			font-size: 16px;
+			font-style: normal;
+
+			@media screen and (max-width: @breakpoints[small]) {
+				& {
+					font-size: 20px;
+				}
+			}
+
+			&::before {
+				font-family: "Font Awesome 6 Free";
+				font-weight: 900;
+				content: "\f053";
+
+				@media screen and (max-width: @breakpoints[large]) {
+					& {
+						content: "\f054";
+					}
+				}
+
+				@media screen and (max-width: @breakpoints[small]) {
+					& {
+						content: "\f0c9";
+					}
+				}
+			}
+		}
+
+		&.is-active {
+			i {
+				&::before {
+					content: "\f054";
+
+					@media screen and (max-width: @breakpoints[small]) {
+						& {
+							content: "\f0c9";
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&-logo {
+		display: none;
+
+		@media screen and (max-width: 458px) {
+			& {
+				display: flex;
+				position: relative;
+				top: -7px;
+				align-items: center;
+			}
+		}
+
+		img {
+			width: 32px;
+			height: 32px;
+			margin-right: 5px;
+		}
+
+		span.title {
+			text-transform: capitalize;
+			font-weight: 600;
+		}
+
+		span:not(.title) {
+			color: lighten(@grey, 30%);
+			position: absolute;
+			bottom: -17px;
+			font-size: 12px;
+			text-align: center;
+			left: 0;
+			right: 0;
+		}
+	}
+
+	.searchbar {
+		@media screen and (max-width: 458px) {
+			& {
+				display: none
+			}
+		}
+	}
+
+	.buttons {
+		display: grid;
+		grid-gap: 20px;
+		grid-auto-flow: column;
+		grid-template-columns: auto;
+	}
+
+	&-end {
+		padding-right: 1.25rem;
+	}
+
+	@media screen and (max-width: 458px) {
+		&-end {
+			padding-right: 0;
+
+			.buttons {
+				display: none
+			}
+
+			.menu {
+				display: block
+			}
+		}
+	}
+}

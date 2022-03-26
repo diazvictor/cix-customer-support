@@ -1,0 +1,182 @@
+			<div class="container">
+				<div class="row is-margin-bottom-3">
+					<h1 class="display-1 is-margin-bottom-0">Reportar pagos</h1>
+					<nav class="breadcrumb">
+						<ul>
+							<li><a href="#">Inicio</a></li>
+							<li><a href="#">Reportar pagos</a></li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="box is-grouped">
+					<section class="box">
+						<div class="columns columns-1">
+							<div class="row">
+								<h1 class="title text-uppercase">¿Ya realizaste tu pago?</h1>
+								<p class="subtitle">Si ya has realizado tu pago puedes notificarnos llenando los siguientes
+								formularios y lo validaremos cuanto antes</p>
+							</div>
+							<div class="row">
+								<div class="steps is-medium has-content-centered">
+									<div class="steps-segment is-active">
+										<div class="steps-marker">1</div>
+										<div class="steps-content">
+											Servicio
+										</div>
+									</div>
+									<div class="steps-segment">
+										<div class="steps-marker">2</div>
+										<div class="steps-content">
+											Banco
+										</div>
+									</div>
+									<div class="steps-segment">
+										<div class="steps-marker">3</div>
+										<div class="steps-content">
+											Completar
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section class="box">
+						<div class="columns columns-1">
+							<div class="step-content">
+								<div class="step-pane is-active" id="step-1">
+									<div class="row">
+										<h1 class="title">Datos del servicio</h1>
+										<p class="subtitle">Presione los campos y luego continunar</p>
+									</div>
+
+									<div class="row">
+										<div class="columns columns-2 columns-sm-1">
+											<div class="row">
+												<label for="services">Meses cancelados</label>
+												<select class="select">
+													<option value="0">Lista de meses</option>
+												</select>
+											</div>
+
+											<div class="row">
+												<label for="services">Servicios</label>
+												<select class="select">
+													<option value="0">Lista de servicios</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="step-pane" id="step-2">
+									<div class="row">
+										<h1 class="title">Dirección</h1>
+										<p class="subtitle">Complete los campos y presione continuar</p>
+									</div>
+
+									<div class="row">
+										<div class="tabs">
+											<button type="button" class="tab-item is-active" data-tab="bank">
+												<i class="fas fa-landmark"></i>
+												Transferencia bancaria
+											</button>
+
+											<button type="button" class="tab-item" data-tab="paypal">
+												<i class="fab fa-paypal"></i>
+												Paypal
+											</button>
+										</div>
+
+										<div class="tab-content">
+											<div class="tab-pane is-active" id="bank">
+												<form class="form">
+													<div class="columns columns-2 columns-md-1">
+														<div class="field">
+															<label>Banco</label>
+															<select>
+																<option>Seleccione un banco</option>
+															</select>
+														</div>
+
+														<div class="field">
+															<label>Código de referencia</label>
+															<input type="text" placeholder="54629646">
+														</div>
+
+														<div class="field">
+															<label>Monto transferido</label>
+															<input type="text" placeholder="0,00">
+														</div>
+
+														<div class="field">
+															<label>Fecha de la transacción</label>
+															<div class="has-icon">
+																<input type="text" placeholder="11/06/2021">
+																<i class="fas fa-calendar-alt is-right"></i>
+															</div>
+														</div>
+													</div>
+												</form>
+											</div>
+
+											<div class="tab-pane" id="paypal">
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="step-pane" id="step-3">
+									<div class="row">
+										<h1 class="title">Complete el reporte</h1>
+										<p class="subtitle">Complete el reporte y presione finalizar</p>
+									</div>
+
+									<div class="row is-margin-top-3 is-margin-bottom-3">
+										<form class="form">
+											<div class="columns columns-1">
+												<div class="field">
+													<label>Observación</label>
+													<textarea placeholder="Opcionalmente ingrese alguna observación"></textarea>
+												</div>
+
+												<div class="columns columns-2 columns-md-1">
+													<div class="field">
+														<label for="file">Adjuntar Archivo</label>
+														<div class="file">
+															<input type="text" value="captura.png" disabled>
+															<label>
+																<i class="fas fa-file-medical"></i>
+																<span>Adjuntar</span>
+																<input type="file">
+															</label>
+														</div>
+													</div>
+
+													<div class="field">
+														<div class="d-flex j-between">
+															<label for="switch">Notificarme al correo cuando se apruebe el pago</label>
+															<label class="switch">
+																<input type="checkbox" id="switch">
+																<span class="slider round"></span>
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+
+							<div class="row d-flex j-between">
+								<button type="button" id="previous" class="button is-primary" disabled>Atrás</button>
+
+								<button type="button" id="next" class="button is-primary">Siguiente</button>
+								<button type="button" id="accept" class="button is-primary">Finalizar</button>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>

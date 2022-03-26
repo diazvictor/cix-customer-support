@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+    {(common/meta.html)}
+    {% if ( type(css) == 'table' ) then %}
+    {% for _, v in ipairs(css) do %}
+    <link rel="stylesheet"   href="{*v*}">
+    {% end %}
+    {% else %}
+    <link rel="stylesheet"   href="{*css*}">
+    {% end %}
+</head>
+<body>
+	<div class="wrapper">
+		<div class="content">
+
+<!--
+			<div class="glow-stars">
+				<img src="/img/login/glow-stars.png">
+			</div>
+-->
+
+
+			<div class="astronaut">
+				<img src="/img/404/astronaut.svg">
+			</div>
+
+			<div class="planet">
+				<img src="/img/404/rocket-planet.png">
+			</div>
+
+			<div class="oops">
+				<img src="/img/404/oops.svg">
+			</div>
+
+			<div class="content">
+				El documento que ha solicitado no existe o no funciona
+			</div>
+		</div>
+        {(common/footer.html)}
+	</div>
+    {% if ( type(js) == 'table' ) then %}
+    {% for _, v in ipairs(js) do %}
+    <script type="text/javascript" src="{*v*}"></script>
+    {% end %}
+    {% end %}
+</body>
+</html>

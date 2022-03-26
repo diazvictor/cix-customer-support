@@ -1,0 +1,102 @@
+// @package   CCS
+// @filename  columns.less
+// @version   1.0
+// @autor     Díaz Urbaneja Víctor Eduardo Diex <diazvictor@tutamail.com>
+// @date      09.06.2021 19:45:20 -04
+
+// Para compilar el archivo desde la consola:
+// lessc columns.less > columns.css
+
+// Variables
+@columns: 12;
+@columns-size: 12fr;
+@gap: 20px;
+@breakpoints: {
+	xsmall: 320px;
+	small: 425px;
+	medium: 768px;
+	large: 1024px;
+	xlarge: 1440px;
+}
+
+.generate-columns(@breakpoint) {
+	each(range(@columns), {
+		&.columns-@{breakpoint}-@{index} {
+			grid-template-columns: repeat(@index, 1fr);
+		}
+	});
+
+	each(range(@columns), {
+		& .column-@{breakpoint}-@{index} {
+			grid-column: span @value;
+		}
+	});
+}
+
+.container {
+	margin: 0 auto;
+	width: 90%;
+	max-width: 1200px;
+}
+
+.columns {
+	display: grid;
+	grid-gap: @gap;
+	grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+
+	&:not(:last-child) {
+		margin-bottom: @gap;
+	}
+
+	each(range(@columns), {
+		&.columns-@{index} {
+			grid-template-columns: repeat(@index, 1fr);
+		}
+	});
+
+	each(range(@columns), {
+		& .column-@{index} {
+			grid-column: span @value;
+		}
+	});
+
+	.row {
+		&.has-centered {
+			justify-self: center
+		}
+	}
+}
+
+@media screen and (max-width: @breakpoints[xlarge]) {
+	// .columns {
+		// .generate-columns(xl)
+	// }
+}
+
+// Laptop
+@media screen and (max-width: @breakpoints[large]) {
+	.columns {
+		.generate-columns(lg)		
+	}
+}
+
+// Tablet
+@media screen and (max-width: @breakpoints[medium]) {
+	.columns {
+		.generate-columns(md)
+	}
+}
+
+// Mobile SM
+@media screen and (max-width: @breakpoints[small]) {
+	.columns {
+		.generate-columns(sm)
+	}
+}
+
+// Mobile XS
+@media screen and (max-width: @breakpoints[xsmall]) {
+	.columns {
+		.generate-columns(xs)
+	}
+}

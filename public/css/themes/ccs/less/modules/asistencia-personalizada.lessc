@@ -1,0 +1,295 @@
+// @package   CCS
+// @filename  asistencia-personalizada.less
+// @version   1.0
+// @autor     Díaz Urbaneja Víctor Eduardo Diex <diazvictor@tutamail.com>
+// @date      05.08.2021 03:45:32 -04
+
+// Para compilar el archivo desde la consola:
+// lessc asistencia-personalizada.less > asistencia-personalizada.css
+
+.chat {
+	&-head {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1.2rem 1.875rem;
+		background-color: @white;
+		border: 1px solid darken(@white-2, 5%);
+		border-top-left-radius: @border-radius-width;
+		border-top-right-radius: @border-radius-width;
+
+		.start {
+			display: flex;
+
+			.avatar {
+				margin-right: 20px;
+
+				img {
+					display: block;
+					width: 45px;
+					height: 45px;
+					border-radius: 50%;
+				}
+			}
+
+			.info {
+				display: flex;
+				flex-flow: column;
+				justify-content: space-around;
+				font-size: @font-size-title;
+
+				.fullname {
+					color: @color-text-subtitle;
+					font-weight: 700;
+				}
+
+				.status {
+					display: flex;
+					align-items: center;
+					color: @color-text-subtitle;
+
+					i {
+						color: @green;
+						font-size: 10px;
+						margin-right: 5px;
+					}
+				}
+			}
+		}
+	}
+
+	&-content {
+		display: flex;
+		flex-flow: column;
+		align-items: flex-end;
+		padding: 1rem 1.875rem;
+		border: 1px solid darken(@white-2, 5%);
+		border-top: none;
+		background-color: @white;
+
+		.message {
+			& + .message {
+				margin-top: 10px;
+			}
+
+			&.is-to {
+				max-width: 90%;
+
+				.text {
+					position: relative;
+					// text-align: right;
+					background: rgba(240, 240, 255, 1);
+					padding: 0.938rem 1.25rem;
+					font-size: 15px;
+					font-weight: 300;
+					border-radius: @border-radius-width;
+
+					&::after {
+						content: " ";
+						position: absolute;
+						top: 50%;
+						left: 100%; /* To the left of the tooltip */
+						margin-top: -8px;
+						border-width: 8px;
+						border-style: solid;
+						border-color: transparent transparent transparent rgba(240, 240, 255, 1);
+					}
+				}
+			}
+
+			&.is-from {
+				display: flex;
+				align-self: start;
+
+				.avatar {
+					margin-right: 20px;
+
+					img {
+						display: block;
+						width: 45px;
+						height: 45px;
+						border-radius: 10%;
+					}
+				}
+
+				.text {
+					position: relative;
+					background: rgba(230, 60, 31, 0.2);
+					padding: 0.938rem 1.25rem;
+					font-size: 15px;
+					font-weight: 300;
+					border-radius: @border-radius-width;
+
+					&::after {
+						content: " ";
+						position: absolute;
+						top: 50%;
+						right: 100%; /* To the left of the tooltip */
+						margin-top: -8px;
+						border-width: 8px;
+						border-style: solid;
+						border-color: transparent rgba(230, 60, 31, 0.2) transparent transparent;
+					}
+				}
+			}
+		}
+
+		.date {
+			background: rgba(230, 60, 31, 0.5);
+			color: @white;
+			padding: 0.2rem 0.5rem;
+			font-size: 12px;
+			font-weight: 300;
+			margin: 0 auto 1rem auto;
+			border-radius: @border-radius-width;
+		}
+
+		.alert {
+			text-align: center;
+			width: 100%;
+			margin: 0.625rem 0;
+			font-size: 15px;
+			font-weight: 300;
+			color: @orange;
+		}
+	}
+
+	&-foot {
+		display: flex;
+		padding: 1rem 1.875rem;
+		background-color: @white;
+		border: 1px solid darken(@white-2, 5%);
+		border-top: none;
+		border-bottom-left-radius: @border-radius-width;
+		border-bottom-right-radius: @border-radius-width;
+
+		input {
+			width: 100%;
+			border: none;
+			margin: 0 1.875rem;
+			font-size: 15px;
+		}
+
+		button {
+			i {
+				color: lighten(@grey, 20%)
+			}
+		}
+	}
+}
+
+.content-discussions {
+	display: flex;
+
+	@media screen and (max-width: @breakpoints[medium]) {
+		& {
+			position: fixed;
+			top: 20%;
+			right: 0;
+			margin-left: 20px;
+
+			.toggle-discussions {
+				display: block;
+			}
+
+			.discussions {
+				display: none;
+
+				&.is-active {
+					display: block;
+					border-top-right-radius: 0;
+					border-bottom-right-radius: 0;
+					margin-right: -1px;
+				}
+			}
+		}
+	}
+}
+
+.toggle-discussions {
+	display: none;
+	height: 37px;
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+	border: 1px solid darken(@white-2, 5%);
+	background: white;
+	padding: 10px 10px 10px 15px;
+	border-right: none;
+	margin-right: -1px;
+	margin-top: 15px;
+	position: relative;
+}
+
+.discussions {
+	width: 100%;
+	height: max-content;
+	background-color: @white;
+	border: 1px solid darken(@white-2, 5%);
+	border-radius: @border-radius-width;
+
+	&-head {
+		padding: 1.6rem;
+		border-bottom: 1px solid darken(@white-2, 5%);
+	}
+
+	&-item {
+		display: flex;
+		padding: 1rem;
+		color: @blue-dark;
+		border-bottom: 1px solid darken(@white-2, 5%);
+
+		.avatar {
+			margin-right: 20px;
+
+			img {
+				display: block;
+				width: 35px;
+				height: 35px;
+				border-radius: 10%;
+			}
+		}
+
+		.sender {
+			width: 100%;
+
+			.start {
+				display: flex;
+				justify-content: space-between;
+
+				.fullname {
+					font-size: 15px;
+					font-weight: 500;
+				}
+
+				.status {
+					font-size: 12px;
+					font-weight: 300;
+				}
+			}
+
+			.end {
+				p {
+					font-size: 15px;
+					font-weight: 300;
+				}
+			}
+		}
+
+		&:last-child {
+			border-bottom: none;
+		}
+
+		&.is-active {
+			background: lighten(@bg-light, 1%);
+		}
+	}
+
+	.alert {
+		padding: 1rem 1.6rem;
+		color: @orange;
+		font-size: 15px;
+		text-align: center;
+		text-transform: uppercase;
+		border-bottom: 1px solid darken(@white-2, 5%);
+	}
+}

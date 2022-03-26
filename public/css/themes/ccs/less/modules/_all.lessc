@@ -1,0 +1,8 @@
+// Dashboard
+@import "dashboard.lessc";
+
+// Plan
+@import "plan.lessc";
+
+// Asistencia Personalizada
+@import "asistencia-personalizada.lessc";

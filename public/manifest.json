@@ -1,0 +1,17 @@
+{
+  "short_name": "CCS",
+  "name": "CiX Customer Support",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "170x170",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "scope": "/",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "theme_color": "#FFF",
+  "background_color": "#1E90FF"
+}

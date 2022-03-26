@@ -1,0 +1,147 @@
+// @package   CCS
+// @filename  steps.less
+// @version   1.0
+// @autor     Díaz Urbaneja Víctor Eduardo Diex <diazvictor@tutamail.com>
+// @date      04.07.2021 23:41:47 -04
+
+// Para compilar el archivo desde la consola:
+// lessc steps.less > steps.css
+
+.steps {
+    display: flex;
+    font-size: 16px;
+    list-style: none;
+
+	@media screen and (max-width: 375px) {
+		& {
+			height: 2.8rem;
+		}
+	}
+
+	&-segment {
+		position: relative;
+
+		&:not(:last-child) {			
+			flex-basis: 1rem;
+			flex-grow: 1;
+			flex-shrink: 1;
+
+			&:after {
+				content: " ";
+				display: block;
+				position: absolute;
+
+				height: 0.13em;
+				left: 1.76rem;
+				right: -0.24rem;
+				top: calc(1rem - (0.1em));
+			}
+		}
+
+		&.is-active .steps-marker {
+			background-color: @bg-primary;
+			color: @text-secondary;
+		}
+
+		&:after {
+			background: repeating-linear-gradient(90deg, @bg-light, @bg-light 10px, transparent 10px, transparent 13px);
+		}
+	}
+
+	&.is-medium {
+		.steps-segment {
+			&:after {
+				top: calc(1.25rem - (0em));
+			}
+		}
+
+		.steps-marker {
+			height: 2.8rem;
+			width: 2.8rem;
+			overflow: hidden;
+		}
+	}
+
+	&.has-content-centered {
+		text-align: center;
+
+		.steps-content {
+			margin-top: 3rem;
+			margin-left: 0.5em;
+			margin-right: 0.5em;
+			padding-top: 0.2em;
+		}
+
+		.steps-marker {
+			position: absolute;
+			left: calc(50% - 1.25rem);
+		}
+
+		.steps-segment {
+			&:not(:last-child) {
+				&:after {
+					left: 50%;
+					right: -50%;
+				}
+			}
+
+			&:last-child {
+				flex-basis: 1rem;
+				flex-grow: 1;
+				flex-shrink: 1;
+			}
+		}
+	}
+
+	&-marker {
+		background-color: @bg-light;
+		color: rgba(0, 0, 0, .4);
+
+		height: 2rem;
+		width: 2rem;
+		overflow: hidden;
+		font-size: 20px;
+
+		align-items: center;
+		display: flex;
+		border-radius: 50%;
+		font-weight: 400;
+		justify-content: center;
+		position: relative;
+		z-index: 5;
+
+		@media screen and (max-width: 375px) {
+			&:hover {
+				& + .steps-content {
+					display: block;
+					position: absolute;
+					z-index: 10;
+					background: rgba(0,0,0, 0.8);
+					text-align: left;
+					padding: 5px 10px;
+					border-radius: 999px;
+					color: white;
+					font-size: 9.6px;
+					left: 15px;
+					bottom: -30px;
+					width: max-content;
+				}
+			}
+		}
+	}
+
+	&-content {
+		margin-top: 2rem;
+		margin-left: 0.5em;
+		margin-right: 0.5em;
+		padding-top: 0.2em;
+
+		@media screen and (max-width: 375px) {
+			& {
+				display: none;
+				margin: 0;
+				padding-top: 0;
+			}
+		}
+	}
+}

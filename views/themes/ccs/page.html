@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+    {(common/meta.html)}
+    {% if ( type(css) == 'table' ) then %}
+    {% for _, v in ipairs(css) do %}
+    <link rel="stylesheet"   href="{*v*}">
+    {% end %}
+    {% else %}
+    <link rel="stylesheet"   href="{*css*}">
+    {% end %}
+</head>
+<body>
+    <div id="overlay-bg"></div>
+    <div class="wrapper">
+        {(common/header.html)}
+        <aside class="sidebar">
+            {(common/sidebar.html)}
+        </aside>
+        <main class="content">
+           {*view*}
+        </main>
+        {(common/footer.html)}
+    </div>
+    {% if ( type(js) == 'table' ) then %}
+    {% for _, v in ipairs(js) do %}
+    <script type="text/javascript" src="{*v*}"></script>
+    {% end %}
+    {% end %}
+</body>
+</html>

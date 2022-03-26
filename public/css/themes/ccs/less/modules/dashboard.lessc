@@ -1,0 +1,68 @@
+// @package   CCS
+// @filename  dashboard.less
+// @version   1.0
+// @autor     Díaz Urbaneja Víctor Eduardo Diex <diazvictor@tutamail.com>
+// @date      18.07.2021 01:55:07 -04
+
+// Para compilar el archivo desde la consola:
+// lessc dashboard.less > dashboard.css
+
+.info {
+	.box {
+		display: flex;
+		flex-flow: column;
+		justify-content: space-between;
+
+		> div {
+			.end {
+				margin-left: 10px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: @breakpoints[medium]) {
+	.j-md-normal {
+		justify-self: normal !important;
+	}
+}
+
+@media screen and (max-width: @breakpoints[small]) {
+	.j-sm-normal {
+		justify-self: normal !important;
+	}
+}
+
+.map {
+	.row:first-child {
+		display: flex;
+		justify-content: space-between;
+
+		@media screen and (max-width: @breakpoints[small]) {
+			& {
+				flex-flow: column;
+
+				.end {
+					margin-top: 30px
+				}
+			}
+		}
+
+		.end {
+			display: grid;
+			grid-template-columns: 2fr auto;
+			align-items: center;
+			grid-gap: 30px;
+
+			.column:first-child {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-gap: 5px;
+
+				progress {
+					grid-column: span 2;
+				}
+			}
+		}
+	}
+}

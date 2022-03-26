@@ -1,0 +1,8 @@
+// @package   CCS
+// @filename  visibility.less
+// @version   1.0
+// @autor     Díaz Urbaneja Víctor Eduardo Diex <diazvictor@tutamail.com>
+// @date      05.07.2021 00:10:32 -04
+
+// Para compilar el archivo desde la consola:
+// lessc visibility.less > visibility.css

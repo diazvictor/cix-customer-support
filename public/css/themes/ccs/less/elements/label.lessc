@@ -1,0 +1,30 @@
+// @package   CCS
+// @filename  label.less
+// @version   1.0
+// @autor     Díaz Urbaneja Víctor Eduardo Diex <diazvictor@tutamail.com>
+// @date      13.07.2021 00:34:18 -04
+
+// Para compilar el archivo desde la consola:
+// lessc label.less > label.css
+
+.label {
+	background: @bg-primary;
+	color: @text-secondary;
+	min-width: 2em;
+	min-height: 2em;
+	padding: .5em;
+	line-height: 0.625rem;
+	text-align: center;
+	border-radius: 500rem;
+	font-size: 8px;
+	font-weight: 700;
+
+	&.is-floating {
+		position: relative;
+		padding: 3px 5px
+	}
+
+	&.is-info {
+		background: @text-info;
+	}
+}
