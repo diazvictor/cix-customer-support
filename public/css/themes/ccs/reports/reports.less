@@ -1,0 +1,51 @@
+@white-2: #F0F0FF;
+@border-radius-width: 4px;
+
+.box.is-mobile {
+	display: none;
+
+	&.is-grouped {
+		grid-gap: 10px;
+		grid-auto-flow: row;
+
+		.box {
+			padding: 0.875rem;
+			border-radius: @border-radius-width !important;
+			border: 1px solid darken(@white-2, 5%) !important;
+
+			.d-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+
+				.row:nth-child(2) {
+					justify-self: center;
+				}
+
+				.row:nth-child(3) {
+					justify-self: end;
+
+					.dropdown {
+						&-menu {
+							top: 30px;
+							width: 10.75rem;
+						}
+					}
+				}
+
+				& + .d-grid {
+					margin-top: 0.875rem;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 730px) {
+	.box.is-desktop {
+		display: none;
+	}
+
+	.box.is-mobile {
+		display: grid;
+	}
+}
