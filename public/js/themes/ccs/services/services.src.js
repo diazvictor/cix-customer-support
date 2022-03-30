@@ -6,6 +6,15 @@ import      '../common/dropdown.js';
 import      '../common/steps.js';
 import      '../common/tabs.js';
 
+let title = document.querySelector(".navbar #title");
+title.innerText = "Mis servicios";
+
+let sidenavCollapse = document.querySelector(".sidenav div[data-collapse=services]");
+sidenavCollapse.classList.add("is-collapsible");
+
+let sidenav = document.querySelector(".sidenav a[data-item=services]");
+sidenav.classList.add("is-active");
+
 /*Ejemplo del mapa*/
 let cities = L.layerGroup();
 

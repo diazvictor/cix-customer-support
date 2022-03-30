@@ -16,20 +16,20 @@
 				</span>
 			</div>
 
-			<nav class="sidenav">
+			<nav class="sidenav" id="sidenav">
 				<div class="heading">Dashboard</div>
-				<a href="/" class="sidenav-item is-active">
+				<a href="/dash" class="sidenav-item" data-item="dash">
 					<i class="sidenav-item-icon fas fa-home"></i>
 					<div class="sidenav-item-content">Dashboard</div>
 				</a>
 
-				<a href="/bills" class="sidenav-item">
+				<a href="/bills" class="sidenav-item" data-item="bills">
 					<i class="sidenav-item-icon fas fa-file-alt"></i>
 					<div class="sidenav-item-content">Facturas</div>
 					<span class="label">22</span>
 				</a>
 
-				<div class="sidenav-collapse-item">
+				<div class="sidenav-collapse-item" data-collapse="payments">
 					<div class="sidenav-collapse-item-header">
 						<i class="sidenav-item-icon fas fa-money-check"></i>
 						<div class="sidenav-item-content">Pagos</div>
@@ -37,19 +37,19 @@
 					</div>
 
 					<div class="sidenav-collapse-item-body">
-						<a href="/payments" class="sidenav-item">
+						<a href="/payments" class="sidenav-item" data-item="payments">
 							<i class="sidenav-item-icon fas fa-certificate"></i>
 							<div class="sidenav-item-content">Mis pagos</div>
 						</a>
 
-						<a href="/payments/new/" class="sidenav-item">
+						<a href="/payments/new/" class="sidenav-item" data-item="payments-new">
 							<i class="sidenav-item-icon fas fa-certificate"></i>
 							<div class="sidenav-item-content">Reportar pago</div>
 						</a>
 					</div>
 				</div>
 
-				<div class="sidenav-collapse-item">
+				<div class="sidenav-collapse-item" data-collapse="services">
 					<div class="sidenav-collapse-item-header">
 						<i class="sidenav-item-icon fas fa-cog"></i>
 						<div class="sidenav-item-content">Servicios</div>
@@ -57,22 +57,22 @@
 					</div>
 
 					<div class="sidenav-collapse-item-body">
-						<a href="/services" class="sidenav-item">
+						<a href="/services" class="sidenav-item" data-item="services">
 							<i class="sidenav-item-icon fas fa-certificate"></i>
 							<div class="sidenav-item-content">Solicitar Nuevo</div>
 						</a>
 
-						<a href="/services/1/" class="sidenav-item">
+						<a href="/services/1/" class="sidenav-item" data-item>
 							<i class="sidenav-item-icon fas fa-certificate"></i>
 							<div class="sidenav-item-content">Plan 20Mb-r</div>
 						</a>
 
-						<a href="/services/2/" class="sidenav-item">
+						<a href="/services/2/" class="sidenav-item" data-item>
 							<i class="sidenav-item-icon fas fa-certificate"></i>
 							<div class="sidenav-item-content">Plan 50Mb-r</div>
 						</a>
 
-						<a href="/services/3/" class="sidenav-item">
+						<a href="/services/3/" class="sidenav-item" data-item>
 							<i class="sidenav-item-icon fas fa-certificate"></i>
 							<div class="sidenav-item-content">Plan 100Mb-e</div>
 						</a>
@@ -80,7 +80,7 @@
 				</div>
 
 				<div class="heading">Soporte y Ayuda</div>
-				<div class="sidenav-collapse-item">
+				<div class="sidenav-collapse-item" data-collapse="reports">
 					<div class="sidenav-collapse-item-header">
 						<i class="sidenav-item-icon fas fa-exclamation-circle"></i>
 						<div class="sidenav-item-content">Reportes</div>
@@ -88,20 +88,20 @@
 					</div>
 
 					<div class="sidenav-collapse-item-body">
-						<a href="/reports" class="sidenav-item">
+						<a href="/reports" class="sidenav-item" data-item="reports">
 							<i class="sidenav-item-icon fas fa-certificate"></i>
 							<div class="sidenav-item-content">Mis Reportes</div>
 							<span class="label is-info">5</span>
 						</a>
 
-						<a href="/reports/new" class="sidenav-item">
+						<a href="/reports/new" class="sidenav-item" data-item="reports-new">
 							<i class="sidenav-item-icon fas fa-certificate"></i>
 							<div class="sidenav-item-content">Crear Reportes</div>
 						</a>
 					</div>
 				</div>
 
-				<div class="sidenav-collapse-item">
+				<div class="sidenav-collapse-item" data-collapse="help">
 					<div class="sidenav-collapse-item-header">
 						<i class="sidenav-item-icon fas fa-wrench"></i>
 						<div class="sidenav-item-content">Asistencia Técnica</div>
@@ -109,12 +109,12 @@
 					</div>
 
 					<div class="sidenav-collapse-item-body">
-						<a href="/help" class="sidenav-item">
+						<a href="/help" class="sidenav-item" data-item="help">
 							<i class="sidenav-item-icon fas fa-certificate"></i>
 							<div class="sidenav-item-content">Asistencia Guiada</div>
 						</a>
 
-						<a href="/asistencia-tecnica/asistencia-personalizada/" class="sidenav-item">
+						<a href="/asistencia-tecnica/asistencia-personalizada/" class="sidenav-item" data-item="help-personalized">
 							<i class="sidenav-item-icon fas fa-certificate"></i>
 							<div class="sidenav-item-content">Asistencia Personalizada</div>
 						</a>

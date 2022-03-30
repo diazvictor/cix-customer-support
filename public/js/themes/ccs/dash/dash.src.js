@@ -5,6 +5,11 @@ import      '../common/ccs.js';
 import      '../common/navbar.js';
 import      '../common/sidebar.js';
 
+let title = document.querySelector(".navbar #title");
+title.innerText = "Dasboard";
+
+let sidenav = document.querySelector(".sidenav a[data-item=dash]");
+sidenav.classList.add("is-active");
 
 /*Ejemplo de la grafica*/
 const labels = [
@@ -13,6 +18,7 @@ const labels = [
     'Ago', 'Sep', 'Oct',
     'Nov', 'Dic'
 ];
+
 const data = {
     labels: labels,
     datasets: [
@@ -74,7 +80,6 @@ let myChart = new Chart(
     config
 );
 
-
 /*Ejemplo del mapa*/
 let cities = L.layerGroup();
 
@@ -122,20 +127,9 @@ let latlngs = [
     ],
     [
         [[7.460518,-63.316956] ,[9.832129,-63.316956] ,[9.832129,-63.110042],[7.460518,-63.110042],[7.460518,-63.316956]]
-    ]
-    
+    ]    
 ];
-
-
-
 
 let polygon = L.polygon(latlngs, {color: 'red'}).addTo(map);
 
-
-
-
-
 let layerControl = L.control.layers(baseLayers, overlays).addTo(map);
-
-
-
