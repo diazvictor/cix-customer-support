@@ -23,6 +23,7 @@ function services:show_main()
 			("/css/themes/%s/common/fontawesome/brands.css"):format(theme),
 			("/css/themes/%s/common/fontawesome/solid.css"):format(theme),
 			("/css/themes/%s/common/fontawesome/regular.css"):format(theme),
+			("/css/themes/%s/common/leaflet.css"):format(theme),
 			("/css/themes/%s/services/services.css"):format(theme)
 		},
 		users= model:get_users(),
