@@ -22,6 +22,7 @@ function dash:show_main()
 		css = {
 			("/css/themes/%s/%s.css"):format(theme,theme),
 			("/css/themes/%s/common/fontawesome/fontawesome.css"):format(theme),
+			("/css/themes/%s/common/fontawesome/brands.css"):format(theme),
 			("/css/themes/%s/common/fontawesome/solid.css"):format(theme),
 			("/css/themes/%s/common/fontawesome/regular.css"):format(theme),
 			("/css/themes/%s/common/leaflet.css"):format(theme),

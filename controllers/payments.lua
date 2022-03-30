@@ -19,6 +19,7 @@ function payments:set_page()
 		css  = {
 			("/css/themes/%s/%s.css"):format(theme,theme),
 			("/css/themes/%s/common/fontawesome/fontawesome.css"):format(theme),
+			("/css/themes/%s/common/fontawesome/brands.css"):format(theme),
 			("/css/themes/%s/common/fontawesome/solid.css"):format(theme),
 			("/css/themes/%s/common/fontawesome/regular.css"):format(theme),
 			("/css/themes/%s/payments/payments.css"):format(theme)
@@ -43,6 +44,12 @@ end
 
 function payments:show_new()
 	view:add_content('title',"Cix Customer Support | Payments")
+	view:add_contents({
+		js = {
+            ("/js/themes/%s/common/steps.js"):format(theme),
+            ("/js/themes/%s/common/tabs.js"):format(theme)
+		},
+	})
 	self:set_page()
 	local page   = template.new(
 		"/payments/new.html",
