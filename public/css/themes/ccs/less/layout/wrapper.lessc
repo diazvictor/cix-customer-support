@@ -696,7 +696,7 @@ body {
 		grid-area: content;
 
 		.container {
-			@media screen and (max-width: @breakpoints[small]) {
+			@media screen and (max-width: @breakpoints[medium]) {
 				& {
 					> .row {
 						display: none;

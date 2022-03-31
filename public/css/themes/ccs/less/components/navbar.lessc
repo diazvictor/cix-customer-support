@@ -65,7 +65,7 @@
 
 				@media screen and (max-width: @breakpoints[large]) {
 					& {
-						content: "\f054";
+						content: "\f0c9";
 					}
 				}
 
@@ -149,7 +149,7 @@
 		&-end {
 			padding-right: 0;
 
-			.buttons {
+			.button {
 				display: none
 			}
 
