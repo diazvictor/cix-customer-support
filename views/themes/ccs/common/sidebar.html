@@ -19,11 +19,29 @@
 			<nav class="sidenav" id="sidenav">
 				<div class="heading">Dashboard</div>
 				<a href="/dash" class="sidenav-item" data-item="dash">
+<!--
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="#7B7596" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+						<polyline points="5 12 3 12 12 3 21 12 19 12" />
+						<path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+						<path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+					</svg>
+-->
 					<i class="sidenav-item-icon fas fa-home"></i>
 					<div class="sidenav-item-content">Dashboard</div>
 				</a>
 
 				<a href="/bills" class="sidenav-item" data-item="bills">
+<!--
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-text" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="#7B7596" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+						<path d="M14 3v4a1 1 0 0 0 1 1h4" />
+						<path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+						<line x1="9" y1="9" x2="10" y2="9" />
+						<line x1="9" y1="13" x2="15" y2="13" />
+						<line x1="9" y1="17" x2="15" y2="17" />
+					</svg>
+-->
 					<i class="sidenav-item-icon fas fa-file-alt"></i>
 					<div class="sidenav-item-content">Facturas</div>
 					<span class="label">22</span>
@@ -31,6 +49,15 @@
 
 				<div class="sidenav-collapse-item" data-collapse="payments">
 					<div class="sidenav-collapse-item-header">
+<!--
+						<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-credit-card" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="#7B7596" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+							<rect x="3" y="5" width="18" height="14" rx="3" />
+							<line x1="3" y1="10" x2="21" y2="10" />
+							<line x1="7" y1="15" x2="7.01" y2="15" />
+							<line x1="11" y1="15" x2="13" y2="15" />
+						</svg>
+-->
 						<i class="sidenav-item-icon fas fa-money-check"></i>
 						<div class="sidenav-item-content">Pagos</div>
 						<i class="fas fa-chevron-right"></i>
@@ -51,30 +78,32 @@
 
 				<div class="sidenav-collapse-item" data-collapse="services">
 					<div class="sidenav-collapse-item-header">
+<!--
+						<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-settings" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="#7B7596" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+							<path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z" />
+							<circle cx="12" cy="12" r="3" />
+						</svg>
+-->
 						<i class="sidenav-item-icon fas fa-cog"></i>
 						<div class="sidenav-item-content">Servicios</div>
 						<i class="fas fa-chevron-right"></i>
 					</div>
 
 					<div class="sidenav-collapse-item-body">
-						<a href="/services" class="sidenav-item" data-item="services">
+						<a href="/services/" class="sidenav-item" data-item="services">
 							<i class="sidenav-item-icon fas fa-certificate"></i>
-							<div class="sidenav-item-content">Solicitar Nuevo</div>
+							<div class="sidenav-item-content">Mis Servicios</div>
 						</a>
 
-						<a href="/services/1/" class="sidenav-item" data-item>
+						<a href="/services/requests/" class="sidenav-item" data-item="services-requests">
 							<i class="sidenav-item-icon fas fa-certificate"></i>
-							<div class="sidenav-item-content">Plan 20Mb-r</div>
+							<div class="sidenav-item-content">Mis Solicitudes</div>
 						</a>
 
-						<a href="/services/2/" class="sidenav-item" data-item>
+						<a href="/services/new/" class="sidenav-item" data-item="services-new">
 							<i class="sidenav-item-icon fas fa-certificate"></i>
-							<div class="sidenav-item-content">Plan 50Mb-r</div>
-						</a>
-
-						<a href="/services/3/" class="sidenav-item" data-item>
-							<i class="sidenav-item-icon fas fa-certificate"></i>
-							<div class="sidenav-item-content">Plan 100Mb-e</div>
+							<div class="sidenav-item-content">Nueva Solicitud</div>
 						</a>
 					</div>
 				</div>
@@ -82,6 +111,14 @@
 				<div class="heading">Soporte y Ayuda</div>
 				<div class="sidenav-collapse-item" data-collapse="reports">
 					<div class="sidenav-collapse-item-header">
+<!--
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-alert-octagon" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="#7B7596" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+						<path d="M8.7 3h6.6c.3 0 .5 .1 .7 .3l4.7 4.7c.2 .2 .3 .4 .3 .7v6.6c0 .3 -.1 .5 -.3 .7l-4.7 4.7c-.2 .2 -.4 .3 -.7 .3h-6.6c-.3 0 -.5 -.1 -.7 -.3l-4.7 -4.7c-.2 -.2 -.3 -.4 -.3 -.7v-6.6c0 -.3 .1 -.5 .3 -.7l4.7 -4.7c.2 -.2 .4 -.3 .7 -.3z" />
+						<line x1="12" y1="8" x2="12" y2="12" />
+						<line x1="12" y1="16" x2="12.01" y2="16" />
+					</svg>
+-->
 						<i class="sidenav-item-icon fas fa-exclamation-circle"></i>
 						<div class="sidenav-item-content">Reportes</div>
 						<i class="fas fa-chevron-right"></i>
@@ -103,7 +140,14 @@
 
 				<div class="sidenav-collapse-item" data-collapse="help">
 					<div class="sidenav-collapse-item-header">
+<!--
+						<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tool" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="#7B7596" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+							<path d="M7 10h3v-3l-3.5 -3.5a6 6 0 0 1 8 8l6 6a2 2 0 0 1 -3 3l-6 -6a6 6 0 0 1 -8 -8l3.5 3.5" />
+						</svg>
+-->
 						<i class="sidenav-item-icon fas fa-wrench"></i>
+
 						<div class="sidenav-item-content">Asistencia Técnica</div>
 						<i class="fas fa-chevron-right"></i>
 					</div>

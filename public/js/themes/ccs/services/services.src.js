@@ -3,16 +3,26 @@ import		"leaflet";
 import      '../common/navbar.js';
 import      '../common/sidebar.js';
 import      '../common/dropdown.js';
-import      '../common/steps.js';
-import      '../common/tabs.js';
 
 let title = document.querySelector(".navbar #title");
-title.innerText = "Mis servicios";
 
 let sidenavCollapse = document.querySelector(".sidenav div[data-collapse=services]");
 sidenavCollapse.classList.add("is-collapsible");
+sidenavCollapse.classList.add("is-active");
 
-let sidenav = document.querySelector(".sidenav a[data-item=services]");
+let sidenav;
+
+if (window.location.pathname == "/services/") {
+	sidenav = document.querySelector(".sidenav a[data-item=services]");
+	title.innerText = "Mis Servicios";
+} else if (window.location.pathname == "/services/requests/") {
+	sidenav = document.querySelector(".sidenav a[data-item=services-requests]");
+	title.innerText = "Mis Solicitudes";
+} else if (window.location.pathname == "/services/new/") {
+	sidenav = document.querySelector(".sidenav a[data-item=services-new]");
+	title.innerText = "Nueva Solicitud";
+}
+
 sidenav.classList.add("is-active");
 
 /*Ejemplo del mapa*/

@@ -10,11 +10,10 @@ Copyright (c) 2020  Díaz  Víctor  aka  (Máster Vitronic)
 local services	= class('services');
 local theme     = conf.theme.theme
 
-function services:show_main()
-	view:add_content('title',"Cix Customer Support | Services")
+function services:set_page()
 	view:add_contents({
 		js   = {
-             ("/js/themes/%s/common/common.min.js"):format(theme),
+            ("/js/themes/%s/common/common.min.js"):format(theme),
 			("/js/themes/%s/services/services.min.js"):format(theme)
 		},
 		css  = {
@@ -32,6 +31,11 @@ function services:show_main()
 	if( util:is_false(conf.luachi.production) )then
 		view:add_content('js','//127.0.0.1:35729/livereload.js')
 	end
+end
+
+function services:show_overview()
+	view:add_content('title',"Cix Customer Support | Services")
+	self:set_page()
 	local page   = template.new(
 		"/services/services.html",
 		"/page.html"
@@ -39,7 +43,36 @@ function services:show_main()
 	view:generate(page)
 end
 
+function services:show_requests()
+	view:add_content('title',"Cix Customer Support | Requests")
+	self:set_page()
+	local page   = template.new(
+		"/services/requests.html",
+		"/page.html"
+	)
+	view:generate(page)
+end
+
+function services:show_new()
+	view:add_content('title',"Cix Customer Support | New Request")
+	self:set_page()
+	view:add_contents({
+		js = {
+            ("/js/themes/%s/common/steps.js"):format(theme),
+            ("/js/themes/%s/common/tabs.js"):format(theme)
+		},
+	})
+	local page   = template.new(
+		"/services/new.html",
+		"/page.html"
+	)
+	view:generate(page)
+end
+
+
 function services:execute()
+	local parameters = router.parameters
+
 	if (ENV.REQUEST_METHOD == 'POST') then
 		if ( POST['logOut'] == 'true' ) then
 			local result = auth:logOut()
@@ -50,7 +83,18 @@ function services:execute()
 			return
 		end
 	end
-	self:show_main()
+
+	if ( parameters[1] ) then
+		if (parameters[1] == 'new') then
+			self:show_new()
+			return
+		elseif (parameters[1] == 'requests') then
+			self:show_requests()
+			return
+		end
+	end
+
+	self:show_overview()
 end
 
 return services
