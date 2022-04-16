@@ -10,6 +10,7 @@ let title = document.querySelector(".navbar #title");
 
 let sidenavCollapse = document.querySelector(".sidenav div[data-collapse=help]");
 sidenavCollapse.classList.add("is-collapsible");
+sidenavCollapse.classList.add("is-active");
 
 let sidenav;
 
