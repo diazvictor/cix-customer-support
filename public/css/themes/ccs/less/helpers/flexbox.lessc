@@ -18,6 +18,10 @@
 }
 
 .j {
+	&-flex-end {
+		justify-content: flex-end
+	}
+
 	&-between {
 		justify-content: space-between
 	}

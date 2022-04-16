@@ -526,7 +526,7 @@ body {
 
 	.sidebar {
 		grid-area: sidebar;
-		width: 18rem;
+		width: 100%;
 		background-color: @gradient[primary];
 		background-image: linear-gradient(@gradient[primary], @gradient[secondary]);
 		transform: translateX(0%);
@@ -561,6 +561,7 @@ body {
 
 			& {
 				display: none;
+				width: 18rem;
 				position: fixed;
 				overflow-y: auto;
 				height: 100vh;
@@ -604,6 +605,7 @@ body {
 				&-header {
 					cursor: pointer;
 					display: flex;
+					align-items: center;
 					color: rgba(255, 255, 255, 0.4);
 					padding: 15px 40px;
 
@@ -663,6 +665,7 @@ body {
 			&-item {
 				cursor: pointer;
 				display: flex;
+				align-items: center;
 				color: rgba(255, 255, 255, 0.4);
 				padding: 15px 40px;
 
@@ -691,13 +694,12 @@ body {
 	}
 
 	> .content {
-		margin-top: 30px;
-		margin-bottom: 30px;
 		grid-area: content;
+		padding: 32px;
 
-		.container {
-			@media screen and (max-width: @breakpoints[medium]) {
-				& {
+		@media screen and (max-width: @breakpoints[medium]) {
+			& {
+				.container {
 					> .row {
 						display: none;
 					}

@@ -13,6 +13,7 @@
 #forms() {
 	.input {
 		background: @white;
+		font-size: 14px;
 		padding: 0.5rem 0.625rem;
 		border: 1px solid @border;
 		border-radius: (@border-radius-width / 2);
@@ -272,6 +273,8 @@ select.select {
 }
 
 label {
+	font-size: 14px;
+
 	&.switch {
 		#forms > .switch();
 	}

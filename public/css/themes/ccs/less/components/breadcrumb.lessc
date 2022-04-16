@@ -8,7 +8,7 @@
 // lessc breadcrumb.less > breadcrumb.css
 
 .breadcrumb {
-	font-size: 16px;
+	font-size: 14px;
 
 	@media screen and (max-width: @breakpoints[medium]) {
 		& {
