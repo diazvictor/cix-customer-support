@@ -7,20 +7,20 @@
  * @date      13.07.2021 20:43:05 -04
  */
 
-const navbar = document.querySelector('.navbar');
+// const navbar = document.querySelector('.navbar');
 
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-    var currentScrollPos = window.pageYOffset;
+// var prevScrollpos = window.pageYOffset;
+// window.onscroll = function() {
+    // var currentScrollPos = window.pageYOffset;
 
-    if (prevScrollpos > currentScrollPos) {
-        navbar.style.top = "0";
-    } else {
-        navbar.style.top = "-500px";
-    }
+    // if (prevScrollpos > currentScrollPos) {
+        // navbar.style.top = "0";
+    // } else {
+        // navbar.style.top = "-500px";
+    // }
 
-    prevScrollpos = currentScrollPos;
-};
+    // prevScrollpos = currentScrollPos;
+// };
 
 // const dropdowns = document.querySelector(".navbar .navbar-end > .buttons");
 // dropdowns.childNodes.forEach((dropdown) => {

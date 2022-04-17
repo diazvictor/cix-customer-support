@@ -22,6 +22,23 @@
 			width: 100%;
 			transition: top 0.3s;
 			z-index: 1999;
+			background-color: #030134;
+
+			&-start {
+				.button.is-icon {
+					display: block;
+					color: #FFFFFF;
+					background-color: transparent;
+				}
+			}
+
+			&-end {
+				.button.is-icon {
+					display: block;
+					color: #FFFFFF;
+					background-color: transparent;
+				}
+			}
 		}
 	}
 
@@ -71,7 +88,7 @@
 
 				@media screen and (max-width: @breakpoints[small]) {
 					& {
-						content: "\f0c9";
+						color: #FFFFFF;
 					}
 				}
 			}
@@ -98,31 +115,24 @@
 		@media screen and (max-width: 458px) {
 			& {
 				display: flex;
-				position: relative;
-				top: -7px;
-				align-items: center;
+				justify-content: center;
+				flex-flow: column;
 			}
 		}
 
 		img {
 			width: 32px;
 			height: 32px;
-			margin-right: 5px;
+			margin: 0 auto;
+			margin-bottom: 2px;
 		}
 
 		span.title {
-			text-transform: capitalize;
-			font-weight: 600;
-		}
-
-		span:not(.title) {
-			color: lighten(@grey, 30%);
-			position: absolute;
-			bottom: -17px;
-			font-size: 12px;
+			color: #FFFFFF;
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 17px;
 			text-align: center;
-			left: 0;
-			right: 0;
 		}
 	}
 
@@ -147,10 +157,8 @@
 
 	@media screen and (max-width: 458px) {
 		&-end {
-			padding-right: 0;
-
 			.button {
-				display: none
+				display: none;
 			}
 
 			.menu {

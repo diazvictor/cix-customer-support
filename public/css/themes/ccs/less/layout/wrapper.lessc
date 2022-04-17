@@ -40,6 +40,22 @@ body {
 	min-height: 120vh;
 	overflow-x: hidden;
 
+	.header {
+		> img {
+			display: none;
+			width: 100%;
+			position: fixed;
+			top: 68px;
+			z-index: 1;
+
+			@media screen and (max-width: 460px) {
+				& {
+					display: block;
+				}
+			}
+		}
+	}
+
 	&.login {
 		grid-template-columns: 3fr 1fr;
 		grid-template-areas: "content login"
@@ -50,6 +66,8 @@ body {
 			grid-template-columns: 1fr;
 
 			.content {
+				padding: 0;
+
 				.box {
 					width: 550px;
 					background-color: #020033;
@@ -192,6 +210,7 @@ body {
 			// justify-content: center;
 			margin-top: 0;
 			margin-bottom: 0;
+			padding: 0;
 
 			.bg {
 				.planet {
@@ -700,7 +719,7 @@ body {
 		@media screen and (max-width: @breakpoints[medium]) {
 			& {
 				.container {
-					> .row {
+					> .row:first-child {
 						display: none;
 					}
 				}
@@ -709,7 +728,7 @@ body {
 
 		@media screen and (max-width: 460px) {
 			& {
-				margin-top: 95px;
+				margin-top: 68px;
 			}
 		}
 	}

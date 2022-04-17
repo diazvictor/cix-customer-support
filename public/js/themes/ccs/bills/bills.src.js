@@ -8,3 +8,12 @@ title.innerText = "Mis facturas";
 
 let sidenav = document.querySelector(".sidenav a[data-item=bills]");
 sidenav.classList.add("is-active");
+
+let reveals = document.querySelectorAll(".reveal")
+reveals.forEach((reveal) => {
+	let revealHead = reveal.querySelector(".head");
+
+	revealHead.addEventListener("click", (e) => {
+		reveal.classList.toggle("is-active");
+	});
+});
