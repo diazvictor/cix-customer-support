@@ -86,6 +86,14 @@
 	}
 }
 
+.absolute {
+	@media screen and (max-width: 586px) {
+		& {
+			grid-template-columns: 1fr !important;
+		}
+	}
+}
+
 @media screen and (max-width: 425px) {
 	.tabs.is-desktop {
 		display: none;

@@ -1,297 +1,79 @@
-			<div class="container">
-				<div class="row is-margin-bottom-3">
-					<h1 class="display-1 is-margin-bottom-0">Mis Solicitudes</h1>
-					<nav class="breadcrumb">
-						<ul>
-							<li><a href="#">Inicio</a></li>
-							<li><a href="#">Mis Solicitudes</a></li>
-						</ul>
-					</nav>
+			<div class="container services">
+				<div class="row is-margin-bottom-3 d-flex a-center j-between">
+					<div class="start">
+						<h1 class="display-1 is-margin-bottom-0">Mis Solicitudes</h1>
+						<nav class="breadcrumb">
+							<ul>
+								<li><a href="#">Inicio</a></li>
+								<li><a href="#">Mis Solicitudes</a></li>
+							</ul>
+						</nav>
+					</div>
+
+					<div class="end">
+						<button type="button" class="button is-primary button-new-service">Solicitar Nuevo Servicio</button>
+					</div>
 				</div>
 
-				<div class="box is-grouped">
-					<section class="box">
-						<div class="columns columns-1">
-							<div class="row">
-								<h1 class="title text-uppercase">¿Quieres contratar un nuevo servicio?</h1>
-								<p class="subtitle">Contrata un nuevo servicio de CIX rellenando la siguiente información</p>
-							</div>
-
-							<div class="row">
-								<div class="steps is-medium has-content-centered">
-									<div class="steps-segment is-active" data-step="1">
-										<div class="steps-marker">1</div>
-										<div class="steps-content">
-											Datos personales
-										</div>
-									</div>
-
-									<div class="steps-segment" data-step="2">
-										<div class="steps-marker">2</div>
-										<div class="steps-content">
-											Dirección
-										</div>
-									</div>
-
-									<div class="steps-segment" data-step="3">
-										<div class="steps-marker">3</div>
-										<div class="steps-content">
-											Plan
-										</div>
-									</div>
-
-									<div class="steps-segment" data-step="4">
-										<div class="steps-marker">4</div>
-										<div class="steps-content">
-											Caja
-										</div>
-									</div>
-								</div>
+				<div class="box">
+					<div class="box view-service">
+						<div class="start">
+							<div class="content">
+								<span class="title">RS-000919</span>
+								<span class="subtitle">Av luis del valle garcia cruce con alberto carnevali</span>
 							</div>
 						</div>
-					</section>
 
-					<section class="box">
-						<div class="columns columns-1">
-							<div class="step-content">
-								<div class="step-pane is-active" id="step-1">
-									<div class="row">
-										<h1 class="title">Datos personales</h1>
-										<p class="subtitle">Complete los campos y presione continuar</p>
-									</div>
-
-									<div class="row">
-										<form class="form">
-											<div class="columns columns-3 columns-md-2 columns-sm-1">
-												<div class="field">
-													<label>Nombre</label>
-													<input type="text" placeholder="Edwin Hernandez">
-												</div>
-
-												<div class="field">
-													<label>Apellido</label>
-													<input type="text" placeholder="Hernandez Lugo">
-												</div>
-
-												<div class="field">
-													<label>Cédula de identidad</label>
-													<input type="text" placeholder="22.354.671">
-												</div>
-
-												<div class="field">
-													<label>Número de celular</label>
-													<input type="text" placeholder="0424 953 7531">
-												</div>
-
-												<div class="field">
-													<label>Número de teléfono local</label>
-													<input type="text" placeholder="0288 221 3578">
-												</div>
-											</div>
-										</form>
-									</div>								
-								</div>
-
-								<div class="step-pane" id="step-2">
-									<div class="row">
-										<h1 class="title">Dirección</h1>
-										<p class="subtitle">Complete los campos y presione continuar</p>
-									</div>
-
-									<div class="row">
-										<div class="tabs is-desktop">
-											<button type="button" class="tab-item is-active" data-tab="manual-steering">
-												<i class="fas fa-edit tab-item is-active" data-tab="manual-steering"></i>
-												Dirección manual
-											</button>
-
-											<button type="button" class="tab-item" data-tab="mapped-steering">
-												<i class="fas fa-map-marked-alt tab-item" data-tab="mapped-steering"></i>
-												Dirección con mapas
-											</button>
-										</div>
-
-										<div class="tabs is-mobile">
-											<button type="button" class="tab-item is-active" data-tab="manual-steering">
-												<i class="fas fa-edit tab-item is-active" data-tab="manual-steering"></i>
-											</button>
-
-											<button type="button" class="tab-item" data-tab="mapped-steering">
-												<i class="fas fa-map-marked-alt tab-item is-active" data-tab="mapped-steering"></i>
-											</button>
-										</div>
-
-										<div class="tab-content">
-											<div class="tab-pane is-active" id="manual-steering">
-												<form class="form">
-													<div class="columns columns-8 columns-sm-1">
-														<div class="field column-2 column-sm-1">
-															<label>Número de casa</label>
-															<input type="text" placeholder="47">
-														</div>
-
-														<div class="field column-3 column-sm-1">
-															<label>Calle</label>
-															<input type="text" placeholder="Los ilustres">
-														</div>
-
-														<div class="field column-3 column-sm-1">
-															<label>Sector</label>
-															<input type="text" placeholder="Palma Real">
-														</div>
-													</div>
-												</form>
-											</div>
-
-											<div class="tab-pane" id="mapped-steering">
-												<div id="mapid"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="step-pane" id="step-3">
-									<div class="row">
-										<h1 class="title">Plan</h1>
-										<p class="subtitle">Complete los campos y presione continuar</p>
-									</div>
-
-									<div class="row">
-										<form class="form">
-											<div class="columns select-plan">
-												<div class="field">
-													<label>Planes de internet</label>
-													<select>
-														<option>Seleccione un plan</option>
-														<option value="0">Internet residencial - 20Mbps de descarga y 2Mbps de subida</option>
-														<option value="1">Internet residencial - 50Mbps de descarga y 5Mbps de subida</option>
-														<option value="2">Internet residencial - 100Mbps de descarga y 10Mbps de subida</option>
-													</select>
-												</div>
-
-												<div class="row a-end">
-													<button type="button" class="button is-primary is-small">
-														<i class="fas fa-plus"></i>
-														<span class="is-hidden-sm">Agregar</span>
-													</button>
-												</div>
-											</div>
-										</form>
-									</div>
-
-									<div class="row is-margin-top-3 is-margin-bottom-3">
-										<div class="columns columns-1" id="plan-items">
-											<div class="row">
-												<div class="plan-item">
-													<div class="row">
-														<div class="info-box">
-															<p class="text-truncate">Internet residencial - 20Mbps de descarga y 2Mbps de subida</p>
-														</div>
-													</div>
-
-													<div class="row">
-														<button type="button" class="button is-primary is-small">
-															<i class="fas fa-trash"></i>
-															<span class="is-hidden-sm">Eliminar</span>
-														</button>
-													</div>
-
-													<div class="row">
-														<span class="is-font-medium is-color-grey-light">$40</span>
-													</div>
-												</div>
-											</div>
-
-											<div class="row">
-												<div class="plan-item">
-													<div class="row">
-														<div class="info-box">
-															<p class="text-truncate">Internet residencial - 100Mbps de descarga y 10Mbps de subida</p>
-														</div>
-													</div>
-
-													<div class="row">
-														<button type="button" class="button is-primary is-small">
-															<i class="fas fa-trash"></i>
-															<span class="is-hidden-sm">Eliminar</span>
-														</button>
-													</div>
-
-													<div class="row">
-														<span class="is-font-medium is-color-grey-light">$100</span>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="step-pane" id="step-4">
-									<div class="row">
-										<h1 class="title">Caja</h1>
-										<p class="subtitle">
-											Ya casi terminamos!. Compruebe sus datos y
-											envienos el número de referencia bancaria para activar su
-											servicio cuanto antes.
-										</p>
-									</div>
-
-									<div class="row">
-										<div class="data">
-											<div class="data-item">
-												<h2>Datos personales</h2>
-												<p>Nombre: Edwin Hernandez</p>
-												<p>Cédula: 22.354.671</p>
-												<p>Teléfono: 0424 953 7531</p>
-												<p>Teléfono de casa: 0288 221 3578</p>
-											</div>
-
-											<div class="data-item">
-												<h2>Dirección</h2>
-												<p>Casa: 47</p>
-												<p>Calle: Los ilustres</p>
-												<p>Sector: Palma Real</p>
-											</div>
-
-											<div class="data-item">
-												<h2>Servicios</h2>
-												<p class="d-flex j-between">
-													<span>Internet Residencial 20Mbps</span>
-													<span class="is-margin-left-1">$40</span>
-												</p>
-
-												<p class="d-flex j-between">
-													<span>Internet Residencial 100Mbps</span>
-													<span class="is-margin-left-1">$100</span>
-												</p>
-											</div>
-
-											<div class="data-item">
-												<h2>Número de referencia bancaria</h2>
-												<p>
-													Ingrese el número de referencia bancaria para completar su compra
-													y nos pondremos en contacto contigo cuanto antes
-												</p>
-
-												<div class="is-margin-bottom-2"></div>
-
-												<div class="d-flex d-flow-column">
-													<label>Referencia</label>
-													<input type="text" class="input" placeholder="84516554">
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+						<div class="end">
+							<div class="row">
+								<span class="title">Internet residencial FTTH 20Mb</span>
+								<span class="subtitle">20Mbps/2Mbps</span>
 							</div>
 
-							<div class="row d-flex j-between">
-								<button type="button" id="previous" class="button is-primary" disabled>Atrás</button>
+							<button type="button" class="button is-primary">
+								<img src="/img/services/eye.svg">
+							</button>
+						</div>
+					</div>
 
-								<button type="button" id="next" class="button is-primary">Siguiente</button>
-								<button type="button" id="accept" class="button is-primary">Comprar</button>
+					<div class="box view-service">
+						<div class="start">
+							<div class="content">
+								<span class="title">RS-000875</span>
+								<span class="subtitle">Urb. lomas del bosque condominio chaguaramos casa 21</span>
 							</div>
 						</div>
-					</section>
+
+						<div class="end">
+							<div class="row">
+								<span class="title">Internet residencial FTTH 20Mb</span>
+								<span class="subtitle">20Mbps/2Mbps</span>
+							</div>
+
+							<button type="button" class="button is-primary">
+								<img src="/img/services/eye.svg">
+							</button>
+						</div>
+					</div>
+
+					<div class="box view-service">
+						<div class="start">
+							<div class="content">
+								<span class="title">RS-001789</span>
+								<span class="subtitle">Urb. lomas del bosque condominio chaguaramos casa 21</span>
+							</div>
+						</div>
+
+						<div class="end">
+							<div class="row">
+								<span class="title">Internet residencial FTTH 20Mb</span>
+								<span class="subtitle">20Mbps/2Mbps</span>
+							</div>
+
+							<button type="button" class="button is-primary">
+								<img src="/img/services/eye.svg">
+							</button>
+						</div>
+					</div>
 				</div>
 			</div>

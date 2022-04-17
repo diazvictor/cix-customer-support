@@ -10,9 +10,18 @@
 .select-plan {
 	grid-template-columns: repeat(3, 1fr);
 
-	@media screen and (max-width: @breakpoints[small]) {
+	@media screen and (max-width: 615px) {
 		& {
-			grid-template-columns: 1fr auto;			
+			grid-template-columns: 1fr auto;
+
+			.button {
+				padding-left: 0.8rem;
+				padding-right: 0.8rem;
+
+				.is-hidden-sm {
+					display: none;
+				}
+			}
 		}
 	}
 }
@@ -20,24 +29,102 @@
 .plan-item {
 	display: grid;
 	grid-gap: 20px;
-	grid-template-columns: 500px auto 1fr;
+	grid-template-columns: 35rem 1fr auto;
 
-	@media screen and (max-width: @breakpoints[medium]) {
+	.info-box {
+		position: relative;
+	}
+
+	.info-box[title]:hover::after {
+		content: attr(title);
+		font-size: 9.6px;
+		padding: 5px 10px;
+		color: white;
+		position: absolute;
+		top: 3rem;
+		z-index: 10;
+		border-radius: 999px;
+		background: rgba(0,0,0, 0.8);
+		width: 100%;
+		left: 0;
+		right: 0; 
+	}
+
+	@media screen and (max-width: 870px) {
 		& {
-			grid-template-columns: 1fr auto;
+			grid-template-columns: 26rem 1fr auto;
 		}
 	}
 
 	@media screen and (max-width: @breakpoints[medium]) {
 		& {
 			p.text-truncate {
-				width: 18rem
+				width: 25rem
+			}
+		}
+	}
+
+	@media screen and (max-width: 730px) {
+		& {
+			grid-template-columns: 24rem 1fr auto;
+
+			p.text-truncate {
+				width: 23rem
+			}
+		}
+	}
+
+	@media screen and (max-width: 694px) {
+		& {
+			grid-template-columns: 18rem 1fr auto;
+
+			p.text-truncate {
+				width: 17rem
+			}
+		}
+	}
+
+	@media screen and (max-width: 585px) {
+		& {
+			.button {
+				padding-left: 0.8rem;
+				padding-right: 0.8rem;
+
+				.is-hidden-sm {
+					display: none;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 528px) {
+		& {
+			grid-template-columns: 15rem 1fr auto;
+
+			p.text-truncate {
+				width: 14rem
+			}
+		}
+	}
+
+	@media screen and (max-width: 482px) {
+		& {
+			grid-template-columns: 11rem 1fr;
+
+			p.text-truncate {
+				width: 10rem
 			}
 		}
 	}
 
 	@media screen and (max-width: @breakpoints[small]) {
 		& {
+			grid-template-columns: 1fr auto;
+
+			.button {
+				justify-self: end;
+			}
+
 			p.text-truncate {
 				width: 10rem
 			}
@@ -48,7 +135,7 @@
 		justify-self: end;
 		align-self: center;
 
-		@media screen and (max-width: @breakpoints[medium]) {
+		@media screen and (max-width: @breakpoints[small]) {
 			& {
 				grid-column: span 2
 			}

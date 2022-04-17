@@ -12,7 +12,7 @@
     font-size: 16px;
     list-style: none;
 
-	@media screen and (max-width: 375px) {
+	@media screen and (max-width: 425px) {
 		& {
 			height: 2.8rem;
 		}
@@ -110,7 +110,7 @@
 		position: relative;
 		z-index: 5;
 
-		@media screen and (max-width: 375px) {
+		@media screen and (max-width: 425px) {
 			&:hover {
 				& + .steps-content {
 					display: block;
@@ -136,7 +136,7 @@
 		margin-right: 0.5em;
 		padding-top: 0.2em;
 
-		@media screen and (max-width: 375px) {
+		@media screen and (max-width: 425px) {
 			& {
 				display: none;
 				margin: 0;
