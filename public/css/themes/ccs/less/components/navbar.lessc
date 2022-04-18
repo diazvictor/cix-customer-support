@@ -54,12 +54,18 @@
 
 	&-start {
 		display: flex;
+
+		.button {
+			svg.is-tablet, svg.is-mobile {
+				display: none;
+			}
+		}
 	}
 
 	#toggle-sidebar {
 		padding-left: 0.75rem;
 
-		@media screen and (max-width: @breakpoints[small]) {
+		@media screen and (max-width: 460px) {
 			& {
 				padding-left: 1.25rem;
 			}
@@ -69,12 +75,6 @@
 			font-size: 16px;
 			font-style: normal;
 
-			@media screen and (max-width: @breakpoints[small]) {
-				& {
-					font-size: 20px;
-				}
-			}
-
 			&::before {
 				font-family: "Font Awesome 6 Free";
 				font-weight: 900;
@@ -82,13 +82,8 @@
 
 				@media screen and (max-width: @breakpoints[large]) {
 					& {
+						display: none;
 						content: "\f0c9";
-					}
-				}
-
-				@media screen and (max-width: @breakpoints[small]) {
-					& {
-						color: #FFFFFF;
 					}
 				}
 			}
@@ -99,8 +94,9 @@
 				&::before {
 					content: "\f054";
 
-					@media screen and (max-width: @breakpoints[small]) {
+					@media screen and (max-width: 460px) {
 						& {
+							display: none;
 							content: "\f0c9";
 						}
 					}
@@ -112,7 +108,7 @@
 	&-logo {
 		display: none;
 
-		@media screen and (max-width: 458px) {
+		@media screen and (max-width: 460px) {
 			& {
 				display: flex;
 				justify-content: center;
@@ -137,7 +133,7 @@
 	}
 
 	.searchbar {
-		@media screen and (max-width: 458px) {
+		@media screen and (max-width: 460px) {
 			& {
 				display: none
 			}
@@ -155,14 +151,36 @@
 		padding-right: 1.25rem;
 	}
 
-	@media screen and (max-width: 458px) {
+	@media screen and (max-width: @breakpoints[large]) {
+		&-start {
+			.button {
+				svg.is-tablet {
+					display: flex;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 460px) {
+		&-start {
+			.button {
+				svg.is-mobile {
+					display: flex;
+				}
+
+				svg.is-tablet {
+					display: none;
+				}
+			}
+		}
+
 		&-end {
 			.button {
 				display: none;
 			}
 
 			.menu {
-				display: block
+				display: flex;
 			}
 		}
 	}

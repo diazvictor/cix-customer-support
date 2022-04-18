@@ -1,12 +1,24 @@
 			<div class="container">
-				<div class="row is-margin-bottom-3">
-					<h1 class="display-1 is-margin-bottom-0">Facturas</h1>
-					<nav class="breadcrumb">
-						<ul>
-							<li><a href="#">Inicio</a></li>
-							<li><a href="#">Facturas</a></li>
-						</ul>
-					</nav>
+				<div class="row is-margin-bottom-3 d-flex a-center j-between">
+					<div class="start">
+						<h1 class="display-1 is-margin-bottom-0">Facturas</h1>
+						<nav class="breadcrumb">
+							<ul>
+								<li><a href="#">Inicio</a></li>
+								<li><a href="#">Facturas</a></li>
+							</ul>
+						</nav>
+					</div>
+
+					<div class="end">
+						<div class="row j-start d-flex a-center">
+							<label for="services">Servicios</label>
+
+							<select class="select">
+								<option value="0" data-name="Plutón">Internet r-20Mbps</option>
+							</select>
+						</div>
+					</div>
 				</div>
 
 				<section class="box is-desktop">
@@ -18,129 +30,42 @@
 							ellos para mostrar las facturas de cada uno de ellos.</p>
 						</div>
 
-						<div class="row j-start j-md-normal">
-							<label for="services">Servicios</label>
-							<select class="select">
-								<option value="0" data-name="Plutón">Internet r-20Mbps</option>
-							</select>
-						</div>
+						<div class="row">
+							<div class="bills">
+								<div class="head">
+									<span>Factura Nª</span>
+									<span>Fecha</span>
+									<span>Ciclo</span>
+									<span>Monto</span>
+									<span>Pendiente</span>
+									<span>Divisa</span>
+									<span>Estado</span>
+								</div>
 
-						<div class="row responsive-table">
-							<table class="table">
-								<thead>
-									<tr>
-										<th>CÓDIGO</th>
-										<th>FECHA</th>
-										<th>CICLO</th>
-										<th>MONTO</th>
-										<th>PENDIENTE</th>
-										<th>DIVISA</th>
-										<th>ESTADO</th>
-									</tr>
-								</thead>
+								<div class="body">
+									<div class="bill">
+										<img src="/img/bills/bill.svg">
+										<span class="title">FP-000987</span>
+										<span>15/06/2022</span>
+										<span class="text-uppercase">junio</span>
+										<span>$100.00</span>
+										<span class="is-hidden-medium">$100.00</span>
+										<span class="is-hidden-medium">USD</span>
+										<span class="d-flex a-center">
+											<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M7 0.55C10.5608 0.55 13.45 3.43917 13.45 7C13.45 10.5608 10.5608 13.45 7 13.45C3.43917 13.45 0.55 10.5608 0.55 7C0.55 3.43917 3.43917 0.55 7 0.55Z" stroke="#19B159" stroke-width="1.1" stroke-miterlimit="10"/>
+												<path d="M10 5L5.80015 10L4 8.125" stroke="#19B159" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>
 
-								<tbody>
-									<tr>
-										<td>S-000912</td>
-										<td>08/06/2021</td>
-										<td>Junio</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td class="is-info"><i class="fas fa-undo icon"></i> Parcial</td>
-									</tr>
+											Completado
+										</span>
 
-									<tr>
-										<td>S-000913</td>
-										<td>08/06/2021</td>
-										<td>Mayo</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td class="is-info"><i class="fas fa-undo icon"></i> Parcial</td>
-									</tr>
-
-									<tr>
-										<td>S-000914</td>
-										<td>08/06/2021</td>
-										<td>Mayo</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td class="is-success"><i class="fas fa-check icon"></i> Aprobado</td>
-									</tr>
-
-									<tr>
-										<td>S-000915</td>
-										<td>08/06/2021</td>
-										<td>Junio</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td class="is-success"><i class="fas fa-check icon"></i> Aprobado</td>
-									</tr>
-
-									<tr>
-										<td>S-000916</td>
-										<td>08/06/2021</td>
-										<td>Abril</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td class="is-success"><i class="fas fa-check icon"></i> Aprobado</td>
-									</tr>
-
-									<tr>
-										<td>S-000917</td>
-										<td>08/06/2021</td>
-										<td>Marzo</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td class="is-danger"><i class="fas fa-exclamation icon"></i> Pendiente</td>
-									</tr>
-
-									<tr>
-										<td>S-000918</td>
-										<td>08/06/2021</td>
-										<td>Abril</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td class="is-danger"><i class="fas fa-exclamation icon"></i> Pendiente</td>
-									</tr>
-
-									<tr>
-										<td>S-000919</td>
-										<td>08/06/2021</td>
-										<td>Febrero</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td class="is-danger"><i class="fas fa-exclamation icon"></i> Pendiente</td>
-									</tr>
-
-									<tr>
-										<td>S-000920</td>
-										<td>08/06/2021</td>
-										<td>Febrero</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td class="is-success"><i class="fas fa-check icon"></i> Aprobado</td>
-									</tr>
-
-									<tr>
-										<td>S-000913</td>
-										<td>08/06/2021</td>
-										<td>Enero</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td class="is-success"><i class="fas fa-check icon"></i> Aprobado</td>
-									</tr>
-								</tbody>
-							</table>
+										<button type="button" class="button is-primary">
+											<img src="/img/services/eye.svg">
+										</button>
+									</div>
+								</div>
+							</div>
 						</div>
 
 						<div class="row">

@@ -10,8 +10,7 @@ Copyright (c) 2020  Díaz  Víctor  aka  (Máster Vitronic)
 local bills	= class('bills');
 local theme = conf.theme.theme
 
-function bills:show_main()
-	view:add_content('title',"Cix Customer Support | Invoicings")
+function bills:set_page()
 	view:add_contents({
 		js   = {
             ("/js/themes/%s/common/common.min.js"):format(theme),
@@ -31,6 +30,11 @@ function bills:show_main()
 	if( util:is_false(conf.luachi.production) )then
 		view:add_content('js','//127.0.0.1:35729/livereload.js')
 	end
+end
+
+function bills:show_overview()
+	view:add_content('title',"Cix Customer Support | Invoicings")
+	self:set_page()
 	local page   = template.new(
 		"/bills/bills.html",
 		"/page.html"
@@ -38,9 +42,26 @@ function bills:show_main()
 	view:generate(page)
 end
 
+function bills:show_view()
+	view:add_content('title',"Cix Customer Support | Invoicings - View")
+	self:set_page()
+	view:add_contents({
+		css = {
+            ("/css/themes/%s/bills/view.css"):format(theme),
+		},
+	})
+	local page   = template.new(
+		"/bills/view.html",
+		"/page.html"
+	)
+	view:generate(page)
+end
+
 function bills:execute()
+	local parameters = router.parameters
+
 	if (ENV.REQUEST_METHOD == 'POST') then
-		if ( FORM['logOut'] == 'true' ) then
+		if ( POST['logOut'] == 'true' ) then
 			local result = auth:logOut()
 			if ( result == true) then
 				http:header("Content-type: application/json; charset=utf-8",200)
@@ -49,7 +70,15 @@ function bills:execute()
 			return
 		end
 	end
-	self:show_main()
+
+	if ( parameters[1] ) then
+		if (parameters[1] == 'view') then
+			self:show_view()
+			return
+		end
+	end
+
+	self:show_overview()
 end
 
 return bills
