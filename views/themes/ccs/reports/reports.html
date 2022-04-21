@@ -16,205 +16,105 @@
 							<p class="subtitle">A continuación se muestran todos los reportes que hayas realizado hasta ahora.</p>
 						</div>
 
-						<div class="row responsive-table">
-							<table class="table">
-								<thead>
-									<tr>
-										<th>VER</th>
-										<th>ASUNTO</th>
-										<th>DESCRIPCIÓN CORTA</th>
-										<th>IMPORTANCIA</th>
-										<th>ESTADO</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td class="icon">
-											<a href="javascript:void(0);">
-												<i class="fas fa-eye"></i>
-											</a>
-										</td>
-										<td>Internet lento</td>
-										<td>Contraté un servicio de 20Mbps y solo descargo a 5Mbps...</td>
-										<td class="is-primary">Baja</td>
-										<td class="is-success"><i class="fas fa-unlock-alt icon no-border"></i> Abierto</td>
-									</tr>
-									<tr>
-										<td class="icon">
-											<a href="javascript:void(0);">
-												<i class="fas fa-eye"></i>
-											</a>
-										</td>
-										<td>Servicio intermitente</td>
-										<td>El serviciose cae mucho a lo largo de todo el día...</td>
-										<td class="is-info">Media</td>
-										<td class="is-danger"><i class="fas fa-lock icon no-border"></i> Cerrado</td>
-									</tr>
-									<tr>
-										<td class="icon">
-											<a href="javascript:void(0);">
-												<i class="fas fa-eye"></i>
-											</a>
-										</td>
-										<td>3 días sin servicio</td>
-										<td>Tengo 3 días sin internet y el pago ya me aparece como completado...</td>
-										<td class="is-danger">Alta</td>
-										<td class="is-danger"><i class="fas fa-lock icon no-border"></i> Cerrado</td>
-									</tr>
-									<tr>
-										<td class="icon">
-											<a href="javascript:void(0);">
-												<i class="fas fa-eye"></i>
-											</a>
-										</td>
-										<td>Puertos bloqueados</td>
-										<td>Creo que tengo los puertos 7777 bloqueados...</td>
-										<td class="is-dark">Muy alta</td>
-										<td class="is-success"><i class="fas fa-unlock-alt icon no-border"></i> Abierto</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-
 						<div class="row">
-							<div class="pagination is-centered">
-								<button type="button" class="button">Anterior</button>
-								<button type="button" class="button is-active">1</button>
-								<button type="button" class="button">Siguiente</button>
+							<div class="bill">
+								<div class="circle">
+									<img src="/img/reports/ticket.svg">
+								</div>
+
+								<span class="title">Ticket#000941</span>
+								<span class="desc">Asunto: Caida de conexión</span>
+
+								<span class="is-color-warning">
+									Baja
+								</span>
+
+								<span class="is-color-success">
+									<img src="/img/reports/unlock.svg">
+
+									Abierto
+								</span>
+
+								<button type="button" class="button is-primary">
+									<img src="/img/services/eye.svg">
+								</button>
+							</div>
+
+							<div class="bill">
+								<div class="circle">
+									<img src="/img/reports/ticket.svg">
+								</div>
+
+								<span class="title">Ticket#000941</span>
+								<span class="desc">Asunto: Caida de conexión</span>
+
+								<span class="is-color-info">
+									Media
+								</span>
+
+								<span class="is-color-danger">
+									<img src="/img/reports/lock.svg">
+
+									Cerrado
+								</span>
+
+								<button type="button" class="button is-primary">
+									<img src="/img/services/eye.svg">
+								</button>
+							</div>
+
+							<div class="bill">
+								<div class="circle">
+									<img src="/img/reports/ticket.svg">
+								</div>
+
+								<span class="title">Ticket#000941</span>
+								<span class="desc">Asunto: Caida de conexión</span>
+
+								<span class="is-color-danger">
+									Alta
+								</span>
+
+								<span class="is-color-danger">
+									<img src="/img/reports/lock.svg">
+
+									Cerrado
+								</span>
+
+								<button type="button" class="button is-primary">
+									<img src="/img/services/eye.svg">
+								</button>
+							</div>
+
+							<div class="bill">
+								<div class="circle">
+									<img src="/img/reports/ticket.svg">
+								</div>
+
+								<span class="title">Ticket#000941</span>
+								<span class="desc">Asunto: Caida de conexión</span>
+
+								<span class="is-color-dark">
+									Muy Alta
+								</span>
+
+								<span class="is-color-success">
+									<img src="/img/reports/unlock.svg">
+
+									Abierto
+								</span>
+
+								<button type="button" class="button is-primary">
+									<img src="/img/services/eye.svg">
+								</button>
 							</div>
 						</div>
 					</div>
 				</section>
 
-				<section class="box is-mobile is-grouped">
-					<div class="box">
-						<div class="d-flex j-between">
-							<div class="start">
-								<h1 class="title">Asunto</h1>
-								<span class="subtitle text-uppercase">Internet lento</span>
-							</div>
+				<div class="row d-flex j-flex-end">
+					<button type="button" class="button is-primary is-margin-right-2" disabled>Atrás</button>
 
-							<div class="end">
-								<div class="dropdown">
-									<button type="button" class="button is-icon dropdown-toggle">
-										<i class="fas fa-ellipsis-h"></i>
-									</button>
-
-									<div class="dropdown-menu">
-										<a class="dropdown-item is-font-xs" href="javascript:void(0);">
-											Ver factura
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="d-flex is-margin-top-1">
-							<div class="row">
-								<h1 class="title">Descripción corta</h1>
-								<span class="subtitle">Contraté un servicio de 20Mbps y solo descargo a 5Mbps...</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="box">
-						<div class="d-flex j-between">
-							<div class="start">
-								<h1 class="title">Asunto</h1>
-								<span class="subtitle text-uppercase">Internet lento</span>
-							</div>
-
-							<div class="end">
-								<div class="dropdown">
-									<button type="button" class="button is-icon dropdown-toggle">
-										<i class="fas fa-ellipsis-h"></i>
-									</button>
-
-									<div class="dropdown-menu">
-										<a class="dropdown-item is-font-xs" href="javascript:void(0);">
-											Ver factura
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="d-flex is-margin-top-1">
-							<div class="row">
-								<h1 class="title">Descripción corta</h1>
-								<span class="subtitle">Contraté un servicio de 20Mbps y solo descargo a 5Mbps...</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="box">
-						<div class="d-flex j-between">
-							<div class="start">
-								<h1 class="title">Asunto</h1>
-								<span class="subtitle text-uppercase">Internet lento</span>
-							</div>
-
-							<div class="end">
-								<div class="dropdown">
-									<button type="button" class="button is-icon dropdown-toggle">
-										<i class="fas fa-ellipsis-h"></i>
-									</button>
-
-									<div class="dropdown-menu">
-										<a class="dropdown-item is-font-xs" href="javascript:void(0);">
-											Ver factura
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="d-flex is-margin-top-1">
-							<div class="row">
-								<h1 class="title">Descripción corta</h1>
-								<span class="subtitle">Contraté un servicio de 20Mbps y solo descargo a 5Mbps...</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="box">
-						<div class="d-flex j-between">
-							<div class="start">
-								<h1 class="title">Asunto</h1>
-								<span class="subtitle text-uppercase">Internet lento</span>
-							</div>
-
-							<div class="end">
-								<div class="dropdown">
-									<button type="button" class="button is-icon dropdown-toggle">
-										<i class="fas fa-ellipsis-h"></i>
-									</button>
-
-									<div class="dropdown-menu">
-										<a class="dropdown-item is-font-xs" href="javascript:void(0);">
-											Ver factura
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="d-flex is-margin-top-1">
-							<div class="row">
-								<h1 class="title">Descripción corta</h1>
-								<span class="subtitle">Contraté un servicio de 20Mbps y solo descargo a 5Mbps...</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="row is-margin-top-2">
-						<div class="pagination is-centered">
-							<button type="button" class="button">Anterior</button>
-							<button type="button" class="button is-active">1</button>
-							<button type="button" class="button">2</button>
-							<button type="button" class="button">3</button>
-							<button type="button" class="button">Siguiente</button>
-						</div>
-					</div>
-				</section>
+					<button type="button" class="button is-primary">Siguiente</button>
+				</div>
 			</div>

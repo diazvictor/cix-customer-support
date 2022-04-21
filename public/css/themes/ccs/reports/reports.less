@@ -1,57 +1,113 @@
+@warning: #FF9B21;
+@info: #01B8FF;
+@success: #19B159;
+@danger: #E63C1F;
+@dark: #25233C;
+
 @white-2: #F0F0FF;
 @border-radius-width: 4px;
 
-.box.is-mobile {
-	display: none;
+.box.is-desktop {
+	.row {
+		.bill {
+			display: flex;
+			align-items: center;
+			padding: 0 0 0 12px;
+			border: 1px solid #D0D0E8;
+			border-radius: 4px;
 
-	&.is-grouped {
-		grid-gap: 10px;
-		grid-auto-flow: row;
-
-		.pagination {
-			.button {
-				border-color: #d7d7ff;
+			& + .bill {
+				margin-top: 13px
 			}
-		}
 
-		.box {
-			padding: 0.875rem;
-			border-radius: @border-radius-width !important;
-			border: 1px solid darken(@white-2, 5%) !important;
+			.circle {
+				display: flex;
+				justify-content: center;
+				width: 54px;
+				height: $width;
+				border-radius: 33rem;
+				background-color: #FF3C2F;
+				margin-right: 25px
+			}
 
-			.d-grid {
-				display: grid;
-				grid-template-columns: repeat(3, 1fr);
+			span {
+				width: 2rem;
+				flex-grow: 1;
 
-				.row:nth-child(2) {
-					justify-self: center;
+				&.title {
+					width: 4rem;
 				}
 
-				.row:nth-child(3) {
-					justify-self: end;
+				&.desc {
+					width: 4rem;
+				}
+			}
 
-					.dropdown {
-						&-menu {
-							top: 30px;
-							width: 10.75rem;
-						}
-					}
+			span.title {
+				color: #1D212F;
+				font-size: 20px;
+				font-weight: 700;
+				line-height: 24px;
+			}
+
+			span:not(.title) {
+				color: #8F9CC0;
+				font-size: 12px;
+				font-weight: 500;
+				line-height: 14px;
+
+				&.is-color-danger {
+					font-family: "Roboto";
+					color: @danger;
 				}
 
-				& + .d-grid {
-					margin-top: 0.875rem;
+				&.is-color-warning {
+					font-family: "Roboto";
+					color: @warning;
+				}
+
+				&.is-color-info {
+					font-family: "Roboto";
+					color: @info;
+				}
+
+				&.is-color-success {
+					font-family: "Roboto";
+					color: @success;
+				}
+
+				&.is-color-dark {
+					font-family: "Roboto";
+					color: @dark;
+				}
+			}
+
+			button {
+				display: flex;
+				width: 5rem;
+				height: 5rem;
+				border-radius: 0px 4px 4px 0px;
+
+				i {
+					font-size: 2rem;
 				}
 			}
 		}
 	}
 }
 
-@media screen and (max-width: 730px) {
-	.box.is-desktop {
-		display: none;
+@media screen and (max-width: 425px) {
+	.wrapper > .content {
+		margin-top: 0;
+		padding: 16px;
+		padding-top: 134px;
+		background-image: url(/img/background-mobile.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-attachment: fixed;
 	}
 
-	.box.is-mobile {
-		display: grid;
+	.box.is-desktop {
+		display: none;
 	}
 }
