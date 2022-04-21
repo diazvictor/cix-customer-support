@@ -16,7 +16,7 @@
 	justify-content: space-between;
 	align-items: center;
 
-	@media screen and (max-width: 460px) {
+	@media screen and (max-width: @breakpoints[small]) {
 		& {
 			position: fixed;
 			width: 100%;
@@ -65,7 +65,7 @@
 	#toggle-sidebar {
 		padding-left: 0.75rem;
 
-		@media screen and (max-width: 460px) {
+		@media screen and (max-width: @breakpoints[small]) {
 			& {
 				padding-left: 1.25rem;
 			}
@@ -94,7 +94,7 @@
 				&::before {
 					content: "\f054";
 
-					@media screen and (max-width: 460px) {
+					@media screen and (max-width: @breakpoints[small]) {
 						& {
 							display: none;
 							content: "\f0c9";
@@ -108,7 +108,7 @@
 	&-logo {
 		display: none;
 
-		@media screen and (max-width: 460px) {
+		@media screen and (max-width: @breakpoints[small]) {
 			& {
 				display: flex;
 				justify-content: center;
@@ -133,7 +133,7 @@
 	}
 
 	.searchbar {
-		@media screen and (max-width: 460px) {
+		@media screen and (max-width: @breakpoints[small]) {
 			& {
 				display: none
 			}
@@ -161,7 +161,7 @@
 		}
 	}
 
-	@media screen and (max-width: 460px) {
+	@media screen and (max-width: @breakpoints[small]) {
 		&-start {
 			.button {
 				svg.is-mobile {

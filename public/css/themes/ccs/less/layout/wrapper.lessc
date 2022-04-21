@@ -48,7 +48,7 @@ body {
 			top: 68px;
 			z-index: 1;
 
-			@media screen and (max-width: 460px) {
+			@media screen and (max-width: @breakpoints[small]) {
 				& {
 					display: block;
 				}
@@ -681,6 +681,12 @@ body {
 				}
 			}
 
+			&-separator {
+				display: block;
+				margin: 15px 40px;
+				border-top: 1px solid rgba(255, 255, 255, 0.2);
+			}
+
 			&-item {
 				cursor: pointer;
 				display: flex;
@@ -716,7 +722,7 @@ body {
 		grid-area: content;
 		padding: 32px;
 
-		@media screen and (max-width: @breakpoints[medium]) {
+		@media screen and (max-width: @breakpoints[small]) {
 			& {
 				.container {
 					> .row:first-child {
