@@ -1,6 +1,6 @@
 			<div class="container">
 				<div class="row is-margin-bottom-3">
-					<h1 class="display-1 is-margin-bottom-0">Mis pagos</h1>
+					<h1 class="display-1 is-margin-bottom-0">Historial De Pagos <i class="fas fa-history is-color-orange"></i></h1>
 					<nav class="breadcrumb">
 						<ul>
 							<li><a href="#">Inicio</a></li>
@@ -10,347 +10,590 @@
 				</div>
 
 				<section class="box is-desktop">
-					<div class="columns columns-1">
-						<div class="row">
-							<h1 class="title text-uppercase">Lista de facturas</h1>
-							<p class="subtitle">En la siguiente lista puede llevar un control de las facturas
-							pagadas y las que aún están pendiente. Si posee varios servicios podrá cambiar entre
-							ellos para mostrar las facturas de cada uno de ellos.</p>
-						</div>
+					<div class="content">
+						<span>Pagos Reportados</span>
 
-						<div class="row j-start j-md-normal">
-							<label for="services">Servicios</label>
-							<select class="select">
-								<option value="0" data-name="Plutón">Internet r-20Mbps</option>
-							</select>
-						</div>
+						<div class="panel">
+							<div class="panel-item">
+								<div class="head">
+									<div class="start">
+										<div class="icon">
+											<img src="/img/payments/mdi_transit-connection-variant.svg">
+										</div>
 
-						<div class="row responsive-table">
-							<table class="table">
-								<thead>
-									<tr>
-										<th>CÓDIGO</th>
-										<th>FECHA</th>
-										<th>CICLO</th>
-										<th>MONTO</th>
-										<th>PENDIENTE</th>
-										<th>DIVISA</th>
-										<th>ESTADO</th>
-									</tr>
-								</thead>
+										<div class="title">
+											<span>Internet r-20Mbps</span>
+											<p class="subtitle">Pago de mensualidad</p>
+										</div>
+									</div>
 
-								<tbody>
-									<tr>
-										<td>S-000912</td>
-										<td>08/06/2021</td>
-										<td>Junio</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td class="is-info"><i class="fas fa-undo icon"></i> Parcial</td>
-									</tr>
+									<div class="end">
+										<div class="row">
+											<h1 class="title">
+												$40,00
+												<i class="fas fa-long-arrow-alt-up is-color-green"></i>
+											</h1>
+											<p class="subtitle">15 junio 2021</p>
+										</div>
 
-									<tr>
-										<td>S-000913</td>
-										<td>08/06/2021</td>
-										<td>Mayo</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td class="is-info"><i class="fas fa-undo icon"></i> Parcial</td>
-									</tr>
+										<div class="row show-panel">
+											<span></span>
+										</div>
+									</div>
+								</div>
 
-									<tr>
-										<td>S-000914</td>
-										<td>08/06/2021</td>
-										<td>Mayo</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td class="is-success"><i class="fas fa-check icon"></i> Aprobado</td>
-									</tr>
+								<div class="body">
+									<div class="start">
+										<div class="row">
+											<span>Codigo Del Pago: <b>P-000005022</b></span>
+											<span>Banco: <b>BANCAMIGA</b></span>
+										</div>
 
-									<tr>
-										<td>S-000915</td>
-										<td>08/06/2021</td>
-										<td>Junio</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td class="is-success"><i class="fas fa-check icon"></i> Aprobado</td>
-									</tr>
+										<div class="row">
+											<span>Fecha Del Pago: <b>04/04/2022</b></span>
+											<span>Servicio Pagado: <b>S-002009</b></span>
+										</div>
+									</div>
 
-									<tr>
-										<td>S-000916</td>
-										<td>08/06/2021</td>
-										<td>Abril</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td class="is-success"><i class="fas fa-check icon"></i> Aprobado</td>
-									</tr>
+									<div class="end">
+										<span class="label is-success">Aprobado</span>
+									</div>
+								</div>
+							</div>
 
-									<tr>
-										<td>S-000917</td>
-										<td>08/06/2021</td>
-										<td>Marzo</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td class="is-danger"><i class="fas fa-exclamation icon"></i> Pendiente</td>
-									</tr>
+							<div class="panel-item">
+								<div class="head">
+									<div class="start">
+										<div class="icon">
+											<img src="/img/payments/mdi_transit-connection-variant.svg">
+										</div>
 
-									<tr>
-										<td>S-000918</td>
-										<td>08/06/2021</td>
-										<td>Abril</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td class="is-danger"><i class="fas fa-exclamation icon"></i> Pendiente</td>
-									</tr>
+										<div class="title">
+											<span>Internet r-20Mbps</span>
+											<p class="subtitle">Pago de mensualidad</p>
+										</div>
+									</div>
 
-									<tr>
-										<td>S-000919</td>
-										<td>08/06/2021</td>
-										<td>Febrero</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td class="is-danger"><i class="fas fa-exclamation icon"></i> Pendiente</td>
-									</tr>
+									<div class="end">
+										<div class="row">
+											<h1 class="title">
+												$40,00
+												<i class="fas fa-long-arrow-alt-up is-color-green"></i>
+											</h1>
+											<p class="subtitle">15 junio 2021</p>
+										</div>
 
-									<tr>
-										<td>S-000920</td>
-										<td>08/06/2021</td>
-										<td>Febrero</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td class="is-success"><i class="fas fa-check icon"></i> Aprobado</td>
-									</tr>
+										<div class="row show-panel">
+											<span></span>
+										</div>
+									</div>
+								</div>
 
-									<tr>
-										<td>S-000913</td>
-										<td>08/06/2021</td>
-										<td>Enero</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td>$100.00</td>
-										<td class="is-success"><i class="fas fa-check icon"></i> Aprobado</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
+								<div class="body">
+									<div class="start">
+										<div class="row">
+											<span>Codigo Del Pago: <b>P-000005022</b></span>
+											<span>Banco: <b>BANCAMIGA</b></span>
+										</div>
 
-						<div class="row">
-							<div class="pagination is-centered">
-								<button type="button" class="button">Anterior</button>
-								<button type="button" class="button is-active">1</button>
-								<button type="button" class="button">2</button>
-								<button type="button" class="button">3</button>
-								<button type="button" class="button">Siguiente</button>
+										<div class="row">
+											<span>Fecha Del Pago: <b>04/04/2022</b></span>
+											<span>Servicio Pagado: <b>S-002009</b></span>
+										</div>
+									</div>
+
+									<div class="end">
+										<span class="label is-success">Aprobado</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="panel-item">
+								<div class="head">
+									<div class="start">
+										<div class="icon">
+											<img src="/img/payments/mdi_transit-connection-variant.svg">
+										</div>
+
+										<div class="title">
+											<span>Internet r-20Mbps</span>
+											<p class="subtitle">Pago de mensualidad</p>
+										</div>
+									</div>
+
+									<div class="end">
+										<div class="row">
+											<h1 class="title">
+												$40,00
+												<i class="fas fa-long-arrow-alt-up is-color-green"></i>
+											</h1>
+											<p class="subtitle">15 junio 2021</p>
+										</div>
+
+										<div class="row show-panel">
+											<span></span>
+										</div>
+									</div>
+								</div>
+
+								<div class="body">
+									<div class="start">
+										<div class="row">
+											<span>Codigo Del Pago: <b>P-000005022</b></span>
+											<span>Banco: <b>BANCAMIGA</b></span>
+										</div>
+
+										<div class="row">
+											<span>Fecha Del Pago: <b>04/04/2022</b></span>
+											<span>Servicio Pagado: <b>S-002009</b></span>
+										</div>
+									</div>
+
+									<div class="end">
+										<span class="label is-success">Aprobado</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="panel-item">
+								<div class="head">
+									<div class="start">
+										<div class="icon">
+											<img src="/img/payments/mdi_transit-connection-variant.svg">
+										</div>
+
+										<div class="title">
+											<span>Internet r-20Mbps</span>
+											<p class="subtitle">Pago de mensualidad</p>
+										</div>
+									</div>
+
+									<div class="end">
+										<div class="row">
+											<h1 class="title">
+												$40,00
+												<i class="fas fa-long-arrow-alt-up is-color-green"></i>
+											</h1>
+											<p class="subtitle">15 junio 2021</p>
+										</div>
+
+										<div class="row show-panel">
+											<span></span>
+										</div>
+									</div>
+								</div>
+
+								<div class="body">
+									<div class="start">
+										<div class="row">
+											<span>Codigo Del Pago: <b>P-000005022</b></span>
+											<span>Banco: <b>BANCAMIGA</b></span>
+										</div>
+
+										<div class="row">
+											<span>Fecha Del Pago: <b>04/04/2022</b></span>
+											<span>Servicio Pagado: <b>S-002009</b></span>
+										</div>
+									</div>
+
+									<div class="end">
+										<span class="label is-success">Aprobado</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="panel-item">
+								<div class="head">
+									<div class="start">
+										<div class="icon">
+											<img src="/img/payments/mdi_transit-connection-variant.svg">
+										</div>
+
+										<div class="title">
+											<span>Internet r-20Mbps</span>
+											<p class="subtitle">Pago de mensualidad</p>
+										</div>
+									</div>
+
+									<div class="end">
+										<div class="row">
+											<h1 class="title">
+												$40,00
+												<i class="fas fa-long-arrow-alt-up is-color-green"></i>
+											</h1>
+											<p class="subtitle">15 junio 2021</p>
+										</div>
+
+										<div class="row show-panel">
+											<span></span>
+										</div>
+									</div>
+								</div>
+
+								<div class="body">
+									<div class="start">
+										<div class="row">
+											<span>Codigo Del Pago: <b>P-000005022</b></span>
+											<span>Banco: <b>BANCAMIGA</b></span>
+										</div>
+
+										<div class="row">
+											<span>Fecha Del Pago: <b>04/04/2022</b></span>
+											<span>Servicio Pagado: <b>S-002009</b></span>
+										</div>
+									</div>
+
+									<div class="end">
+										<span class="label is-success">Aprobado</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="panel-item is-collapsible">
+								<div class="head">
+									<div class="start">
+										<div class="icon">
+											<img src="/img/payments/mdi_transit-connection-variant.svg">
+										</div>
+
+										<div class="title">
+											<span>Internet r-20Mbps</span>
+											<p class="subtitle">Pago de mensualidad</p>
+										</div>
+									</div>
+
+									<div class="end">
+										<div class="row">
+											<h1 class="title">
+												$40,00
+												<i class="fas fa-long-arrow-alt-up is-color-green"></i>
+											</h1>
+											<p class="subtitle">15 junio 2021</p>
+										</div>
+
+										<div class="row show-panel">
+											<span></span>
+										</div>
+									</div>
+								</div>
+
+								<div class="body">
+									<div class="start">
+										<div class="row">
+											<span>Codigo Del Pago: <b>P-000005022</b></span>
+											<span>Banco: <b>BANCAMIGA</b></span>
+										</div>
+
+										<div class="row">
+											<span>Fecha Del Pago: <b>04/04/2022</b></span>
+											<span>Servicio Pagado: <b>S-002009</b></span>
+										</div>
+									</div>
+
+									<div class="end">
+										<span class="label is-success">Aprobado</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="panel-item">
+								<div class="head">
+									<div class="start">
+										<div class="icon">
+											<img src="/img/payments/mdi_transit-connection-variant.svg">
+										</div>
+
+										<div class="title">
+											<span>Internet r-20Mbps</span>
+											<p class="subtitle">Pago de mensualidad</p>
+										</div>
+									</div>
+
+									<div class="end">
+										<div class="row">
+											<h1 class="title">
+												$40,00
+												<i class="fas fa-long-arrow-alt-up is-color-green"></i>
+											</h1>
+											<p class="subtitle">15 junio 2021</p>
+										</div>
+
+										<div class="row show-panel">
+											<span></span>
+										</div>
+									</div>
+								</div>
+
+								<div class="body">
+									<div class="start">
+										<div class="row">
+											<span>Codigo Del Pago: <b>P-000005022</b></span>
+											<span>Banco: <b>BANCAMIGA</b></span>
+										</div>
+
+										<div class="row">
+											<span>Fecha Del Pago: <b>04/04/2022</b></span>
+											<span>Servicio Pagado: <b>S-002009</b></span>
+										</div>
+									</div>
+
+									<div class="end">
+										<span class="label is-success">Aprobado</span>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</section>
 
-				<section class="box is-mobile is-grouped">
-					<div class="box">
-						<div class="d-grid">
-							<div class="row">
-								<h1 class="title">S-000912</h1>
-								<span class="subtitle text-uppercase">Ene,Feb,Mar...</span>
+				<section class="reveals">
+					<div class="reveal is-active">
+						<div class="head d-flex a-center j-between">
+							<div class="d-flex d-flow-column">
+								<span class="title">Pluton-10x</span>
+								<span class="subtitle"><b>Monto</b> : 550 USD</span>
 							</div>
 
-							<div class="row">
-								<h1 class="title">Monto</h1>
-								<span class="subtitle">560,00 USD</span>
+							<div class="d-flex d-flow-column flex-end">
+								<span class="subtitle"><b>Ciclo</b> : Febrero</span>
+								<span class="subtitle"><b>Fecha</b> : 06/04/2022</span>
 							</div>
 
-							<div class="row">
-								<div class="dropdown">
-									<button type="button" class="button is-icon dropdown-toggle">
-										<i class="fas fa-ellipsis-h"></i>
-									</button>
-
-									<div class="dropdown-menu">
-										<a class="dropdown-item is-font-xs" href="javascript:void(0);">
-											Ver factura
-										</a>
-									</div>
-								</div>
-							</div>
+							<i class="fas fa-chevron-down"></i>
 						</div>
 
-						<div class="d-grid">
+						<div class="body">
 							<div class="row">
-								<h1 class="title">Fecha</h1>
-								<span class="subtitle">08/06/2021</span>
+								<span class="label is-success">Aprobado</span>
 							</div>
 
 							<div class="row">
-								<h1 class="title">Pendiente</h1>
-								<span class="subtitle">100,00</span>
+								<span><b>Codigo</b></span>
+								<span><b>P-000005021</b></span>
+
+								<span>Servicio pagado</span>
+								<span>S-000887</span>
+
+								<span>Fecha de pago</span>
+								<span>24/04/2022</span>
+
+								<span>Banco</span>
+								<span>BANCAMIGA</span>
+
+								<span>Proforma o factura</span>
+								<span>FP-0000014655</span>
+
+								<span>Monto depositado</span>
+								<span>60,00</span>
 							</div>
 
 							<div class="row">
-								<h1 class="title">Estado</h1>
-								<span class="subtitle is-color-info">
-									Parcial <i class="fas fa-undo icon"></i>
-								</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="box">
-						<div class="d-grid">
-							<div class="row">
-								<h1 class="title">S-000913</h1>
-								<span class="subtitle text-uppercase">Ene,Feb,Mar...</span>
-							</div>
-
-							<div class="row">
-								<h1 class="title">Monto</h1>
-								<span class="subtitle">560,00 USD</span>
-							</div>
-
-							<div class="row">
-								<div class="dropdown">
-									<button type="button" class="button is-icon dropdown-toggle">
-										<i class="fas fa-ellipsis-h"></i>
-									</button>
-
-									<div class="dropdown-menu">
-										<a class="dropdown-item is-font-xs" href="javascript:void(0);">
-											Ver factura
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="d-grid">
-							<div class="row">
-								<h1 class="title">Fecha</h1>
-								<span class="subtitle">08/06/2021</span>
-							</div>
-
-							<div class="row">
-								<h1 class="title">Pendiente</h1>
-								<span class="subtitle">00,00</span>
-							</div>
-
-							<div class="row">
-								<h1 class="title">Estado</h1>
-								<span class="subtitle is-color-success">
-									Aprobado <i class="fas fa-check icon"></i>
-								</span>
+								<span class="title">Observaciones</span>
+								<p>
+									Pago aprobado por administracion, sin embargo tiene una retencion
+									pendiente por entregar en nuestras oficinas, gracias por ser cliente cix.
+								</p>
 							</div>
 						</div>
 					</div>
 
-					<div class="box">
-						<div class="d-grid">
-							<div class="row">
-								<h1 class="title">S-000914</h1>
-								<span class="subtitle text-uppercase">Ene,Feb,Mar...</span>
+					<div class="reveal">
+						<div class="head d-flex a-center j-between">
+							<div class="d-flex d-flow-column">
+								<span class="title">Pluton-10x</span>
+								<span class="subtitle"><b>Monto</b> : 550 USD</span>
 							</div>
 
-							<div class="row">
-								<h1 class="title">Monto</h1>
-								<span class="subtitle">560,00 USD</span>
+							<div class="d-flex d-flow-column flex-end">
+								<span class="subtitle"><b>Ciclo</b> : Febrero</span>
+								<span class="subtitle"><b>Fecha</b> : 06/04/2022</span>
 							</div>
 
-							<div class="row">
-								<div class="dropdown">
-									<button type="button" class="button is-icon dropdown-toggle">
-										<i class="fas fa-ellipsis-h"></i>
-									</button>
-
-									<div class="dropdown-menu">
-										<a class="dropdown-item is-font-xs" href="javascript:void(0);">
-											Ver factura
-										</a>
-									</div>
-								</div>
-							</div>
+							<i class="fas fa-chevron-down"></i>
 						</div>
 
-						<div class="d-grid">
+						<div class="body">
 							<div class="row">
-								<h1 class="title">Fecha</h1>
-								<span class="subtitle">08/06/2021</span>
+								<span class="label is-success">Aprobado</span>
 							</div>
 
 							<div class="row">
-								<h1 class="title">Pendiente</h1>
-								<span class="subtitle">00,00</span>
+								<span><b>Codigo</b></span>
+								<span><b>P-000005021</b></span>
+
+								<span>Servicio pagado</span>
+								<span>S-000887</span>
+
+								<span>Fecha de pago</span>
+								<span>24/04/2022</span>
+
+								<span>Banco</span>
+								<span>BANCAMIGA</span>
+
+								<span>Proforma o factura</span>
+								<span>FP-0000014655</span>
+
+								<span>Monto depositado</span>
+								<span>60,00</span>
 							</div>
 
 							<div class="row">
-								<h1 class="title">Estado</h1>
-								<span class="subtitle is-color-success">
-									Aprobado <i class="fas fa-check icon"></i>
-								</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="box">
-						<div class="d-grid">
-							<div class="row">
-								<h1 class="title">S-000913</h1>
-								<span class="subtitle text-uppercase">Ene,Feb,Mar...</span>
-							</div>
-
-							<div class="row">
-								<h1 class="title">Monto</h1>
-								<span class="subtitle">560,00 USD</span>
-							</div>
-
-							<div class="row">
-								<div class="dropdown">
-									<button type="button" class="button is-icon dropdown-toggle">
-										<i class="fas fa-ellipsis-h"></i>
-									</button>
-
-									<div class="dropdown-menu">
-										<a class="dropdown-item is-font-xs" href="javascript:void(0);">
-											Ver factura
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="d-grid">
-							<div class="row">
-								<h1 class="title">Fecha</h1>
-								<span class="subtitle">08/06/2021</span>
-							</div>
-
-							<div class="row">
-								<h1 class="title">Pendiente</h1>
-								<span class="subtitle">00,00</span>
-							</div>
-
-							<div class="row">
-								<h1 class="title">Estado</h1>
-								<span class="subtitle is-color-danger">
-									Aprobado <i class="fas fa-exclamation icon"></i>
-								</span>
+								<span class="title">Observaciones</span>
+								<p>
+									Pago aprobado por administracion, sin embargo tiene una retencion
+									pendiente por entregar en nuestras oficinas, gracias por ser cliente cix.
+								</p>
 							</div>
 						</div>
 					</div>
 
-					<div class="row is-margin-top-2">
-						<div class="pagination is-centered">
-							<button type="button" class="button">Anterior</button>
-							<button type="button" class="button is-active">1</button>
-							<button type="button" class="button">2</button>
-							<button type="button" class="button">3</button>
-							<button type="button" class="button">Siguiente</button>
+					<div class="reveal">
+						<div class="head d-flex a-center j-between">
+							<div class="d-flex d-flow-column">
+								<span class="title">Pluton-10x</span>
+								<span class="subtitle"><b>Monto</b> : 550 USD</span>
+							</div>
+
+							<div class="d-flex d-flow-column flex-end">
+								<span class="subtitle"><b>Ciclo</b> : Febrero</span>
+								<span class="subtitle"><b>Fecha</b> : 06/04/2022</span>
+							</div>
+
+							<i class="fas fa-chevron-down"></i>
+						</div>
+
+						<div class="body">
+							<div class="row">
+								<span class="label is-success">Aprobado</span>
+							</div>
+
+							<div class="row">
+								<span><b>Codigo</b></span>
+								<span><b>P-000005021</b></span>
+
+								<span>Servicio pagado</span>
+								<span>S-000887</span>
+
+								<span>Fecha de pago</span>
+								<span>24/04/2022</span>
+
+								<span>Banco</span>
+								<span>BANCAMIGA</span>
+
+								<span>Proforma o factura</span>
+								<span>FP-0000014655</span>
+
+								<span>Monto depositado</span>
+								<span>60,00</span>
+							</div>
+
+							<div class="row">
+								<span class="title">Observaciones</span>
+								<p>
+									Pago aprobado por administracion, sin embargo tiene una retencion
+									pendiente por entregar en nuestras oficinas, gracias por ser cliente cix.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="reveal">
+						<div class="head d-flex a-center j-between">
+							<div class="d-flex d-flow-column">
+								<span class="title">Pluton-10x</span>
+								<span class="subtitle"><b>Monto</b> : 550 USD</span>
+							</div>
+
+							<div class="d-flex d-flow-column flex-end">
+								<span class="subtitle"><b>Ciclo</b> : Febrero</span>
+								<span class="subtitle"><b>Fecha</b> : 06/04/2022</span>
+							</div>
+
+							<i class="fas fa-chevron-down"></i>
+						</div>
+
+						<div class="body">
+							<div class="row">
+								<span class="label is-success">Aprobado</span>
+							</div>
+
+							<div class="row">
+								<span><b>Codigo</b></span>
+								<span><b>P-000005021</b></span>
+
+								<span>Servicio pagado</span>
+								<span>S-000887</span>
+
+								<span>Fecha de pago</span>
+								<span>24/04/2022</span>
+
+								<span>Banco</span>
+								<span>BANCAMIGA</span>
+
+								<span>Proforma o factura</span>
+								<span>FP-0000014655</span>
+
+								<span>Monto depositado</span>
+								<span>60,00</span>
+							</div>
+
+							<div class="row">
+								<span class="title">Observaciones</span>
+								<p>
+									Pago aprobado por administracion, sin embargo tiene una retencion
+									pendiente por entregar en nuestras oficinas, gracias por ser cliente cix.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="reveal">
+						<div class="head d-flex a-center j-between">
+							<div class="d-flex d-flow-column">
+								<span class="title">Pluton-10x</span>
+								<span class="subtitle"><b>Monto</b> : 550 USD</span>
+							</div>
+
+							<div class="d-flex d-flow-column flex-end">
+								<span class="subtitle"><b>Ciclo</b> : Febrero</span>
+								<span class="subtitle"><b>Fecha</b> : 06/04/2022</span>
+							</div>
+
+							<i class="fas fa-chevron-down"></i>
+						</div>
+
+						<div class="body">
+							<div class="row">
+								<span class="label is-success">Aprobado</span>
+							</div>
+
+							<div class="row">
+								<span><b>Codigo</b></span>
+								<span><b>P-000005021</b></span>
+
+								<span>Servicio pagado</span>
+								<span>S-000887</span>
+
+								<span>Fecha de pago</span>
+								<span>24/04/2022</span>
+
+								<span>Banco</span>
+								<span>BANCAMIGA</span>
+
+								<span>Proforma o factura</span>
+								<span>FP-0000014655</span>
+
+								<span>Monto depositado</span>
+								<span>60,00</span>
+							</div>
+
+							<div class="row">
+								<span class="title">Observaciones</span>
+								<p>
+									Pago aprobado por administracion, sin embargo tiene una retencion
+									pendiente por entregar en nuestras oficinas, gracias por ser cliente cix.
+								</p>
+							</div>
 						</div>
 					</div>
 				</section>

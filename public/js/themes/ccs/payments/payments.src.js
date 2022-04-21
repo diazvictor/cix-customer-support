@@ -20,3 +20,22 @@ if (window.location.pathname == "/payments") {
 }
 
 sidenav.classList.add("is-active");
+
+let panels = document.querySelectorAll(".panel-item");
+
+panels.forEach((panel) => {
+	let showPanel = panel.querySelector(".show-panel");
+
+	showPanel.addEventListener("click", (e) => {
+		panel.classList.toggle("is-collapsible");
+	});
+});
+
+let reveals = document.querySelectorAll(".reveal")
+reveals.forEach((reveal) => {
+	let revealHead = reveal.querySelector(".head");
+
+	revealHead.addEventListener("click", (e) => {
+		reveal.classList.toggle("is-active");
+	});
+});
