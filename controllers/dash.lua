@@ -25,7 +25,8 @@ function dash:show_main()
 			("/css/themes/%s/common/fontawesome/brands.css"):format(theme),
 			("/css/themes/%s/common/fontawesome/solid.css"):format(theme),
 			("/css/themes/%s/common/fontawesome/regular.css"):format(theme),
-			("/css/themes/%s/common/leaflet.css"):format(theme),
+			-- ("/css/themes/%s/common/leaflet.css"):format(theme),
+			("/css/themes/%s/common/splide.min.css"):format(theme),
 			("/css/themes/%s/dash/dash.css"):format(theme)
 		},
         year = os.date('%Y')

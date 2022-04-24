@@ -1,270 +1,325 @@
 <div class="container">
-    <div class="row is-margin-bottom-3">
-        <h1 class="display-1 is-margin-bottom-0">Bienvenida Isabel</h1>
-        <nav class="breadcrumb">
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Cix Dashboard</a></li>
-            </ul>
-        </nav>
-    </div>
+    <div class="dash">
+		<div class="row">
+			<div class="box">
+				<div class="head">
+					<img src="/img/dash/bar-top.svg">
 
-    <div class="columns columns-3 columns-lg-3 columns-md-1">
-        <div class="column-2 column-lg-2 column-md-1">
-            <section class="info box is-grouped is-vertical">
-                <div class="box">
-                    <div class="d-flex j-between is-margin-bottom-1">
-                        <div class="start">
-                            <h1 class="title text-uppercase">deuda total</h1>
-                            <p class="subtitle">Facturas por pagar</p>
-                        </div>
+					<div class="avatar">
+						<img src="/img/dash/profile-1.png">
+					</div>
+				</div>
 
-                        <div class="end">
-                            <i class="fas fa-dollar-sign fa-2x is-color-orange"></i>
-                        </div>
-                    </div>
+				<div class="body">
+					<span class="title">Pedro pablo Perez</span>
+					<span class="subtitle">V-8367037</span>
+					<span class="subtitle">C-002388</span>
 
-                    <h2 class="is-margin-bottom-1">$5,900.00</h2>
+					<p class="subtitle">
+						AV LUIS DEL VALLE GARCIA EDIF OFI PRO AIRIÑOS PISO 4 OF 403 SECTOR LAS AVENIDAS MATURIN MONAGAS ZONA POSTAL 6201 Maturin, Mónagas. Venezuela
+					</p>
 
-                    <p class="is-font-xs">
-                        <a href="/bills/">22 <span class="is-color-grey-light">Facturas</span></a>
-                    </p>
-                </div>
+					<div class="list">
+						<a href="javascript:void(0);">
+							<span>Notificaciones</span>
+							<span class="label is-primary">4</span>
+						</a>
 
-                <div class="box">
-                    <div class="d-flex j-between is-margin-bottom-1">
-                        <div class="start">
-                            <h1 class="title text-uppercase">pagos por aprobar</h1>
-                            <p class="subtitle">Procesando facturas</p>
-                        </div>
+						<a href="javascript:void(0);">
+							<span>Facturas</span>
+							<span class="label is-primary">2</span>
+						</a>
 
-                        <div class="end">
-                            <i class="fas fa-coins fa-2x is-color-orange"></i>
-                        </div>
-                    </div>
+						<a href="javascript:void(0);">
+							<span>Reportes</span>
+							<span class="label is-primary">6</span>
+						</a>
+					</div>
+				</div>
 
-                    <h2 class="is-margin-bottom-1">6</h2>
+				<div class="foot">
+					<a href="javascript:void(0);">
+						<img src="/img/dash/edit-profile.svg">
+						<span>Editar mi perfil</span>
+					</a>
+				</div>
+			</div>
+		</div>
 
-                    <a href="/pagos/payments/" class="is-font-xs">6/22</a>
-                </div>
+		<div class="row">
+			<div class="filter">
+				<div class="separator"></div>
 
-                <div class="box">
-                    <div class="d-flex j-between is-margin-bottom-1">
-                        <div class="start">
-                            <h1 class="title text-uppercase">deuda total</h1>
-                            <p class="subtitle">Facturas por pagar</p>
-                        </div>
+				<div class="order-by">
+					Ordenar por: <b>Recientes</b>
+				</div>
+			</div>
 
-                        <div class="end">
-                            <i class="fas fa-exclamation-circle fa-2x is-color-orange"></i>
-                        </div>
-                    </div>
+			<div class="box">
+				<div class="head">
+					<div class="start">
+						<div class="avatar">
+							<img src="/img/dash/profile-2.png">
+						</div>
 
-                    <h2 class="is-margin-bottom-1">7</h2>
+						<div class="row">
+							<span class="title">Pedro pablo Perez</span>
+							<span class="subtitle">Tecnico de Soporte Nivel II</span>
+						</div>
+					</div>
 
-                    <a href="/reportes/reports/" class="is-font-xs">Ver mis reportes</a>
-                </div>
-            </section>
+					<div class="end">
+						<button type="button">
+							. . .
+						</button>
+					</div>
+				</div>
 
-            <section class="box">
-                <div class="columns columns-1">
-                    <div class="row">
-                        <div class="columns">
-                            <div class="row j-start">
-                                <h1 class="title text-uppercase">Consumo de internet</h1>
-                                <p class="subtitle">Consulta el consumo de internet hasta ahora</p>
-                            </div>
+				<div class="body">
+					<span class="date">15 abr. 2022</span>
+					<p class="desc">
+						Presentamos falla, por corte de fibra optica en la ruta terrazas - dp,
+						nuestro personal se encuentra realizando las validaciones correspondientes
+						para reestablecer el servicio lo antes posible...
+					</p>
 
-                            <div class="row j-end j-md-normal">
-                                <select class="select">
-                                    <option value="0">Internet r-50Mbps</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
+					<div class="thumbnail">
+						<img src="/img/dash/thumbnail.png">
+					</div>
+				</div>
 
-                    <div class="row">
-                        <div class="chart-container">
-                            <canvas id="myChart"></canvas>
-                        </div>
-                    </div>
+				<div class="foot">
+					<a href="javascript:void(0);">
+						<img src="/img/dash/like.svg">
+						<span>Me Gusta</span>
+					</a>
 
-                    <div class="row">
-                        <form class="form">
-                            <div class="columns">
-                                <div class="field">
-                                    <label>Rango</label>
-                                    <select class="select">
-                                        <option value="0">Ultima semana</option>
-                                    </select>
-                                </div>
+					<a href="javascript:void(0);">
+						<img src="/img/dash/comment.svg">
+						<span>Comentar</span>
+					</a>
 
-                                <div class="field">
-                                    <label>Desde</label>
-                                    <div class="has-icon">
-                                        <input type="text" placeholder="16/06/2021">
-                                        <i class="fas fa-calendar-alt is-right"></i>
-                                    </div>
-                                </div>
+					<a href="javascript:void(0);">
+						<img src="/img/dash/share.svg">
+						<span>Compartir</span>
+					</a>
+				</div>
+			</div>
 
-                                <div class="field">
-                                    <label>Hasta</label>
-                                    <div class="has-icon">
-                                        <input type="text" placeholder="16/06/2021">
-                                        <i class="fas fa-calendar-alt is-right"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+			<div class="box">
+				<div class="head">
+					<div class="start">
+						<div class="avatar">
+							<img src="/img/dash/profile-2.png">
+						</div>
 
-                    <div class="row has-centered j-sm-normal">
-                        <button type="button" class="button is-fullwidth is-primary">
-                            <i class="fas fa-chart-bar"></i>
-                            Generar Gráfica
-                        </button>
-                    </div>
-                </div>
-            </section>
-        </div>
+						<div class="row">
+							<span class="title">Pedro pablo Perez</span>
+							<span class="subtitle">Tecnico de Soporte Nivel II</span>
+						</div>
+					</div>
 
-        <div class="column-1">
-            <div class="panel">
-                <div class="panel-head">
-                    <div class="start">
-                        <h1 class="title text-uppercase">historial de pagos</h1>
-                        <p class="subtitle">Pagos completados</p>
-                    </div>
+					<div class="end">
+						<button type="button">
+							. . .
+						</button>
+					</div>
+				</div>
 
-                    <div class="end">
-                        <button type="button" class="button is-icon is-transparent">
-                            <i class="fas fa-history is-color-orange"></i>
-                        </button>
-                    </div>
-                </div>
+				<div class="body">
+					<span class="date">15 abr. 2022</span>
+					<p class="desc">
+						Presentamos falla, por corte de fibra optica en la ruta terrazas - dp,
+						nuestro personal se encuentra realizando las validaciones correspondientes
+						para reestablecer el servicio lo antes posible...
+					</p>
 
-                <div class="panel-item">
-                    <div class="start">
-                        <div class="icon">
-                            <i class="fas fa-project-diagram is-color-orange"></i>
-                        </div>
+					<div class="thumbnail">
+						<img src="/img/dash/thumbnail.png">
+					</div>
+				</div>
 
-                        <div class="title">
-                            <span>Internet r-20Mbps</span>
-                            <p class="subtitle">Pago de mensualidad</p>
-                        </div>
-                    </div>
+				<div class="foot">
+					<a href="javascript:void(0);">
+						<img src="/img/dash/like.svg">
+						<span>Me Gusta</span>
+					</a>
 
-                    <div class="end">
-                        <h1 class="title">
-                            $40,00
-                            <i class="fas fa-long-arrow-alt-up is-color-green"></i>
-                        </h1>
-                        <p class="subtitle">15 junio 2021</p>
-                    </div>
-                </div>
+					<a href="javascript:void(0);">
+						<img src="/img/dash/comment.svg">
+						<span>Comentar</span>
+					</a>
 
-                <div class="panel-item">
-                    <div class="start">
-                        <div class="icon">
-                            <i class="fas fa-project-diagram is-color-orange"></i>
-                        </div>
+					<a href="javascript:void(0);">
+						<img src="/img/dash/share.svg">
+						<span>Compartir</span>
+					</a>
+				</div>
+			</div>
 
-                        <div class="title">
-                            <span>Internet r-20Mbps</span>
-                            <p class="subtitle">Pago de mensualidad</p>
-                        </div>
-                    </div>
+			<div class="box">
+				<div class="head">
+					<div class="start">
+						<div class="avatar">
+							<img src="/img/dash/profile-2.png">
+						</div>
 
-                    <div class="end">
-                        <h1 class="title">
-                            $40,00
-                            <i class="fas fa-long-arrow-alt-up is-color-green"></i>
-                        </h1>
-                        <p class="subtitle">15 junio 2021</p>
-                    </div>
-                </div>
+						<div class="row">
+							<span class="title">Pedro pablo Perez</span>
+							<span class="subtitle">Tecnico de Soporte Nivel II</span>
+						</div>
+					</div>
 
-                <div class="panel-item">
-                    <div class="start">
-                        <div class="icon">
-                            <i class="fas fa-project-diagram is-color-orange"></i>
-                        </div>
+					<div class="end">
+						<button type="button">
+							. . .
+						</button>
+					</div>
+				</div>
 
-                        <div class="title">
-                            <span>Internet r-20Mbps</span>
-                            <p class="subtitle">Pago de mensualidad</p>
-                        </div>
-                    </div>
+				<div class="body">
+					<span class="date">15 abr. 2022</span>
+					<p class="desc">
+						Presentamos falla, por corte de fibra optica en la ruta terrazas - dp,
+						nuestro personal se encuentra realizando las validaciones correspondientes
+						para reestablecer el servicio lo antes posible...
+					</p>
 
-                    <div class="end">
-                        <h1 class="title">
-                            $40,00
-                            <i class="fas fa-long-arrow-alt-up is-color-green"></i>
-                        </h1>
-                        <p class="subtitle">15 junio 2021</p>
-                    </div>
-                </div>
+					<div class="thumbnail">
+						<img src="/img/dash/thumbnail.png">
+					</div>
+				</div>
 
-                <div class="panel-item">
-                    <div class="start">
-                        <div class="icon">
-                            <i class="fas fa-project-diagram is-color-orange"></i>
-                        </div>
+				<div class="foot">
+					<a href="javascript:void(0);">
+						<img src="/img/dash/like.svg">
+						<span>Me Gusta</span>
+					</a>
 
-                        <div class="title">
-                            <span>Internet r-20Mbps</span>
-                            <p class="subtitle">Pago de mensualidad</p>
-                        </div>
-                    </div>
+					<a href="javascript:void(0);">
+						<img src="/img/dash/comment.svg">
+						<span>Comentar</span>
+					</a>
 
-                    <div class="end">
-                        <h1 class="title">
-                            $40,00
-                            <i class="fas fa-long-arrow-alt-up is-color-green"></i>
-                        </h1>
-                        <p class="subtitle">15 junio 2021</p>
-                    </div>
-                </div>
+					<a href="javascript:void(0);">
+						<img src="/img/dash/share.svg">
+						<span>Compartir</span>
+					</a>
+				</div>
+			</div>
+		</div>
 
-                <div class="panel-foot">
-                    <div class="d-flex j-center a-center">
-                        <a href="javascript:void(0);" class="is-font-xs">Ver historial completo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+		<div class="row">
+			<div class="is-desktop">
+				<div class="box info-bills">
+					<div class="start">
+						<span class="title text-uppercase">
+							Saldo pendiente
+						</span>
 
-        <div class="column-3 column-lg-3 column-md-1">
-            <section class="box map">
-                <div class="row">
-                    <div class="start">
-                        <h1 class="title text-uppercase">tu ubicación</h1>
-                        <p class="subtitle">Ubicación y calidad del radio enlace</p>
-                    </div>
+						<span class="subtitle">
+							Facturas por pagar
+						</span>
+					</div>
 
-                    <div class="end">
-                        <div class="column">
-                            <span class="is-font-xs">Calidad de la señal</span>
-                            <span class="is-font-xs j-end">90%</span>
+					<div class="end">
+						<span class="title">
+							$5,900.00
+						</span>
 
-                            <progress class="progress is-small" value="90" max="100">90%</progress>
-                        </div>
+						<span class="subtitle">
+							<a href="/bills/">22 <span class="is-color-grey-light">Facturas</span></a>
+						</span>
+					</div>
 
-                        <div class="column">
-                            <button type="button" class="button is-icon is-transparent">
-                                <i class="is-color-orange fas fa-sync"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+					<div class="icon">
+						<img src="/img/dash/dollar.svg">
+					</div>
+				</div>
 
-                <div class="is-margin-bottom-2"></div>
+				<div class="box update-data">
+					<img src="/img/dash/info.svg">
 
-                <div class="row">
-                    <div id="mapid"></div>
-                </div>
-            </section>
-        </div>
+					<span class="title">Actualiza Tus Datos!</span>
+					<p class="subtitle">Queremos estar mas en contacto contigo!</p>
+
+					<a href="javascript: void(0);" class="button is-primary">Actualizar Ahora</a>
+				</div>
+
+				<div class="box feedback">
+					<span class="title text-uppercase">Que te parece esta herramienta?</span>
+					<p class="subtitle">Tu Opinion es importante para nosotros</p>
+
+					<div class="stars">
+						<img src="/img/dash/star-off.svg">
+						<img src="/img/dash/star-off.svg">
+						<img src="/img/dash/star-off.svg">
+						<img src="/img/dash/star-off.svg">
+						<img src="/img/dash/star-on.svg">
+					</div>
+
+					<a href="javascript:void(0);" class="button is-primary">Enviar</a>
+				</div>
+			</div>
+
+			<div class="is-mobile">
+				<div class="box profile">
+					<div class="avatar">
+						<img src="/img/dash/profile-2.png">
+					</div>
+
+					<div class="start">
+						<span class="title">Pedro pablo Perez</span>
+						<span class="subtitle">Codigo de cliente Nº 001782</span>
+					</div>
+
+					<div class="end">
+						<span class="title-1 text-uppercase">
+							Saldo pendiente
+						</span>
+
+						<span class="title-2">
+							$5,900.00
+						</span>
+
+						<span class="subtitle">Pague antes del <span class="is-color-orange">06/05/2022</span></span>
+					</div>
+				</div>
+
+				<div id="slider-boxes" class="splide">
+					<div class="splide__track">
+						<ul class="splide__list">
+							<li class="splide__slide">
+								<div class="box update-data info-bills">
+									<img src="/img/dash/info.svg">
+
+									<span class="title">Actualiza Tus Datos!</span>
+									<p class="subtitle">Queremos estar mas en contacto contigo!</p>
+
+									<a href="javascript: void(0);" class="button is-primary">Actualizar Ahora</a>
+								</div>
+							</li>
+
+							<li class="splide__slide">
+								<div class="box feedback">
+									<span class="title text-uppercase">Que te parece esta herramienta?</span>
+									<p class="subtitle">Tu Opinion es importante para nosotros</p>
+
+									<div class="stars">
+										<img src="/img/dash/star-off.svg">
+										<img src="/img/dash/star-off.svg">
+										<img src="/img/dash/star-off.svg">
+										<img src="/img/dash/star-off.svg">
+										<img src="/img/dash/star-on.svg">
+									</div>
+
+									<a href="javascript:void(0);" class="button is-primary">Enviar</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
     </div>
 </div>
