@@ -125,7 +125,10 @@ module.exports = function(grunt) {
                                 '<%=src_js%>/<%=theme%>/help/help.min.js',
                                 '<%=src_js%>/<%=theme%>/payments/payments.min.js',
                                 '<%=src_js%>/<%=theme%>/reports/reports.min.js',
+                                '<%=src_js%>/<%=theme%>/reports/new.min.js',
+                                '<%=src_js%>/<%=theme%>/reports/view.min.js',
                                 '<%=src_js%>/<%=theme%>/services/services.min.js',
+                                '<%=src_js%>/<%=theme%>/services/view.min.js',
                             ]
                         }
                     ]
@@ -140,7 +143,10 @@ module.exports = function(grunt) {
                     '<%=src_js%>/<%=theme%>/help/help.src.js',
                     '<%=src_js%>/<%=theme%>/payments/payments.src.js',
                     '<%=src_js%>/<%=theme%>/reports/reports.src.js',
+                    '<%=src_js%>/<%=theme%>/reports/new.src.js',
+                    '<%=src_js%>/<%=theme%>/reports/view.src.js',
                     '<%=src_js%>/<%=theme%>/services/services.src.js',
+                    '<%=src_js%>/<%=theme%>/services/view.src.js',
                 ],
                 dest: '<%=src_js%>/<%=theme%>/common/common.min.js'
             },
@@ -162,7 +168,10 @@ module.exports = function(grunt) {
                                 '<%=src_js%>/<%=theme%>/help/help.min.js',
                                 '<%=src_js%>/<%=theme%>/payments/payments.min.js',
                                 '<%=src_js%>/<%=theme%>/reports/reports.min.js',
+                                '<%=src_js%>/<%=theme%>/reports/new.min.js',
+                                '<%=src_js%>/<%=theme%>/reports/view.min.js',
                                 '<%=src_js%>/<%=theme%>/services/services.min.js',
+                                '<%=src_js%>/<%=theme%>/services/view.min.js',
                             ]
                         }
                     ]
@@ -177,7 +186,10 @@ module.exports = function(grunt) {
                     '<%=src_js%>/<%=theme%>/help/help.src.js',
                     '<%=src_js%>/<%=theme%>/payments/payments.src.js',
                     '<%=src_js%>/<%=theme%>/reports/reports.src.js',
+                    '<%=src_js%>/<%=theme%>/reports/new.src.js',
+                    '<%=src_js%>/<%=theme%>/reports/view.src.js',
                     '<%=src_js%>/<%=theme%>/services/services.src.js',
+                    '<%=src_js%>/<%=theme%>/services/view.src.js',
                 ],
                 dest: '<%=src_js%>/<%=theme%>/common/common.min.js'
             },
