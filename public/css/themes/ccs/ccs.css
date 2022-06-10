@@ -1716,7 +1716,7 @@ label + .select {
   width: 100%;
   position: fixed;
   top: 68px;
-  z-index: 1;
+  z-index: 99999;
 }
 @media screen and (max-width: 425px) {
   .wrapper .header > img {
