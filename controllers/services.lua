@@ -57,6 +57,9 @@ function services:show_view()
 	view:add_content('title',"Cix Customer Support | Services - View")
 	self:set_page()
 	view:add_contents({
+		js = {
+			("/js/themes/%s/services/view.min.js"):format(theme)
+		},
 		css = {
             ("/css/themes/%s/services/view.css"):format(theme),
 		},
@@ -76,6 +79,9 @@ function services:show_new()
             ("/js/themes/%s/common/steps.js"):format(theme),
             ("/js/themes/%s/common/tabs.js"):format(theme)
 		},
+		css = {
+			("/css/themes/%s/services/new.css"):format(theme),
+		}
 	})
 	local page   = template.new(
 		"/services/new.html",

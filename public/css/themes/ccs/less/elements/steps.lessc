@@ -43,8 +43,16 @@
 			color: @text-secondary;
 		}
 
+		&.is-progress .steps-marker {
+			border: 1px solid @bg-primary;
+		}
+
 		&:after {
 			background: repeating-linear-gradient(90deg, @bg-light, @bg-light 10px, transparent 10px, transparent 13px);
+		}
+
+		&.is-active:after {
+			background: repeating-linear-gradient(90deg, @bg-primary, @bg-primary 10px, transparent 10px, transparent 13px);
 		}
 	}
 

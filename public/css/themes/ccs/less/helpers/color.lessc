@@ -9,26 +9,26 @@
 
 .is {
 	&-color-orange {
-		color: @orange
+		color: @orange !important
 	}
 
 	&-color-grey-light {
-		color: lighten(@grey, 30%)
+		color: lighten(@grey, 30%) !important
 	}
 
 	&-color-green {
-		color: @green
+		color: @green !important
 	}
 
 	&-color-info {
-		color: @text-info
+		color: @text-info !important
 	}
 
 	&-color-success {
-		color: @text-success
+		color: @text-success !important
 	}
 
 	&-color-danger {
-		color: @text-danger
+		color: @text-danger !important
 	}
 }

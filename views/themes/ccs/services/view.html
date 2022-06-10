@@ -1,0 +1,188 @@
+			<div class="container view">
+				<div class="row is-margin-bottom-3">
+					<h1 class="display-1 is-margin-bottom-0">S-000919</h1>
+					<nav class="breadcrumb">
+						<ul>
+							<li><a href="#">Inicio</a></li>
+							<li><a href="#">Mis Servicios</a></li>
+							<li><a href="#">S-000919</a></li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="box">
+					<div class="row d-flex j-between">
+						<div class="start">
+							<h1 class="title text-uppercase">Ficha de servicio</h1>
+							<p class="subtitle">Visualice todos los datos de su plan y su estado actual.</p>
+						</div>
+
+						<div class="end">
+							<div class="row">
+								<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M7 0.55C10.5608 0.55 13.45 3.43917 13.45 7C13.45 10.5608 10.5608 13.45 7 13.45C3.43917 13.45 0.55 10.5608 0.55 7C0.55 3.43917 3.43917 0.55 7 0.55Z" stroke="#19B159" stroke-width="1.1" stroke-miterlimit="10"/>
+									<path d="M10 5L5.80015 10L4 8.125" stroke="#19B159" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+
+								<span>Activo</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="boxes">
+							<div class="box 1">
+								<div class="start">
+									<span class="title text-uppercase">
+										Información General
+									</span>
+
+									<div class="icon">
+										<i class="fas fa-exclamation-circle"></i>
+									</div>
+								</div>
+
+								<div class="end">
+									<ul>
+										<li>Codigo De servicio: <b>S-000919</b></li>
+										<li>Tipo  De servicio: <b>Internet Fibra Optica</b></li>
+										<li>Fecha de Conexion : <b>08/04/2022</b></li>
+										<li>Ultima Modificacion : <b>08/04/2022</b></li>
+										<li>Direccion : <b>Av luis del valle garcia cruce con alberto carnevali</b></li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="box 2">
+								<div class="start d-flex">
+									<span class="title text-uppercase">
+										Traffig Log
+									</span>
+
+									<div class="icon">
+										<img src="/img/services/traffig.svg">
+									</div>
+								</div>
+
+								<div class="end d-flex">
+									<div class="row">
+										<span class="subtitle">Download</span>
+										<span class="title">6.64Gb</span>
+									</div>
+
+									<div class="row">
+										<span class="title">/</span>
+									</div>
+
+									<div class="row">
+										<span class="subtitle">Upload</span>
+										<span class="title">436.4Mb</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="box 3">
+								<div class="start">
+									<span class="title text-uppercase">
+										Dispositivo
+									</span>
+
+									<div class="icon">
+										<img src="/img/services/device.svg">
+									</div>
+								</div>
+
+								<div class="end">
+									<ul>
+										<li>Modelo: <b>ONU HUAWEI HG8310M</b></li>
+										<li>Serial: <b>HW48463C92</b></li>
+										<li>Autenticacion : <b>PPPoE</b></li>
+										<li>Usuario : <b>*********</b></li>
+										<li>Password : <b>*********</b></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="d-flex j-between a-center">
+							<div class="start">
+								<h1 class="title text-uppercase">Tu Ubicación</h1>
+								<p class="subtitle"><u>Geolocalizacion del servicio</u></p>
+							</div>
+
+							<div class="end">
+								<button type="button" class="button is-dark is-small">
+									Suspender Servicio
+								</button>
+
+								<button type="button" class="button is-primary is-small">
+									Reportar Incidente
+								</button>
+
+								<button type="button" class="button is-primary is-small">
+									Solicitar Ampliación
+								</button>
+							</div>
+						</div>
+
+						<div class="content">
+							<div id="mapid"></div>
+
+							<div class="is-color-orange text-center">
+								<p>
+									Te quedan 16 días para pagar tu mensualidad
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="box 2">
+					<div class="columns">
+						<div class="start">
+							<h1 class="title text-uppercase">Consumo de internet</h1>
+							<p class="subtitle">Consulta el cosumo de internet hasta ahora</p>
+						</div>
+
+						<div class="end a-end">
+							<form class="form">
+								<div class="columns columns-4">
+									<div class="field">
+										<label>Rango</label>
+										<select class="select">
+											<option value="0">Ultima semana</option>
+										</select>
+									</div>
+
+									<div class="field">
+										<label>Desde</label>
+										<div class="has-icon">
+											<input type="text" placeholder="16/06/2021">
+											<i class="fas fa-calendar-alt is-right"></i>
+										</div>
+									</div>
+
+									<div class="field">
+										<label>Hasta</label>
+										<div class="has-icon">
+											<input type="text" placeholder="16/06/2021">
+											<i class="fas fa-calendar-alt is-right"></i>
+										</div>
+									</div>
+
+									<button type="button" class="button is-primary is-small a-end">
+										<i class="fas fa-chart-bar"></i>
+										Generar Gráfica
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<div class="chart-container">
+						<canvas id="myChart"></canvas>
+					</div>
+				</div>
+			</div>
