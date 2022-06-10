@@ -57,6 +57,21 @@ function bills:show_view()
 	view:generate(page)
 end
 
+function bills:show_paynow()
+	view:add_content('title',"Cix Customer Support | Invoicings - Pay Now")
+	self:set_page()
+	view:add_contents({
+		css = {
+            ("/css/themes/%s/bills/paynow.css"):format(theme),
+		},
+	})
+	local page   = template.new(
+		"/bills/paynow.html",
+		"/page.html"
+	)
+	view:generate(page)
+end
+
 function bills:execute()
 	local parameters = router.parameters
 
@@ -72,8 +87,11 @@ function bills:execute()
 	end
 
 	if ( parameters[1] ) then
-		if (parameters[1] == 'view') then
+		if (parameters[1] == 'view' and not parameters[2]) then
 			self:show_view()
+			return
+		elseif (parameters[1] == 'view' and parameters[2] == "paynow") then
+			self:show_paynow()
 			return
 		end
 	end

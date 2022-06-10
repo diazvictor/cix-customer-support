@@ -1,0 +1,63 @@
+.tabs.or {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 4px;
+
+	button {
+		color: #FFFFFF;
+		background-color: #4A4D51;
+		border: none;
+
+		&:hover {
+			background-color: #4A4D51;
+		}
+
+		&:focus {
+			box-shadow: 0 0 0 0.2rem rgba(74, 77, 81, .4)
+		}
+
+		i {
+			margin-right: 10px
+		}
+
+		&.is-active {
+			background-color: #E63C1F;
+			border: $background-color;
+
+			&:hover {
+				background-color: #E63C1F;
+			}
+
+			&:focus {
+				box-shadow: 0 0 0 0.2rem rgba(230, 60, 31, .5)
+			}
+		}
+
+		&:first-child {
+			position: relative;
+		}
+	}
+
+	.separator {
+		display: block;
+		position: absolute;
+		top: 11px;
+		right: -11px;
+		width: 18px;
+		height: 18px;
+		color: #4A4D51;
+		background: #FFFFFF;
+		text-align: center;
+		line-height: 18px;
+		border-radius: 50%;
+
+		&::after {
+			content: "o";
+			position: absolute;
+			left: 0px;
+			right: 1px;
+			top: -1px;
+			font-size: 19px;
+		}
+	}
+}

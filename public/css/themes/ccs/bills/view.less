@@ -151,7 +151,8 @@
 
 		.foot {
 			position: relative;
-			padding: 26px 8px;
+			display: flex;
+			padding: 16px 8px;
 			background-color: #EAEAF5;
 
 			.qr-code {
@@ -160,16 +161,25 @@
 				bottom: 1.5rem;
 			}
 
-			.total {
-				display: grid;
-				width: 9.4rem;
+			.end {
+				display: flex;
+				align-items: center;
 				margin-left: auto;
-				grid-template-columns: auto 1rem auto;
 
-				span {
-					font-size: 16px;
-					font-weight: 900;
-					line-height: 19px;
+				.paynow {
+					margin-right: 30px;
+				}
+
+				.total {
+					display: grid;
+					width: 9.4rem;
+					grid-template-columns: auto 1rem auto;
+
+					span {
+						font-size: 16px;
+						font-weight: 900;
+						line-height: 19px;
+					}
 				}
 			}
 		}
