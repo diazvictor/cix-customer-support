@@ -1,6 +1,3 @@
-//import		Chartist	from "chartist";
-import		Chart	    from "chart.js";
-import		map	        from "leaflet";
 import      '../common/ccs.js';
 import      '../common/accordion.js';
 import      '../common/navbar.js';
