@@ -53,6 +53,21 @@ function services:show_requests()
 	view:generate(page)
 end
 
+function services:show_view()
+	view:add_content('title',"Cix Customer Support | Services - View")
+	self:set_page()
+	view:add_contents({
+		css = {
+            ("/css/themes/%s/services/view.css"):format(theme),
+		},
+	})
+	local page   = template.new(
+		"/services/view.html",
+		"/page.html"
+	)
+	view:generate(page)
+end
+
 function services:show_new()
 	view:add_content('title',"Cix Customer Support | New Request")
 	self:set_page()
@@ -90,6 +105,9 @@ function services:execute()
 			return
 		elseif (parameters[1] == 'requests') then
 			self:show_requests()
+			return
+		elseif (parameters[1] == 'view') then
+			self:show_view()
 			return
 		end
 	end

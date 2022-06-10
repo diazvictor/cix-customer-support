@@ -26,19 +26,29 @@
 										</div>
 
 										<div class="field">
-											<label>Afectación <span class="is-color-orange">*</span></label>
+											<label>Incidencia <span class="is-color-orange">*</span></label>
 											<select>
 												<option value="0">Seleccione una opción</option>
 											</select>
 										</div>
 
-										<div class="field">
-											<label>Persona de Contacto <span class="is-color-orange">*</span></label>
+										<div class="field hide-in-desktop">
+											<div class="d-flex j-between a-center a-self-none">
+												<label for="toggle-contact">Asignar persona de contacto</label>
+												<label class="switch">
+													<input type="checkbox" id="toggle-contact">
+													<span class="slider round"></span>
+												</label>
+											</div>
+										</div>
+
+										<div class="field toggle-contact">
+											<label>Persona de Contacto <span class="is-color-orange hide-in-mobile">*</span></label>
 											<input type="text" placeholder="Nombre y apellido de la persona de contacto">
 										</div>
 
-										<div class="field">
-											<label>Telefono de la Persona de Contacto <span class="is-color-orange">*</span></label>
+										<div class="field toggle-contact">
+											<label>Telefono de la Persona de Contacto <span class="is-color-orange hide-in-mobile">*</span></label>
 											<input type="text" placeholder="Telefono de la persona contacto">
 										</div>
 
@@ -48,7 +58,35 @@
 										</div>
 									</div>
 
-									<div class="columns columns-2 columns-md-1">
+									<div class="columns columns-2 columns-md-2 columns-sm-1">
+										<div class="field hide-in-mobile">
+											<label>Prioridad <span class="is-color-orange">*</span></label>
+											<select>
+												<option value="0">Seleccione una opción</option>
+											</select>
+										</div>
+
+										<div class="field">
+											<label>Servicio <span class="is-color-orange">*</span></label>
+											<select>
+												<option value="0">Seleccione una opción</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="columns columns-1">
+										<div class="field">
+											<div class="d-flex j-flex-end a-center a-self-none">
+												<label for="switch">Enviarme una copia de esta solicitud</label>
+												<label class="switch">
+													<input type="checkbox" id="switch">
+													<span class="slider round"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+
+									<div class="columns columns-2 columns-md-1 a-end">
 										<div class="field">
 											<label for="file">Adjuntar Archivo</label>
 											<div class="file">
@@ -61,21 +99,19 @@
 											</div>
 										</div>
 
-										<div class="field">
-											<div class="d-flex j-between">
-												<label for="switch">Notificarme al correo cuando se apruebe el pago</label>
-												<label class="switch">
-													<input type="checkbox" id="switch">
-													<span class="slider round"></span>
-												</label>
-											</div>
+										<div class="row j-end hide-in-mobile">
+											<button type="button" class="button is-primary">Enviar</button>
+										</div>
+
+										<div class="row j-end hide-in-desktop or">
+											<button type="button" class="button is-primary">
+												Enviar
+												<div class="separator"></div>
+											</button>
+											<button type="button" class="button is-primary">Cancelar</button>
 										</div>
 									</div>
 								</form>
-							</div>
-
-							<div class="row j-end">
-								<button type="button" class="button is-primary">Enviar</button>
 							</div>
 						</div>
 					</section>

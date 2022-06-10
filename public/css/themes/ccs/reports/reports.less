@@ -96,6 +96,152 @@
 	}
 }
 
+.box.is-mobile {
+	display: none;
+	padding: 0;
+	background-color: transparent;
+	border: none;
+	border-radius: 0;
+
+	.columns.columns-1 {
+		.bill {
+			display: flex;
+			flex-flow: column;
+			padding: 20px 20px 12px 20px;
+			background-color: #FFFFFF;
+			border: 1px solid #d7d7ff;
+			border-radius: 4px;
+	
+			.head {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 18px;
+	
+				.start {
+					display: flex;
+					align-items: center;
+	
+					img {
+						display: block;
+						margin-right: 13px;
+					}
+	
+					div {
+						span {
+							display: block;
+							text-transform: uppercase;
+	
+							&:first-child {
+								font-size: 14px;
+								font-weight: 800;
+							}
+	
+							&:last-child {
+								font-size: 20px;
+								font-weight: 700;
+							}
+						}
+					}
+				}
+	
+				.end {
+					display: flex;
+					flex-flow: column;
+					text-align: right;
+	
+					img {
+						display: block;
+						margin-left: auto;
+						margin-right: -5px;
+						margin-bottom: 10px;
+					}
+	
+					span {
+						font-weight: 800;
+						font-size: 14px;
+						line-height: 17px;
+						text-transform: uppercase;
+					}
+				}
+			}
+	
+			.body {
+				margin-bottom: 12px;
+	
+				span.title {
+					color: #8F8FB1;
+					font-weight: 600;
+					font-size: 12px;
+					line-height: 15px;
+				}
+	
+				p.desc {
+					color: #8F8FB1;
+					font-weight: 400;
+					font-size: 12px;
+					line-height: 15px;
+				}
+			}
+	
+			span.title {
+				color: #1D212F;
+				font-size: 20px;
+				font-weight: 700;
+				line-height: 24px;
+			}
+	
+			span:not(.title) {
+				color: #8F9CC0;
+				font-size: 12px;
+				font-weight: 500;
+				line-height: 14px;
+	
+				&.is-color-danger {
+					font-family: "Roboto";
+					color: @danger;
+				}
+	
+				&.is-color-warning {
+					font-family: "Roboto";
+					color: @warning;
+				}
+	
+				&.is-color-info {
+					font-family: "Roboto";
+					color: @info;
+				}
+	
+				&.is-color-success {
+					font-family: "Roboto";
+					color: @success;
+				}
+	
+				&.is-color-dark {
+					font-family: "Roboto";
+					color: @dark;
+				}
+			}
+	
+			.foot {
+				display: flex;
+				justify-content: center;
+	
+				button {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					padding: 12px 24px;
+					border-radius: 4px;
+	
+					i {
+						font-size: 3rem;
+					}
+				}
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 425px) {
 	.wrapper > .content {
 		margin-top: 0;
@@ -109,5 +255,13 @@
 
 	.box.is-desktop {
 		display: none;
+	}
+
+	.box.is-mobile {
+		display: block;
+
+		& + .row.d-flex.j-flex-end.hide-in-mobile {
+			display: none;
+		}
 	}
 }

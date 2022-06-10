@@ -1,6 +1,4 @@
 //import		Chartist	from "chartist";
-import		Chart	    from "chart.js";
-import		map	        from "leaflet";
 import      '../common/ccs.js';
 import      '../common/navbar.js';
 import      '../common/sidebar.js';
@@ -15,18 +13,13 @@ let sidenav;
 
 if (window.location.pathname == "/reports") {
 	sidenav = document.querySelector(".sidenav a[data-item=reports]");
-	title.innerText = "Mis reportes";
-} else {
+	title.innerText = "Mis Reportes";
+} else if (window.location.pathname == "/new") {
 	sidenav = document.querySelector(".sidenav a[data-item=reports-new]");
-	title.innerText = "Realizar un reporte";
+	title.innerText = "Nuevo Reporte";
+} else {
+	sidenav = document.querySelector(".sidenav a[data-item=reports-reports]");
+	title.innerText = "Mi Reporte";
 }
 
 sidenav.classList.add("is-active");
-
-const filebutton = document.querySelector(".file");
-let fileinput = filebutton.querySelector("label input[type=file]");
-let filename = document.querySelector(".file input[type=text]");
-	
-fileinput.addEventListener("change", () => {
-	filename.value = fileinput.files[0].name;
-});

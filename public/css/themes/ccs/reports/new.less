@@ -1,0 +1,89 @@
+.a-self-none {
+	align-self: normal;
+
+	label:first-child {
+		margin-right: 10px;
+	}
+}
+
+.container .box.is-grouped .box .columns .row .form .columns .field.hide-in-desktop,
+.container .box.is-grouped .box .columns .row .form .columns .row.j-end.hide-in-desktop {
+	display: none;
+}
+
+@media screen and (max-width: 425px) {
+	.a-self-none {
+		justify-content: space-between;
+
+		label:first-child {
+			margin-right: 10px;
+		}
+	}
+
+	.container .box.is-grouped .box .columns .row .form .columns .field.toggle-contact {
+		display: none;
+	}
+
+	.container .box.is-grouped .box .columns .row .form .columns .field.hide-in-desktop {
+		display: flex;
+	}
+
+	.container .box.is-grouped .box .columns .row .form .columns .field.toggle-contact {
+		label {
+			span {
+				display: none;
+			}
+		}
+	}
+
+	.container .box.is-grouped .box .columns .row .form .columns .hide-in-mobile {
+		display: none;
+	}
+
+	.container .box.is-grouped .box .columns .row .form .columns .row.j-end.hide-in-desktop.or {
+		display: grid;
+		grid-auto-flow: column;
+		grid-gap: 3px;
+		justify-self: normal;
+
+		button {
+			&:last-child {
+				color: #FFFFFF;
+				background-color: #4A4D51;
+				border: none;
+
+				&:focus {
+					box-shadow: 0 0 0 0.2rem rgba(74, 77, 81, .4)
+				}
+			}
+
+
+			&:first-child {
+				position: relative;
+			}
+		}
+
+		.separator {
+			display: block;
+			position: absolute;
+			top: 11px;
+			right: -11px;
+			width: 18px;
+			height: 18px;
+			color: #FF3C2F;
+			background: #FFFFFF;
+			text-align: center;
+			line-height: 18px;
+			border-radius: 50%;
+
+			&::after {
+				content: "o";
+				position: absolute;
+				left: 0px;
+				right: -1px;
+				top: -1px;
+				font-size: 19px;
+			}
+		}
+	}
+}

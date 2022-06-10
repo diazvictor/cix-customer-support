@@ -45,8 +45,31 @@ end
 function reports:show_new()
 	view:add_content('title',"Cix Customer Support | New Report")
 	self:set_page()
+	view:add_contents({
+		js   = {
+			("/js/themes/%s/reports/new.min.js"):format(theme)
+		},
+		css  = {
+			("/css/themes/%s/reports/new.css"):format(theme)
+		}
+	})
 	local page   = template.new(
 		"/reports/new.html",
+		"/page.html"
+	)
+	view:generate(page)
+end
+
+function reports:show_view()
+	view:add_content('title',"Cix Customer Support | View")
+	self:set_page()
+	view:add_contents({
+		css  = {
+			("/css/themes/%s/reports/view.css"):format(theme)
+		}
+	})
+	local page   = template.new(
+		"/reports/view.html",
 		"/page.html"
 	)
 	view:generate(page)
@@ -69,6 +92,9 @@ function reports:execute()
 	if ( parameters[1] ) then
 		if (parameters[1] == 'new') then
 			self:show_new()
+			return
+		elseif (parameters[1] == 'view') then
+			self:show_view()
 			return
 		end
 	end
