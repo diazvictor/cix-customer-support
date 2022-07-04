@@ -11,7 +11,7 @@ sidenavCollapse.classList.add("is-active");
 
 let sidenav;
 
-if (window.location.pathname == "/payments") {
+if (window.location.pathname == "/payments/") {
 	sidenav = document.querySelector(".sidenav a[data-item=payments]");
 	title.innerText = "Mis pagos";
 } else {

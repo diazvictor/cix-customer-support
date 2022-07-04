@@ -12,32 +12,509 @@
 				</div>
 
 				<section class="box">
-					<div class="tabs or">
-						<button type="button" class="tab-item" data-tab="payment-1">
-							Pago con Banco de venezuela
+					<div class="boxes is-horizontal" id="payment-method">
+						<div class="card">
+							<div class="card-head one">
+								<div class="start">
+									<img src="/img/bills/visa.svg">
 
-							<div class="separator"></div>
-						</button>
+									<div class="row">
+										<div class="points">
+											<img src="/img/bills/point.svg">
+											<img src="/img/bills/point.svg">
+											<img src="/img/bills/point.svg">
+											<img src="/img/bills/point.svg">
+										</div>
 
-						<button type="button" class="tab-item is-active" data-tab="payment-2">
-							Pago con Otro Banco
-						</button>
+										<div class="points">
+											<img src="/img/bills/point.svg">
+											<img src="/img/bills/point.svg">
+											<img src="/img/bills/point.svg">
+											<img src="/img/bills/point.svg">
+										</div>
+
+										<div class="points">
+											<img src="/img/bills/point.svg">
+											<img src="/img/bills/point.svg">
+											<img src="/img/bills/point.svg">
+											<img src="/img/bills/point.svg">
+										</div>
+
+										<span>5745</span>
+									</div>
+								</div>
+
+								<div class="end">
+									<div class="fullname">NOMBRE APELLIDO</div>
+
+									<div class="expiration-date">
+										<span>Expired</span>
+										<span>06/25</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="card-body">
+								<span class="title">Pago por Tarjeta de debito - Credito</span>
+								<span class="subtitle">Ingrese Los datos correctos del propietario</span>
+								<a href="javascript:void(0);" class="button is-primary" id="button-credit">Continuar</a>
+							</div>
+						</div>
+
+						<div class="card">
+							<div class="card-head two">
+								<img src="/img/bills/two-card.svg">
+							</div>
+
+							<div class="card-body">
+								<span class="title">Pago por Deposito O transferencia</span>
+								<span class="subtitle">Ingrese Los datos del deposito O transferencia</span>
+								<a href="javascript:void(0);" class="button is-primary" id="button-transfer">Continuar</a>
+							</div>
+						</div>
 					</div>
 
-					<div class="tab-content">
-						<div class="tab-pane" id="payment-1">
+					<div id="content-credit" class="columns columns-1">
+						<div class="head-credit">
+							<div class="start">
+								<img src="/img/bills/visa.svg">
+
+								<div class="row">
+									<div class="points">
+										<img src="/img/bills/point.svg">
+										<img src="/img/bills/point.svg">
+										<img src="/img/bills/point.svg">
+										<img src="/img/bills/point.svg">
+									</div>
+
+									<div class="points">
+										<img src="/img/bills/point.svg">
+										<img src="/img/bills/point.svg">
+										<img src="/img/bills/point.svg">
+										<img src="/img/bills/point.svg">
+									</div>
+
+									<div class="points">
+										<img src="/img/bills/point.svg">
+										<img src="/img/bills/point.svg">
+										<img src="/img/bills/point.svg">
+										<img src="/img/bills/point.svg">
+									</div>
+
+									<span>5745</span>
+								</div>
+							</div>
+
+							<div class="end">
+								<div class="fullname">NOMBRE APELLIDO</div>
+
+								<div class="expiration-date">
+									<span>Expired</span>
+									<span>06/25</span>
+								</div>
+							</div>
 						</div>
 
-						<div class="tab-pane is-active" id="payment-2">
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-								sed doeiusmod tempor incididunt ut labore et dolore
-								magna aliqua. Ut enimad minim veniam, quis nostrud
-								exercitation ullamco laboris nisi utaliquip ex ea commodo
-								consequat. Duis aute irure dolor inreprehenderit in voluptate
-								velit esse cillum dolore eu fugiat nullapariatur.
+						<div class="tabs or">
+							<button type="button" class="tab-item is-active" data-tab="page-1">
+								Pago con Banco de venezuela
+								<div class="separator" data-tab="page-1"></div>
+							</button>
+
+							<button type="button" class="tab-item" data-tab="page-2">
+								Pague Con otro Banco
+							</button>
+						</div>
+
+						<div class="tab-content">
+							<div class="tab-pane is-active" id="page-1">
+								<form class="form">
+									<div class="row d-flex">
+										<div class="start">
+											<div class="credit-box">
+												<div class="start">
+													<img src="/img/bills/visa.svg">
+
+													<div class="row">
+														<div class="points">
+															<img src="/img/bills/point.svg">
+															<img src="/img/bills/point.svg">
+															<img src="/img/bills/point.svg">
+															<img src="/img/bills/point.svg">
+														</div>
+
+														<div class="points">
+															<img src="/img/bills/point.svg">
+															<img src="/img/bills/point.svg">
+															<img src="/img/bills/point.svg">
+															<img src="/img/bills/point.svg">
+														</div>
+
+														<div class="points">
+															<img src="/img/bills/point.svg">
+															<img src="/img/bills/point.svg">
+															<img src="/img/bills/point.svg">
+															<img src="/img/bills/point.svg">
+														</div>
+
+														<span>5745</span>
+													</div>
+												</div>
+
+												<div class="end">
+													<div class="fullname">NOMBRE APELLIDO</div>
+
+													<div class="expiration-date">
+														<span>Expired</span>
+														<span>06/25</span>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="end">
+											<div class="columns columns-1">
+												<select id="select-type">
+													<option value="0">Debito - Cuenta de Ahorro</option>
+													<option value="1">Debito - Cuenta Corriente</option>
+													<option value="2">Credito - VISA</option>
+													<option value="3">Credito - MasterCard</option>
+												</select>
+
+												<div class="list">
+													<button type="button" class="item" data-value="0">
+														<div class="start">
+															<span class="title">Debito</span>
+															<span class="subtitle">Cuenta de Ahorro</span>
+														</div>
+
+														<div class="end">
+															<img src="/img/bills/master-logo.png">
+														</div>
+													</button>
+
+													<button type="button" class="item is-active" data-value="1">
+														<div class="start">
+															<span class="title">Debito</span>
+															<span class="subtitle">Cuenta Corriente</span>
+														</div>
+
+														<div class="end">
+															<img src="/img/bills/master-logo.png">
+														</div>
+													</button>
+
+													<button type="button" class="item" data-value="2">
+														<div class="start">
+															<span class="title">Credito</span>
+															<span class="subtitle">VISA</span>
+														</div>
+
+														<div class="end">
+															<img src="/img/bills/visa.png">
+														</div>
+													</button>
+
+													<button type="button" class="item" data-value="3">
+														<div class="start">
+															<span class="title">Credito</span>
+															<span class="subtitle">MasterCard</span>
+														</div>
+
+														<div class="end">
+															<img src="/img/bills/mastercard-logo.png">
+														</div>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row d-flex a-center">
+										<div class="start">
+											<div class="buttons">
+												<button type="button" class="button is-primary btn-sms">Enviar SMS</button>
+												<button type="button" class="button is-secondary" id="btn-credit-anular">Anular</button>
+											</div>
+										</div>
+
+										<div class="end d-flex j-between is-hidden-small">
+											<div class="field">
+												<label class="d-flex a-center">
+													<input type="checkbox">
+													<span class="is-margin-left-2">Registrar pago frecuente</span>
+												</label>
+											</div>
+
+											<div class="field">
+												<label class="d-flex a-center">
+													<input type="checkbox">
+													<span class="is-margin-left-2">Metodo de pago predeterminado</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+
+							<div class="tab-pane" id="page-2">
+								<form class="form">
+									<div class="row d-flex">
+										<div class="start">
+											<div class="credit-box">
+												<div class="start">
+													<img src="/img/bills/visa.svg">
+
+													<div class="row">
+														<div class="points">
+															<img src="/img/bills/point.svg">
+															<img src="/img/bills/point.svg">
+															<img src="/img/bills/point.svg">
+															<img src="/img/bills/point.svg">
+														</div>
+
+														<div class="points">
+															<img src="/img/bills/point.svg">
+															<img src="/img/bills/point.svg">
+															<img src="/img/bills/point.svg">
+															<img src="/img/bills/point.svg">
+														</div>
+
+														<div class="points">
+															<img src="/img/bills/point.svg">
+															<img src="/img/bills/point.svg">
+															<img src="/img/bills/point.svg">
+															<img src="/img/bills/point.svg">
+														</div>
+
+														<span>5745</span>
+													</div>
+												</div>
+
+												<div class="end">
+													<div class="fullname">NOMBRE APELLIDO</div>
+
+													<div class="expiration-date">
+														<span>Expired</span>
+														<span>06/25</span>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="end">
+											<div class="columns columns-1">
+												<div class="field">
+													<label>Número de tarjeta</label>
+													<textarea placeholder="Número de su tarjeta de debito o credito"></textarea>
+												</div>
+
+												<div class="columns columns-2">
+													<div class="columns columns-1">
+														<p>Fecha de Vencimiento</p>
+
+														<div class="start">
+															<div class="field">
+																<select>
+																	<option value="0">MM</option>
+																</select>
+															</div>
+
+															<div class="field">
+																<select>
+																	<option value="0">AA</option>
+																</select>
+															</div>
+														</div>
+													</div>
+
+													<div class="field">
+														<label>Código de seguridad</label>
+														<input type="number" placeholder="···">
+													</div>
+												</div>
+
+												<div class="field">
+													<label>Titular</label>
+													<input type="text" placeholder="Nombre como aparece en la tarjeta">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row d-flex a-center">
+										<div class="start">
+											<button type="button" class="button is-primary is-fullwidth">Pagar</button>
+
+											<div class="buttons hidden-desktop">
+												<button type="button" class="button is-secondary">Anular</button>
+												<button type="button" class="button is-primary btn-sms">Enviar SMS</button>
+											</div>
+										</div>
+
+										<div class="end d-flex j-between is-hidden-small">
+											<div class="field">
+												<label class="d-flex a-center">
+													<input type="checkbox">
+													<span class="is-margin-left-2">Registrar pago frecuente</span>
+												</label>
+											</div>
+
+											<div class="field">
+												<label class="d-flex a-center">
+													<input type="checkbox">
+													<span class="is-margin-left-2">Metodo de pago predeterminado</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<div id="content-transfer" class="columns columns-1">
+						<div class="head-transfer">
+							<img src="/img/bills/two-card.svg">
+						</div>
+
+						<form class="form">
+							<div class="columns columns-1">
+								<div class="field">
+									<label>Moneda</label>
+									<select>
+										<option>Indique la moneda en la cual realiza el pago</option>
+									</select>
+								</div>
+
+								<div class="columns columns-2">
+									<div class="field">
+										<label>Banco</label>
+										<select>
+											<option>Banco Receptor</option>
+										</select>
+									</div>
+
+									<div class="field">
+										<label>Monto depositado</label>
+										<input type="number" placeholder="180,00">
+									</div>
+								</div>
+
+								<div class="columns columns-2">
+									<div class="field">
+										<label>Referencia Bancaria</label>
+										<input type="text" placeholder="Código de la operación">
+									</div>
+
+									<div class="d-grid">
+										<div class="field">
+											<input type="text" placeholder="DD">
+										</div>
+
+										<div class="field">
+											<input type="text" placeholder="MM">
+										</div>
+
+										<div class="field">
+											<input type="text" placeholder="AA">
+										</div>
+									</div>
+								</div>
+
+								<div class="field">
+									<label class="text-center">Adjuntar Comprobante de pago</label>
+
+									<div class="file">
+										<label>
+											<i class="fas fa-paperclip"></i>
+											<span>Adjuntar</span>
+											<input type="file">
+										</label>
+									</div>
+								</div>
+
+								<div class="field">
+									<label>Observaciones</label>
+									<textarea placeholder="Coloque aquí sus observaciones"></textarea>
+								</div>
+
+								<div class="buttons">
+									<button type="button" class="button is-secondary">Anular</button>
+									<button type="button" class="button is-primary">Registrar</button>
+								</div>
+							</div>
+						</form>
+					</div>
+
+					<div id="box-sms" class="columns columns-1">
+						<div class="head-sms">
+							<img src="/img/bills/sms.svg">
+						</div>
+
+						<div class="separator"></div>
+						<p>Inserte su código de Confirmación</p>
+
+						<form class="form">
+							<div class="columns columns-1">
+								<div class="columns columns-5">
+									<div class="field">
+										<input type="text" maxlength="1">
+									</div>
+
+									<div class="field">
+										<input type="text" maxlength="1">
+									</div>
+
+									<div class="field">
+										<input type="text" maxlength="1">
+									</div>
+
+									<div class="field">
+										<input type="text" maxlength="1">
+									</div>
+
+									<div class="field">
+										<input type="text" maxlength="1">
+									</div>
+								</div>
+
+								<div class="buttons">
+									<button type="button" class="button is-secondary" id="btn-sms-anular">Anular</button>
+									<button type="button" class="button is-primary">Confirmar</button>
+								</div>
+							</div>
+						</form>
+					</div>
+
+					<div id="box-confirm" class="columns columns-1">
+						<div class="head-confirm">
+							<img src="/img/bills/confirm.svg">
+							<p>Hemos Aprobado su pago</p>
+						</div>
+
+						<div class="separator"></div>
+						<span class="title">180,00$</span>
+						<span class="subtitle">Recibo N° R-000006347</span>
+
+						<button type="button" class="button is-primary">Regresar</button>
+					</div>
+
+					<div id="box-info" class="columns columns-1">
+						<div class="head-info">
+							<img src="/img/bills/info.svg">
+							<p>Hemos Registrado su pago</p>
+							<p class="subtitle">
+								En un Lapso no mayor a 72hrs habiles sera revisado
+								y procesado por nuestros analistas
 							</p>
 						</div>
+
+						<div class="separator"></div>
+						<span class="title">180,00$</span>
+						<span class="subtitle">Recibo N° R-000006347</span>
+
+						<button type="button" class="button is-primary">Regresar</button>
 					</div>
 				</section>
 			</div>

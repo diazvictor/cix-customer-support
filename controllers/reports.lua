@@ -46,9 +46,6 @@ function reports:show_new()
 	view:add_content('title',"Cix Customer Support | New Report")
 	self:set_page()
 	view:add_contents({
-		js   = {
-			("/js/themes/%s/reports/new.min.js"):format(theme)
-		},
 		css  = {
 			("/css/themes/%s/reports/new.css"):format(theme)
 		}

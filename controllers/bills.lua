@@ -61,6 +61,9 @@ function bills:show_paynow()
 	view:add_content('title',"Cix Customer Support | Invoicings - Pay Now")
 	self:set_page()
 	view:add_contents({
+		js = {
+			("/js/themes/%s/common/tabs.js"):format(theme)
+		},
 		css = {
             ("/css/themes/%s/bills/paynow.css"):format(theme),
 		},

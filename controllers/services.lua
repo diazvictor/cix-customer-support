@@ -90,6 +90,20 @@ function services:show_new()
 	view:generate(page)
 end
 
+function services:show_res_view()
+	view:add_content('title',"Cix Customer Support | Request")
+	self:set_page()
+	view:add_contents({
+		css = {
+			("/css/themes/%s/services/res-view.css"):format(theme),
+		}
+	})
+	local page   = template.new(
+		"/services/res-view.html",
+		"/page.html"
+	)
+	view:generate(page)
+end
 
 function services:execute()
 	local parameters = router.parameters
@@ -111,6 +125,9 @@ function services:execute()
 			return
 		elseif (parameters[1] == 'requests') then
 			self:show_requests()
+			return
+		elseif (parameters[1] == 'res-view') then
+			self:show_res_view()
 			return
 		elseif (parameters[1] == 'view') then
 			self:show_view()
