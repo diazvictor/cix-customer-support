@@ -1,68 +1,143 @@
+// .wrapper {
+// 	@media screen and (max-width: 425px) {
+// 		& {
+// 			min-height: auto;
+// 		}
+// 	}
+// }
+
+.no-margin-bottom {
+	margin-bottom: 0 !important;
+}
+
+.tabs.or {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 4px;
+
+	& + .tab-content {
+		margin-top: 0px;
+	}
+
+	button {
+		color: #FFFFFF;
+		background-color: #4A4D51;
+		border: none;
+
+		&:hover {
+			background-color: darken(#4A4D51, 10%);
+		}
+
+		&:focus {
+			box-shadow: 0 0 0 0.2rem rgba(74, 77, 81, .4)
+		}
+
+		i {
+			margin-right: 10px
+		}
+
+		&.is-active {
+			background-color: #E63C1F;
+			border: $background-color;
+
+			&:focus {
+				box-shadow: 0 0 0 0.2rem rgba(230, 60, 31, .5)
+			}
+		}
+
+		&:first-child {
+			position: relative;
+		}
+	}
+
+	.separator {
+		display: block;
+		position: absolute;
+		top: 11px;
+		right: -11px;
+		width: 18px;
+		height: 18px;
+		color: #4A4D51;
+		background: #FFFFFF;
+		text-align: center;
+		line-height: 18px;
+		border-radius: 50%;
+
+		&::after {
+			content: "o";
+			position: absolute;
+			left: 0px;
+			right: 1px;
+			top: -1px;
+			font-size: 19px;
+		}
+	}
+}
+
 .container.new-resquest {
-	.box {
-		&.is-grouped {
-			.box {
-				.tabs.or {
-					display: grid;
-					grid-auto-flow: column;
-					grid-gap: 4px;
+    .box {
+        &.is-grouped {
+            .box {
+                .foot {
+                    border-top: 1px solid #d0d0e8;
+                    padding-top: 18px;
+                }
 
-					button {
-						color: #FFFFFF;
-						background-color: #4A4D51;
-						border: none;
+                .step-pane#step-1 {
+					.form {
+						.d-flex.d-flow-column {
+							.end {
+								display: grid;
+								grid-template-columns: auto 1fr;
+								grid-gap: 10px;
 
-						&:focus {
-							box-shadow: 0 0 0 0.2rem rgba(74, 77, 81, .4)
+								select {
+									padding: 0.57rem 1.4rem 0.57rem 0.625rem;
+									background-position: right 0.5rem top 50%, 0 0;
+								}
+							}
 						}
+					}
+				}
 
-						i {
-							margin-right: 10px
+                .step-pane#step-2 {
+					.form {
+						.field {
+							textarea {
+								height: 50px;
+							}
 						}
+						.d-flex.d-flow-column {
+							.end {
+								display: grid;
+								grid-template-columns: auto 1fr;
+								margin-top: 5px;
 
-						&.is-active {
-							background-color: #E63C1F;
-							border: $background-color;
+								select {
+									height: 36px;
+									font-size: 10px;
+									padding: 0.57rem 1rem 0.57rem 0.2rem;
+									background-position: right 0.3rem top 50%, 0 0;
+									border-top-right-radius: 0;
+									border-bottom-right-radius: 0;
+									border-right: none;
+								}
 
-							&:focus {
-								box-shadow: 0 0 0 0.2rem rgba(230, 60, 31, .5)
+								input {
+									width: 100%;
+									border-top-left-radius: 0;
+									border-bottom-left-radius: 0;
+								}
 							}
 						}
 
-						&:first-child {
-							position: relative;
-						}
-					}
-
-					.separator {
-						display: block;
-						position: absolute;
-						top: 11px;
-						right: -11px;
-						width: 18px;
-						height: 18px;
-						color: #4A4D51;
-						background: #FFFFFF;
-						text-align: center;
-						line-height: 18px;
-						border-radius: 50%;
-
-						&::after {
-							content: "o";
-							position: absolute;
-							left: 0px;
-							right: 1px;
-							top: -1px;
-							font-size: 19px;
+						.row {
+							border-top: 1px solid #d0d0e8;
+							padding-top: 20px;
 						}
 					}
 				}
-
-				.foot {
-					border-top: 1px solid #d0d0e8;
-					padding-top: 18px;
-				}
-			}
-		}
-	}
+            }
+        }
+    }
 }

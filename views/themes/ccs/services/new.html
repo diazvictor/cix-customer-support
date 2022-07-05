@@ -53,7 +53,7 @@
 
 					<section class="box">
 						<div class="columns columns-1">
-							<div class="tabs or">
+							<div id="hidden-four-step" class="tabs or">
 								<button type="button" class="tab-item" data-tab="to-me">
 									<i class="fas fa-edit tab-item" data-tab="to-me"></i>
 									Para mí
@@ -69,7 +69,6 @@
 
 							<div class="tab-content">
 								<div class="tab-pane" id="to-me">
-									<div id="mapid"></div>
 								</div>
 
 								<div class="tab-pane" id="new-client">
@@ -82,22 +81,35 @@
 
 											<div class="row">
 												<form class="form">
-													<div class="columns columns-3 columns-md-2 columns-sm-1 absolute">
-														<div class="field">
+													<div class="columns columns-3 columns-md-2 columns-sm-1">
+														<div class="field column-2">
 															<label>Nombre</label>
 															<input type="text" placeholder="Edwin Hernandez">
 														</div>
 
-														<div class="field">
-															<label>Apellido</label>
-															<input type="text" placeholder="Hernandez Lugo">
-														</div>
+														<div class="d-flex d-flow-column j-between">
+															<label>Documento de identidad</label>
 
-														<div class="field">
-															<label>Cédula de identidad</label>
-															<input type="text" placeholder="22.354.671">
-														</div>
+															<div class="end">
+																<div class="field">
+																	<select>
+																		<option value="0">V</option>
+																		<option value="1">J</option>
+																		<option value="2">E</option>
+																		<option value="3">P</option>
+																		<option value="4">C</option>
+																		<option value="5">D</option>
+																	</select>
+																</div>
 
+																<div class="field">
+																	<input type="text" placeholder="22.354.671">
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="columns columns-3 columns-md-2 columns-sm-1">
 														<div class="field">
 															<label>Número de celular</label>
 															<input type="text" placeholder="0424 953 7531">
@@ -107,15 +119,170 @@
 															<label>Número de teléfono local</label>
 															<input type="text" placeholder="0288 221 3578">
 														</div>
+
+														<div class="field">
+															<label>Correo Electronico</label>
+															<input type="text" placeholder="aaaaaaaaaaaaaaa@cix.net">
+														</div>
 													</div>
 												</form>
 											</div>
 										</div>
 
 										<div class="step-pane" id="step-2">
+											<form class="form">
+												<div class="columns columns-2">
+													<div class="field">
+														<label>Dirección Completa</label>
+														<textarea placeholder="Terracota"></textarea>
+													</div>
+
+													<div class="field">
+														<label>Referencia</label>
+														<textarea placeholder="Terracota"></textarea>
+													</div>
+												</div>
+
+												<div class="columns columns-2">
+													<div class="field">
+														<label>Urbanismo</label>
+														<input type="text" placeholder="Terracota">
+													</div>
+
+													<div class="field">
+														<label>Condominio</label>
+														<input type="text" placeholder="47">
+													</div>
+												</div>
+
+												<div class="columns columns-2">
+													<div class="columns columns-2 no-margin-bottom">
+														<div class="d-flex d-flow-column j-between">
+															<label>Calle</label>
+
+															<div class="end">
+																<div class="field">
+																	<select>
+																		<option value="0">N/A</option>
+																		<option value="1">J</option>
+																		<option value="2">E</option>
+																		<option value="3">P</option>
+																		<option value="4">C</option>
+																		<option value="5">D</option>
+																	</select>
+																</div>
+
+																<div class="field">
+																	<input type="text" placeholder="Los ilustres">
+																</div>
+															</div>
+														</div>
+
+														<div class="d-flex d-flow-column j-between">
+															<label>Torre o Edificio</label>
+
+															<div class="end">
+																<div class="field">
+																	<select>
+																		<option value="0">N/A</option>
+																		<option value="1">J</option>
+																		<option value="2">E</option>
+																		<option value="3">P</option>
+																		<option value="4">C</option>
+																		<option value="5">D</option>
+																	</select>
+																</div>
+
+																<div class="field">
+																	<input type="text" placeholder="Los ilustres">
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="columns columns-2">
+														<div class="d-flex d-flow-column j-between">
+															<label>Casa o Apartamento</label>
+
+															<div class="end">
+																<div class="field">
+																	<select>
+																		<option value="0">N/A</option>
+																		<option value="1">J</option>
+																		<option value="2">E</option>
+																		<option value="3">P</option>
+																		<option value="4">C</option>
+																		<option value="5">D</option>
+																	</select>
+																</div>
+
+																<div class="field">
+																	<input type="text" placeholder="Palma Real">
+																</div>
+															</div>
+														</div>
+
+														<div class="d-flex d-flow-column j-between">
+															<label>Oficina o Local</label>
+
+															<div class="end">
+																<div class="field">
+																	<select>
+																		<option value="0">N/A</option>
+																		<option value="1">J</option>
+																		<option value="2">E</option>
+																		<option value="3">P</option>
+																		<option value="4">C</option>
+																		<option value="5">D</option>
+																	</select>
+																</div>
+
+																<div class="field">
+																	<input type="text" placeholder="Palma Real">
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="row">
+													<div id="mapid"></div>
+												</div>
+											</form>
 										</div>
 
 										<div class="step-pane" id="step-3">
+											<div class="tabs or">
+												<button type="button" class="tab-item is-active" data-tab="company">
+													Empresarial
+
+													<div class="separator"></div>
+												</button>
+
+												<button type="button" class="tab-item" data-tab="residential">
+													Residencial
+												</button>
+											</div>
+
+											<div class="tab-content">
+												<div class="tab-pane is-active" id="company">
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+													sed doeiusmod tempor incididunt ut labore et dolore
+													magna aliqua. Ut enimad minim veniam, quis nostrud
+													exercitation ullamco laboris nisi utaliquip ex ea commodo
+													consequat. Duis aute irure dolor inreprehenderit in voluptate
+													velit esse cillum dolore eu fugiat nullapariatur.</p>
+												</div>
+
+												<div class="tab-pane" id="residential">
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+													sed doeiusmod tempor incididunt ut labore et dolore
+													magna aliqua. Ut enimad minim veniam, quis nostrud
+													exercitation ullamco laboris nisi utaliquip ex ea commodo
+													consequat. Duis aute irure dolor inreprehenderit in voluptate
+													velit esse cillum dolore eu fugiat nullapariatur.</p>
+												</div>
+											</div>
 										</div>
 
 										<div class="step-pane" id="step-4">
