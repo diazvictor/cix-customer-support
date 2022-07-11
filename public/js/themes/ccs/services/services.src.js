@@ -1,5 +1,6 @@
 import	    	       "leaflet";
 import 		Chart from "chart.js";
+import      '../common/splide.min.js';
 import      '../common/navbar.js';
 import      '../common/sidebar.js';
 
@@ -49,6 +50,115 @@ if (window.location.pathname == "/services/") {
 		zoom: 10,
 		layers: [grayscale, cities]
 	});
+
+	let tabs = document.querySelectorAll("#tabs .tab-item");
+	tabs.forEach((tab) => {
+		tab.addEventListener("click", (e) => {
+			for (let i = 0; i < tabs.length; i++) {
+				tabs[i].classList.remove("is-active");
+			}
+
+			let clickedTab = e.currentTarget;
+			clickedTab.classList.add("is-active");
+			e.preventDefault();
+
+			let panes = document.querySelectorAll("#tabs + .tab-content .tab-pane");
+			for (let i = 0; i < panes.length; i++) {
+				panes[i].classList.remove("is-active");
+			}
+
+			let anchorReference = e.target;
+			let activePaneId = anchorReference.dataset.tab;
+			let activePane = document.getElementById(activePaneId);
+			activePane.classList.add("is-active");
+		});
+	});
+
+	let buttonOne = document.querySelector("a#link1");
+	let buttonTwo = document.querySelector("a#link2");
+	let linkOne = document.querySelector("div#link-1");
+	let linkTwo = document.querySelector("div#link-2");
+
+	buttonOne.addEventListener("click", (e) => {
+		buttonOne.classList.add("is-active");
+		buttonTwo.classList.remove("is-active");
+		linkOne.style.display = "block";
+		linkTwo.style.display = "none";
+	});
+
+	buttonTwo.addEventListener("click", (e) => {
+		buttonTwo.classList.add("is-active");
+		buttonOne.classList.remove("is-active");
+		linkTwo.style.display = "block";
+		linkOne.style.display = "none";
+	});
+
+	let buttonThree = document.querySelector("a#link3");
+	let buttonFour = document.querySelector("a#link4");
+	let linkThree = document.querySelector("div#link-3");
+	let linkFour = document.querySelector("div#link-4");
+
+	buttonThree.addEventListener("click", (e) => {
+		buttonThree.classList.add("is-active");
+		buttonFour.classList.remove("is-active");
+		linkThree.style.display = "block";
+		linkFour.style.display = "none";
+	});
+
+	buttonFour.addEventListener("click", (e) => {
+		buttonFour.classList.add("is-active");
+		buttonThree.classList.remove("is-active");
+		linkFour.style.display = "block";
+		linkThree.style.display = "none";
+	});
+
+	new Splide(document.getElementById('slider-link1'), {
+		type: "loop",
+		width: 936,
+		autoplay: false,
+		arrows: false,
+		pagination: true,
+		start: 1,
+		perPage: 4,
+		focus: "center",
+		gap: 20
+	}).mount();
+
+	new Splide(document.getElementById('slider-link2'), {
+		type: "loop",
+		width: 936,
+		autoplay: false,
+		arrows: false,
+		pagination: true,
+		start: 1,
+		perPage: 4,
+		focus: "center",
+		gap: 20
+	}).mount();
+
+	new Splide(document.getElementById('slider-link3'), {
+		type: "loop",
+		width: 936,
+		autoplay: false,
+		arrows: false,
+		pagination: true,
+		start: 1,
+		perPage: 4,
+		focus: "center",
+		gap: 20
+	}).mount();
+
+	new Splide(document.getElementById('slider-link4'), {
+		type: "loop",
+		width: 936,
+		autoplay: false,
+		arrows: false,
+		pagination: true,
+		start: 1,
+		perPage: 4,
+		focus: "center",
+		gap: 20
+	}).mount();
 } else if (window.location.pathname == "/services/res-view/") {
 	sidenav = document.querySelector(".sidenav a[data-item=services-requests]");
 	title.innerText = "Mis Solicitudes";

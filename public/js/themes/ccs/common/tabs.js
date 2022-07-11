@@ -18,7 +18,7 @@ tabs.forEach((tab) => {
 		clickedTab.classList.add("is-active");
 		e.preventDefault();
 
-		let panes = document.querySelectorAll(".tab-pane");
+		let panes = document.querySelectorAll(".tabs + .tab-content .tab-pane");
 		for (let i = 0; i < panes.length; i++) {
 			panes[i].classList.remove("is-active");
 		}

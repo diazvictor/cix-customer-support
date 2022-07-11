@@ -1491,10 +1491,12 @@ label + .select {
   padding: 25.6px;
   border-top: 1px solid #d7d7ff;
 }
-.tabs {
+.tabs,
+#tabs {
   display: flex;
 }
-.tabs .tab-item:not(i) {
+.tabs .tab-item:not(i),
+#tabs .tab-item:not(i) {
   width: 100%;
   padding: 0.75rem 1.25rem;
   border: 1px solid #E5E5E5;
@@ -1507,44 +1509,55 @@ label + .select {
   border-color: #F0F0FF;
   color: rgba(0, 0, 0, 0.4);
 }
-.tabs .tab-item:not(i):focus {
+.tabs .tab-item:not(i):focus,
+#tabs .tab-item:not(i):focus {
   box-shadow: 0 0 0 0.2rem rgba(215, 215, 255, 0.4);
 }
-.tabs .tab-item:not(i):hover {
+.tabs .tab-item:not(i):hover,
+#tabs .tab-item:not(i):hover {
   background: #d7d7ff;
   border-color: #d7d7ff;
   cursor: pointer;
 }
-.tabs .tab-item:not(i).is-active {
+.tabs .tab-item:not(i).is-active,
+#tabs .tab-item:not(i).is-active {
   background-color: #E63C1F;
   border-color: #E63C1F;
   color: #FFFFFF;
 }
-.tabs .tab-item:not(i).is-active:focus {
+.tabs .tab-item:not(i).is-active:focus,
+#tabs .tab-item:not(i).is-active:focus {
   box-shadow: 0 0 0 0.2rem rgba(230, 60, 31, 0.5);
 }
-.tabs .tab-item:not(i).is-active:hover {
+.tabs .tab-item:not(i).is-active:hover,
+#tabs .tab-item:not(i).is-active:hover {
   background: #d43318;
   border-color: #d43318;
 }
-.tabs .tab-item:not(i):not(:first-child):not(:last-child) {
+.tabs .tab-item:not(i):not(:first-child):not(:last-child),
+#tabs .tab-item:not(i):not(:first-child):not(:last-child) {
   border-radius: 0;
 }
-.tabs .tab-item:not(i):first-child {
+.tabs .tab-item:not(i):first-child,
+#tabs .tab-item:not(i):first-child {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.tabs .tab-item:not(i):last-child {
+.tabs .tab-item:not(i):last-child,
+#tabs .tab-item:not(i):last-child {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-.tabs + .tab-content {
+.tabs + .tab-content,
+#tabs + .tab-content {
   margin-top: 20px;
 }
-.tabs + .tab-content .tab-pane {
+.tabs + .tab-content .tab-pane,
+#tabs + .tab-content .tab-pane {
   display: none;
 }
-.tabs + .tab-content .tab-pane.is-active {
+.tabs + .tab-content .tab-pane.is-active,
+#tabs + .tab-content .tab-pane.is-active {
   display: block;
 }
 .accordion-item {

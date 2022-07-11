@@ -7,7 +7,7 @@
 // Para compilar el archivo desde la consola:
 // lessc tabs.less > tabs.css
 
-.tabs {
+.tabs, #tabs {
 	display: flex;
 
 	.tab-item:not(i) {

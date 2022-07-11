@@ -50,6 +50,15 @@ let goToStep = (step) => {
 
 	show(steps);
 
+	let hidden_four_step = document.getElementById("hidden-four-step");
+
+	// if we reached final step
+    if (currentStep === 3) {
+		hidden_four_step.style.display = "none";
+    } else {
+        hidden_four_step.style.display = "grid";
+	}
+
     // if we reached final step
     if (currentStep === numberOfSteps) {
         enable(previousBtn);

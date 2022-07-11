@@ -81,6 +81,7 @@ function services:show_new()
 		},
 		css = {
 			("/css/themes/%s/services/new.css"):format(theme),
+			("/css/themes/%s/common/splide.min.css"):format(theme),
 		}
 	})
 	local page   = template.new(
