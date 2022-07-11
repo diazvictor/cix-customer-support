@@ -36,11 +36,12 @@ let goToStep = (step) => {
     let indicators = document.getElementsByClassName("steps-segment");
 
     for (let i = indicators.length - 1; i >= currentStep; --i) {
+        indicators[i].classList.remove("is-progress");
         indicators[i].classList.remove("is-active");
     }
 
     for (let i = 0; i < currentStep; ++i) {
-        indicators[i].classList.add("is-active");
+        indicators[i].classList.add("is-progress");
     }
 
     // hide all input
@@ -49,6 +50,40 @@ let goToStep = (step) => {
     }
 
 	show(steps);
+
+	let dataStepOne = document.getElementById("step-segment-1");
+	let dataStepTwo = document.getElementById("step-segment-2");
+	let dataStepThree = document.getElementById("step-segment-3");
+	let dataStepFour= document.getElementById("step-segment-4");
+
+	if (currentStep === 1) {
+		console.log("Page 1");
+
+		dataStepOne.classList.remove("is-active");
+		dataStepOne.classList.add("is-progress");
+    } else if (currentStep === 2) {
+		console.log("Page 2");
+
+		dataStepOne.classList.remove("is-progress");
+		dataStepOne.classList.add("is-active");
+
+		dataStepTwo.classList.add("is-progress");
+		dataStepTwo.classList.remove("is-active");
+    } else if (currentStep === 3) {
+		console.log("Page 3");
+
+		dataStepTwo.classList.remove("is-progress");
+		dataStepTwo.classList.add("is-active");
+
+		dataStepThree.classList.add("is-progress");
+		dataStepThree.classList.remove("is-active");
+    } else if (currentStep === 4) {
+		console.log("Page 4");
+
+		dataStepThree.classList.remove("is-progress");
+		dataStepThree.classList.add("is-active");
+	}
+
 
 	let hidden_four_step = document.getElementById("hidden-four-step");
 
