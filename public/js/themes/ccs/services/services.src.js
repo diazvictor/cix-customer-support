@@ -188,6 +188,7 @@ if (window.location.pathname == "/services/") {
 			if (!window.matchMedia("(max-width: 425px)").matches) { // If media query matches
 				document.getElementById("box-1").style.borderBottom = "none";
 				document.getElementById("box-1").style.paddingBottom = 0;
+				document.getElementById("box-2").style.paddingBottom = 0;
 			} else {
 				console.log("Media Query 425px");
 			}
