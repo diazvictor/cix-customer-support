@@ -10,7 +10,7 @@
 				</div>
 
 				<div class="box is-grouped">
-					<section class="box">
+					<section id="box-1" class="box">
 						<div class="columns columns-1">
 							<div class="row">
 								<h1 class="title text-uppercase">¿Quieres contratar un nuevo servicio?</h1>
@@ -51,7 +51,7 @@
 						</div>
 					</section>
 
-					<section class="box">
+					<section id="box-2" class="box">
 						<div class="columns columns-1">
 							<div id="hidden-four-step" class="tabs or">
 								<button type="button" class="tab-item" data-tab="to-me">
@@ -131,19 +131,19 @@
 
 										<div class="step-pane" id="step-2">
 											<form class="form">
-												<div class="columns columns-2">
+												<div class="columns columns-2 columns-sm-1 dir">
 													<div class="field">
 														<label>Dirección Completa</label>
 														<textarea placeholder="Terracota"></textarea>
 													</div>
 
-													<div class="field">
+													<div class="field hidden-mobile">
 														<label>Referencia</label>
 														<textarea placeholder="Terracota"></textarea>
 													</div>
 												</div>
 
-												<div class="columns columns-2">
+												<div class="columns columns-2 urb">
 													<div class="field">
 														<label>Urbanismo</label>
 														<input type="text" placeholder="Terracota">
@@ -155,7 +155,7 @@
 													</div>
 												</div>
 
-												<div class="columns columns-2">
+												<div class="columns columns-2 columns-sm-1 tower">
 													<div class="columns columns-2 no-margin-bottom">
 														<div class="d-flex d-flow-column j-between">
 															<label>Calle</label>
@@ -245,8 +245,21 @@
 													</div>
 												</div>
 
-												<div class="row">
+												<div class="row map">
+													<p>
+														<i class="fa-solid fa-map-location-dot"></i> Indique su dirección usando el mapa
+													</p>
+
 													<div id="mapid"></div>
+
+													<p>
+														<i class="fas fa-edit"></i> Indique su dirección escrita
+													</p>
+												</div>
+
+												<div class="field hidden-desktop refer">
+													<label>Referencia</label>
+													<textarea placeholder="Terracota"></textarea>
 												</div>
 											</form>
 										</div>
@@ -865,6 +878,118 @@
 										</div>
 
 										<div class="step-pane" id="step-4">
+											<div class="row hidden-finish">
+												<h1 class="title">Confirma tu información</h1>
+												<p class="subtitle">
+													Ya casi terminamos!. Compruebe sus datos y envienos el numero de
+													referencia bancaria paara activar su servicio cuanto antes.
+												</p>
+											</div>
+
+											<div id="info" class="info">
+												<div class="start">
+													<div class="row">
+														<span class="title">Datos personales</span>
+
+														<span class="subtitle">Nombre Completo:</span>
+														<span class="subtitle">Documento de Identidad:</span>
+														<span class="subtitle">Teléfono:</span>
+														<span class="subtitle">Número Local:</span>
+														<span class="subtitle">Correo Electronico:</span>
+													</div>
+
+													<div class="row">
+														<span class="title">Dirección</span>
+
+														<span class="subtitle">Dirección Completa: Sector Las Avenidas.</span>
+														<span class="subtitle">Av. La Paz, Frente a SuperMarket La Paz</span>
+														<span class="subtitle">Casa: 47</span>
+														<span class="subtitle">Calle: La Paz</span>
+														<span class="subtitle">Sector: Las Avenidas</span>
+														<span class="subtitle">Referencia: SuperMarket La Paz</span>
+													</div>
+
+													<div class="row">
+														<span class="title">Servicio a contratar</span>
+
+														<span class="subtitle">Tipo de Servicio: Empresarial</span>
+														<span class="subtitle">Medio: Fibra Optica</span>
+														<span class="subtitle">Plan a Contrata: Neptuno</span>
+														<span class="subtitle">Descarga: 20Mbps</span>
+														<span class="subtitle">Carga: 2 Mbps</span>
+														<span class="subtitle">Precio: 60$</span>
+													</div>
+
+													<div class="row d-flex j-between a-center">
+														<button type="button" class="button is-white unirme">
+															Unirme a la Red 10X <i class="fa-solid fa-bolt"></i>
+														</button>
+
+														<p>Al pulsar este boton confirmara que los datos suministrados son correctos.</p>
+													</div>
+												</div>
+											</div>
+
+											<div id="confirm" class="confirm">
+												<div class="row">
+													<span class="title">Bienvenido a CIX</span>
+												</div>
+
+												<div class="row">
+													<div class="start">
+														<span class="title">Su Solicitud a sido creada</span>
+													</div>
+
+													<div class="end">
+														<div class="box">
+															<img src="/img/icono-rs.svg">
+															<span class="title">RS-000775</span>
+														</div>
+													</div>
+
+													<div class="other">
+														<span class="title">Sera atendido en breve.</span>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="start">
+														<p>
+															La gestion de su solicitud sera realizada a través de su
+															ejecutivo de ventas actual.
+														</p>
+													</div>
+
+													<div class="end">
+														<div class="ficha">
+															<div class="start">
+																<img src="/img/avatar.jpg">
+															</div>
+
+															<div class="end">
+																<div class="d-flex d-flow-column">
+																	<span>Víctor Díaz</span>
+																	<span>Ejecutivo de Ventas</span>
+																</div>
+
+																<div class="d-flex">
+																	<a href="javascript: void(0);">
+																		<img src="/img/bills/phone.svg">
+																	</a>
+
+																	<a href="javascript: void(0);">
+																		<img src="/img/bills/mail.svg">
+																	</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="row">
+													<span class="title">Sera atendido en breve.</span>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>

@@ -115,50 +115,92 @@ if (window.location.pathname == "/services/") {
 	new Splide(document.getElementById('slider-link1'), {
 		type: "loop",
 		width: 936,
-		autoplay: false,
 		arrows: false,
-		pagination: true,
-		start: 1,
 		perPage: 4,
 		focus: "center",
-		gap: 20
+		gap: 20,
+		breakpoints: {
+			425: {
+				width: 300,
+				perPage: 1,
+			}
+		}
 	}).mount();
 
 	new Splide(document.getElementById('slider-link2'), {
 		type: "loop",
 		width: 936,
-		autoplay: false,
 		arrows: false,
-		pagination: true,
-		start: 1,
 		perPage: 4,
 		focus: "center",
-		gap: 20
+		gap: 20,
+		breakpoints: {
+			425: {
+				width: 300,
+				perPage: 1,
+			}
+		}
 	}).mount();
 
 	new Splide(document.getElementById('slider-link3'), {
 		type: "loop",
 		width: 936,
-		autoplay: false,
 		arrows: false,
-		pagination: true,
-		start: 1,
 		perPage: 4,
 		focus: "center",
-		gap: 20
+		gap: 20,
+		breakpoints: {
+			425: {
+				width: 300,
+				perPage: 1,
+			}
+		}
 	}).mount();
 
 	new Splide(document.getElementById('slider-link4'), {
 		type: "loop",
 		width: 936,
-		autoplay: false,
 		arrows: false,
-		pagination: true,
-		start: 1,
 		perPage: 4,
 		focus: "center",
-		gap: 20
+		gap: 20,
+		breakpoints: {
+			425: {
+				width: 300,
+				perPage: 1,
+			}
+		}
 	}).mount();
+
+	let unirmeBtn = document.querySelectorAll(".unirme");
+
+	unirmeBtn.forEach((btn) => {
+		const info = document.getElementById("info");
+		const confirm = document.getElementById("confirm");
+		const dataStepFour = document.getElementById("step-segment-4");
+		let footConfirm = document.querySelector(".container.new-resquest .box.is-grouped .box .foot");
+
+		btn.addEventListener("click", (e) => {
+			info.style.display = "none";
+			previousBtn.style.display = "none";
+			document.querySelector("#step-4 .hidden-finish").style.display = "none";
+
+			if (!window.matchMedia("(max-width: 425px)").matches) { // If media query matches
+				document.getElementById("box-1").style.borderBottom = "none";
+				document.getElementById("box-1").style.paddingBottom = 0;
+			} else {
+				console.log("Media Query 425px");
+			}
+
+			footConfirm.style.borderTop = "none";
+			footConfirm.style.paddingTop = 0;
+
+			confirm.style.display = "grid";
+
+			dataStepFour.classList.remove("is-progress");
+			dataStepFour.classList.add("is-active");
+		});
+	});
 } else if (window.location.pathname == "/services/res-view/") {
 	sidenav = document.querySelector(".sidenav a[data-item=services-requests]");
 	title.innerText = "Mis Solicitudes";

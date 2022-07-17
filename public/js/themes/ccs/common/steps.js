@@ -82,13 +82,18 @@ let goToStep = (step) => {
 
 		dataStepThree.classList.remove("is-progress");
 		dataStepThree.classList.add("is-active");
+
+		previousBtn.style.margin = 0;
+		previousBtn.style.justifyContent = "flex-start";
+	} else {
+		previousBtn.style.marginRight = "20px";
 	}
 
 
 	let hidden_four_step = document.getElementById("hidden-four-step");
 
 	// if we reached final step
-    if (currentStep === 3) {
+    if (currentStep === 3 || currentStep === 4) {
 		hidden_four_step.style.display = "none";
     } else {
         hidden_four_step.style.display = "grid";
@@ -98,7 +103,6 @@ let goToStep = (step) => {
     if (currentStep === numberOfSteps) {
         enable(previousBtn);
         nextBtn.style.display = "none";
-        acceptBtn.style.display = "block";
     }
 
     // else if first step
